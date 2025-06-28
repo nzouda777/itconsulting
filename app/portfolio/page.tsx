@@ -120,7 +120,7 @@ export default function PortfolioPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200 font-mono text-sm">
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
               Portfolio Technique
             </Badge>
 

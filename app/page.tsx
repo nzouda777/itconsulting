@@ -101,7 +101,7 @@ const testimonials = [
     company: "FinanceSecure",
     image: "/placeholder.svg?height=100&width=100",
     content:
-      "TechConsultPro a transformé notre infrastructure. Leur expertise technique et leur approche méthodique nous ont permis de réduire nos coûts de 40% tout en améliorant nos performances.",
+      "ITCloudConsultings a transformé notre infrastructure. Leur expertise technique et leur approche méthodique nous ont permis de réduire nos coûts de 40% tout en améliorant nos performances.",
     rating: 5,
     project: "Migration Cloud & Sécurité",
   },
@@ -228,7 +228,7 @@ export default function HomePage() {
             className="max-w-5xl mx-auto text-center h-full pt-24"
           >
             <motion.div variants={itemVariants}>
-              <Badge className="mb-6 bg-slate-100 text-slate-700 border-slate-200 font-mono text-sm">
+              <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
                 v2.0.1 • Production Ready
               </Badge>
             </motion.div>
@@ -321,7 +321,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200 font-mono text-sm">Core Services</Badge>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Core Services</Badge>
             <h2 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Expertise Technique Complète</h2>
             <p className="text-md md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               De l'architecture système à la livraison, nous maîtrisons chaque étape du cycle de développement moderne
@@ -389,7 +389,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <Badge className="mb-6 bg-green-50 text-green-700 border-green-200 font-mono text-sm">
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
               Fonctionnalités Avancées
             </Badge>
             <h2 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Pourquoi Nous Choisir ?</h2>
@@ -500,7 +500,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <Badge className="mb-6 bg-purple-50 text-purple-700 border-purple-200 font-mono text-sm">
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
               Technologies
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text">Stack Technique Moderne</h2>
@@ -540,7 +540,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <Badge className="mb-6 bg-yellow-50 text-yellow-700 border-yellow-200 font-mono text-sm">Témoignages</Badge>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Témoignages</Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text">Ce Que Disent Nos Clients</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               La satisfaction client au cœur de notre approche technique

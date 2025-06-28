@@ -75,8 +75,8 @@ export default function ContactSuccessPage() {
                   <p className="text-sm text-slate-500">Une question urgente ? Contactez-nous directement :</p>
                   <div className="flex items-center justify-center mt-2">
                     <Mail className="w-4 h-4 mr-2 text-slate-400" />
-                    <a href="mailto:contact@techconsultpro.com" className="text-blue-600 hover:underline">
-                      contact@techconsultpro.com
+                    <a href="mailto:contact@ITCloudConsultings.com" className="text-blue-600 hover:underline">
+                      contact@ITCloudConsultings.com
                     </a>
                   </div>
                 </div>

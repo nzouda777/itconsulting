@@ -114,7 +114,7 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      <section className=" flex items-center justify-center h-screen pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-6">
           <motion.div
             variants={containerVariants}
@@ -123,7 +123,7 @@ export default function ServicesPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <motion.div variants={itemVariants}>
-              <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200 font-mono">Services Techniques</Badge>
+              <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Services Techniques</Badge>
             </motion.div>
 
             <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-bold mb-8 gradient-text">
@@ -221,7 +221,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <Badge className="mb-4 bg-blue-50 text-blue-700 border-blue-200 font-mono">Méthodologie</Badge>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Méthodologie</Badge>
             <h2 className="text-4xl font-bold mb-6 gradient-text">Processus de Développement Agile</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Une approche structurée garantissant qualité, délais et budget maîtrisés

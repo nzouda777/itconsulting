@@ -6,6 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Terminal } from "lucide-react"
+import  Announcement  from "./announcement"
 
 const navigation = [
   { name: "Accueil", href: "/" },
@@ -37,7 +38,8 @@ export default function Header() {
         scrolled ? "bg-white/95 backdrop-blur-md border-b border-slate-200/50 shadow-sm" : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 py-4">
+      <Announcement />
+      <nav className="container bg-white mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
@@ -45,7 +47,7 @@ export default function Header() {
               <div className="absolute -inset-1 bg-blue-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity blur-sm" />
             </div>
             <span className="text-xl font-bold font-mono tracking-tight">
-              TechConsult<span className="text-blue-600">Pro</span>
+              ITCloud<span className="text-blue-600"> Consultings</span>
             </span>
           </Link>
 
@@ -100,9 +102,9 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden mt-4 border-t border-slate-200 pt-4"
+              className="lg:hidden bg-white mt-4 border-t border-slate-200 pt-4"
             >
-              <div className="flex flex-col space-y-2">
+              <div className="flex flex-col space-y-2 ">
                 {navigation.map((item, index) => (
                   <motion.div
                     key={item.name}

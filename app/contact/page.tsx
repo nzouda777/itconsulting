@@ -17,7 +17,7 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    description: "contact@techconsultpro.com",
+    description: "contact@ITCloudConsultings.com",
     action: "Envoyer un email",
   },
   {

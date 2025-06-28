@@ -62,7 +62,7 @@ const team = [
 const timeline = [
   {
     year: "2019",
-    title: "Création de TechConsultPro",
+    title: "Création de ITCloudConsultings",
     description: "Lancement avec une équipe de 3 développeurs seniors",
     icon: Target,
   },
@@ -142,7 +142,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200 font-mono text-sm">À propos de nous</Badge>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">À propos de nous</Badge>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">
               L'Équipe Derrière
@@ -186,7 +186,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Badge className="mb-6 bg-green-50 text-green-700 border-green-200 font-mono text-sm">
+              <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
                 Notre Mission
               </Badge>
               <h2 className="text-4xl font-bold mb-6 gradient-text">Démocratiser l'Excellence Technique</h2>
@@ -248,7 +248,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <Badge className="mb-6 bg-purple-50 text-purple-700 border-purple-200 font-mono text-sm">Nos Valeurs</Badge>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Nos Valeurs</Badge>
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ce Qui Nous Guide</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Des principes fondamentaux qui définissent notre approche et notre engagement
@@ -289,7 +289,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <Badge className="mb-6 bg-orange-50 text-orange-700 border-orange-200 font-mono text-sm">
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
               Notre Histoire
             </Badge>
             <h2 className="text-4xl font-bold mb-6 gradient-text">5 Années d'Innovation</h2>
@@ -339,7 +339,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <Badge className="mb-6 bg-red-50 text-red-700 border-red-200 font-mono text-sm">Notre Équipe</Badge>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Notre Équipe</Badge>
             <h2 className="text-4xl font-bold mb-6 gradient-text">Les Experts Derrière Vos Projets</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Une équipe multidisciplinaire d'experts passionnés par l'innovation technique

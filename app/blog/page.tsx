@@ -154,7 +154,7 @@ export default function BlogPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200 font-mono text-sm">Blog Technique</Badge>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Blog Technique</Badge>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Insights & Expertise</h1>
 

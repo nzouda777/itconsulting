@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  title: "TechConsult Pro - Solutions IT & Digitales",
-  description: "Expertise technique avancée en développement, design et stratégie digitale",
-    generator: 'v0.dev'
+  title: "ITCloud Consultings- Solutions IT & Digitales",
+  description: "Expertise technique avancée en développement, design et stratégie digitale"
+  
 }
 
 export default function RootLayout({

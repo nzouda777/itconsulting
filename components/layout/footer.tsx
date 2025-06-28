@@ -52,7 +52,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center space-x-3 group mb-6">
               <Terminal className="w-8 h-8 text-slate-900" />
               <span className="text-xl font-bold font-mono tracking-tight">
-                TechConsult<span className="text-blue-600">Pro</span>
+                ITCloud <span className="text-blue-600">Consultings</span>
               </span>
             </Link>
             <p className="text-slate-600 mb-6 max-w-md">
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-600 text-sm">© 2024 TechConsultPro. Tous droits réservés.</p>
+          <p className="text-slate-600 text-sm">© 2024 ITCloudConsultings. Tous droits réservés.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy-policy" className="text-slate-600 hover:text-slate-900 text-sm transition-colors">
               Confidentialité
