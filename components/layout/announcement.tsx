@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/Link'
+import Link from 'next/link'
 import { Facebook, Instagram, Twitter, Phone, Linkedin} from 'lucide-react'
 
 export default function Announcement() {
