@@ -14,7 +14,11 @@ export default function ContactSuccessPage() {
       <Header />
 
       <section className="pt-32 pb-16 min-h-screen flex items-center">
+<<<<<<< HEAD
         <div className="container mx-auto px-6">
+=======
+        <div className="max-w-[98%] mx-auto px-6">
+>>>>>>> 4fb5a3d (flipping card updates)
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

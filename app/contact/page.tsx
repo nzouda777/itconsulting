@@ -91,7 +91,11 @@ export default function ContactPage() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
+<<<<<<< HEAD
         <div className="container mx-auto px-6">
+=======
+        <div className="max-w-[98%] mx-auto px-6">
+>>>>>>> 4fb5a3d (flipping card updates)
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,7 +115,11 @@ export default function ContactPage() {
 
       {/* Contact Methods */}
       <section className="py-16">
+<<<<<<< HEAD
         <div className="container mx-auto px-6">
+=======
+        <div className="max-w-[98%] mx-auto px-6">
+>>>>>>> 4fb5a3d (flipping card updates)
           <div className="grid md:grid-cols-4 gap-6 mb-16">
             {contactMethods.map((method, index) => (
               <motion.div
@@ -142,7 +150,11 @@ export default function ContactPage() {
 
       {/* Contact Form */}
       <section className="py-16 bg-white">
+<<<<<<< HEAD
         <div className="container mx-auto px-6">
+=======
+        <div className="max-w-[98%] mx-auto px-6">
+>>>>>>> 4fb5a3d (flipping card updates)
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Form */}

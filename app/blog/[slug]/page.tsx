@@ -142,7 +142,11 @@ export default function BlogArticlePage() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
+<<<<<<< HEAD
         <div className="container mx-auto px-6">
+=======
+        <div className="max-w-[98%] mx-auto px-6">
+>>>>>>> 4fb5a3d (flipping card updates)
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -243,7 +247,11 @@ export default function BlogArticlePage() {
 
       {/* Article Image */}
       <section className="py-8">
+<<<<<<< HEAD
         <div className="container mx-auto px-6">
+=======
+        <div className="max-w-[98%] mx-auto px-6">
+>>>>>>> 4fb5a3d (flipping card updates)
           <div className="max-w-4xl mx-auto">
             <Image
               src={article.image || "/placeholder.svg"}
@@ -258,7 +266,11 @@ export default function BlogArticlePage() {
 
       {/* Article Content */}
       <section className="py-16">
+<<<<<<< HEAD
         <div className="container mx-auto px-6">
+=======
+        <div className="max-w-[98%] mx-auto px-6">
+>>>>>>> 4fb5a3d (flipping card updates)
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-slate prose-lg max-w-none">
               <div
