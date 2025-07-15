@@ -337,43 +337,92 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="group service-card"
+                className="group perspective-1000 h-80"
               >
-                <Card
-                  className={`h-full border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br ${service.color} backdrop-blur-sm`}
-                >
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <service.icon className={`w-8 h-8 ${service.iconColor}`} />
-                    </div>
+                <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+                  {/* Front Side */}
+                  <Card
+                    className={`absolute inset-0 w-full h-full backface-hidden border-0 shadow-lg bg-gradient-to-br ${service.color} backdrop-blur-sm`}
+                  >
+                    <CardContent className="p-8 flex flex-col justify-center items-center text-center h-full">
+                      <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <service.icon className={`w-8 h-8 ${service.iconColor}`} />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4 text-slate-900">{service.title}</h3>
+                      <p className="text-slate-600 leading-relaxed">{service.description}</p>
+                      <div className="mt-6 text-sm text-slate-500 font-mono">Survolez pour plus de détails</div>
+                    </CardContent>
+                  </Card>
 
-                    <h3 className="text-2xl md:text-4xl font-bold mb-4 text-slate-900">{service.title}</h3>
-                    <p className="text-slate-600 mb-8 leading-relaxed">{service.description}</p>
+                  {/* Back Side */}
+                  <Card
+                    className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 border-0 shadow-lg bg-gradient-to-br ${service.color} backdrop-blur-sm`}
+                  >
+                    <CardContent className="p-8 h-full flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center mb-6">
+                          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4 shadow-md">
+                            <service.icon className={`w-6 h-6 ${service.iconColor}`} />
+                          </div>
+                          <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
+                        </div>
 
-                    <ul className="space-y-3 mb-8">
-                      {service.features.map((feature, featureIndex) => (
-                        <motion.li
-                          key={featureIndex}
-                          className="flex items-center text-sm text-slate-600"
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ delay: featureIndex * 0.1 }}
-                        >
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                          <span className="font-mono font-medium">{feature}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
+                        <div className="space-y-4 mb-6">
+                          <h4 className="font-semibold text-slate-800 text-sm uppercase tracking-wide">Technologies</h4>
+                          <ul className="space-y-2">
+                            {service.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-center text-sm text-slate-700">
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                                <span className="font-mono font-medium">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
 
-                    <Link href="/services">
-                      <Button variant="ghost" className="w-full group-hover:bg-white/50 transition-colors font-medium">
-                        En savoir plus
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
+                        <div className="space-y-3 mb-6 hidden">
+                          <h4 className="font-semibold text-slate-800 text-sm uppercase tracking-wide">Avantages</h4>
+                          <ul className="space-y-2 text-sm text-slate-700">
+                            {service.title === "Développement" && (
+                              <>
+                                <li>• Code de qualité entreprise</li>
+                                <li>• Architecture scalable</li>
+                                <li>• Tests automatisés</li>
+                              </>
+                            )}
+                            {service.title === "Infrastructure" && (
+                              <>
+                                <li>• Haute disponibilité 99.9%</li>
+                                <li>• Auto-scaling intelligent</li>
+                                <li>• Monitoring avancé</li>
+                              </>
+                            )}
+                            {service.title === "Sécurité" && (
+                              <>
+                                <li>• Conformité RGPD/SOC2</li>
+                                <li>• Audit de vulnérabilités</li>
+                                <li>• Protection temps réel</li>
+                              </>
+                            )}
+                            {service.title === "Performance" && (
+                              <>
+                                <li>• Optimisation en moins de 100ms</li>
+                                <li>• Analyse prédictive</li>
+                                <li>• Alertes intelligentes</li>
+                              </>
+                            )}
+                          </ul>
+                        </div>
+                      </div>
+
+                      <Link href="/services" className="w-full">
+                        <Button className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium">
+                          Découvrir
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                      </Link>
+                    </CardContent>
+                  </Card>
+                </div>
               </motion.div>
             ))}
           </div>

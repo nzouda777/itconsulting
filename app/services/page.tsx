@@ -115,11 +115,7 @@ export default function ServicesPage() {
 
       {/* Hero Section */}
       <section className=" flex items-center justify-center h-screen pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-<<<<<<< HEAD
         <div className="container mx-auto px-6">
-=======
-        <div className="max-w-[98%] mx-auto px-6">
->>>>>>> 4fb5a3d (flipping card updates)
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -146,11 +142,7 @@ export default function ServicesPage() {
 
       {/* Services Categories */}
       <section className="py-24">
-<<<<<<< HEAD
         <div className="container mx-auto px-6">
-=======
-        <div className="max-w-[98%] mx-auto px-6">
->>>>>>> 4fb5a3d (flipping card updates)
           {serviceCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -222,11 +214,7 @@ export default function ServicesPage() {
 
       {/* Process Section */}
       <section className="py-24 bg-slate-50">
-<<<<<<< HEAD
         <div className="container mx-auto px-6">
-=======
-        <div className="max-w-[98%] mx-auto px-6">
->>>>>>> 4fb5a3d (flipping card updates)
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

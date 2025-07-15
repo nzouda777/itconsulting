@@ -39,11 +39,7 @@ export default function Header() {
       }`}
     >
       <Announcement />
-<<<<<<< HEAD
       <nav className="container bg-white mx-auto px-6 py-2">
-=======
-      <nav className="max-w-[98%] bg-white mx-auto px-6 py-2">
->>>>>>> 4fb5a3d (flipping card updates)
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
