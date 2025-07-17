@@ -14,7 +14,7 @@ export default function ContactSuccessPage() {
       <Header />
 
       <section className="pt-32 pb-16 min-h-screen flex items-center">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

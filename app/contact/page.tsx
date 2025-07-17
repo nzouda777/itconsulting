@@ -91,7 +91,7 @@ export default function ContactPage() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,7 +111,7 @@ export default function ContactPage() {
 
       {/* Contact Methods */}
       <section className="py-16">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-6 mb-16">
             {contactMethods.map((method, index) => (
               <motion.div
@@ -142,7 +142,7 @@ export default function ContactPage() {
 
       {/* Contact Form */}
       <section className="py-16 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Form */}
