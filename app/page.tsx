@@ -220,7 +220,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <motion.div style={{ y, opacity }} className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6 relative z-10">
+        <motion.div style={{ y, opacity }} className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6 relative z-10">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -313,7 +313,7 @@ export default function HomePage() {
 
       {/* Services Section with Advanced Animations */}
       <section className="py-24 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -431,7 +431,7 @@ export default function HomePage() {
 
       {/* Interactive Features Section */}
       <section ref={featuresRef} className="py-24 bg-slate-50">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -542,7 +542,7 @@ export default function HomePage() {
 
       {/* Tech Stack Showcase */}
       <section className="py-24 bg-white overflow-hidden">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -582,7 +582,7 @@ export default function HomePage() {
 
       {/* Testimonials Carousel */}
       <section className="py-24 bg-slate-50">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -711,7 +711,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

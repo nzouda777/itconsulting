@@ -142,7 +142,7 @@ export default function BlogArticlePage() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -243,7 +243,7 @@ export default function BlogArticlePage() {
 
       {/* Article Image */}
       <section className="py-8">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <Image
               src={article.image || "/placeholder.svg"}
@@ -258,7 +258,7 @@ export default function BlogArticlePage() {
 
       {/* Article Content */}
       <section className="py-16">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-slate prose-lg max-w-none">
               <div

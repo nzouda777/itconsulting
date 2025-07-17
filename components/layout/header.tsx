@@ -39,7 +39,7 @@ export default function Header() {
       }`}
     >
       <Announcement />
-      <nav className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden bg-white mx-auto px-6 py-2">
+      <nav className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 bg-white mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">

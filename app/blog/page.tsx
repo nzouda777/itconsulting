@@ -147,7 +147,7 @@ export default function BlogPage() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -202,7 +202,7 @@ export default function BlogPage() {
 
       {/* Featured Articles */}
       <section className="py-16 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -292,7 +292,7 @@ export default function BlogPage() {
 
       {/* Categories Filter */}
       <section className="py-8 bg-slate-50 border-y border-slate-200">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <motion.button
@@ -315,7 +315,7 @@ export default function BlogPage() {
 
       {/* Articles Grid */}
       <section className="py-16 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden md:px-12 mx-auto px-6">
           <div className="grid lg:grid-cols-4 gap-8">
             {/* Articles */}
             <div className="lg:col-span-3">
