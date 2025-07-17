@@ -1,0 +1,9 @@
+{
+  "build": {
+    "env": {
+      "NODE_VERSION": "18"
+    },
+    "command": "pnpm install --legacy-peer-deps && pnpm run build"
+  },
+  "installCommand": "pnpm install --legacy-peer-deps"
+}
