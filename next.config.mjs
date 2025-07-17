@@ -9,6 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  react: {
+    unstable_runtimeJS: 'automatic',
+  },
 }
 
 export default nextConfig
