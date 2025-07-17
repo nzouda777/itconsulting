@@ -115,7 +115,7 @@ export default function ServicesPage() {
 
       {/* Hero Section */}
       <section className=" flex items-center justify-center h-screen pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -142,7 +142,7 @@ export default function ServicesPage() {
 
       {/* Services Categories */}
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
           {serviceCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -214,7 +214,7 @@ export default function ServicesPage() {
 
       {/* Process Section */}
       <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

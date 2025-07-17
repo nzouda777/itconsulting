@@ -15,7 +15,7 @@ export default function ContactSuccessPage() {
 
       <section className="pt-32 pb-16 min-h-screen flex items-center">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)

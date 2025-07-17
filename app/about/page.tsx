@@ -136,7 +136,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -183,7 +183,7 @@ export default function AboutPage() {
       {/* Mission Section */}
       <section className="py-24 bg-white">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -250,7 +250,7 @@ export default function AboutPage() {
       {/* Values Section */}
       <section className="py-24 bg-slate-50">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -295,7 +295,7 @@ export default function AboutPage() {
       {/* Timeline Section */}
       <section className="py-24 bg-white">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -349,7 +349,7 @@ export default function AboutPage() {
       {/* Team Section */}
       <section className="py-24 bg-slate-50">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -430,7 +430,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-24 bg-white">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)

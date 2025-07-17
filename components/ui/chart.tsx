@@ -29,7 +29,7 @@ function useChart() {
 
   if (!context) {
 <<<<<<< HEAD
-    throw new Error("useChart must be used within a <ChartContainer />")
+    throw new Error("useChart must be used within a <Chartcontainer />")
 =======
     throw new Error("useChart must be used within a <Chartmax-w-[98%] />")
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -39,7 +39,7 @@ function useChart() {
 }
 
 <<<<<<< HEAD
-const ChartContainer = React.forwardRef<
+const Chartcontainer = React.forwardRef<
 =======
 const Chartmax-w-[98%] = React.forwardRef<
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -47,7 +47,7 @@ const Chartmax-w-[98%] = React.forwardRef<
   React.ComponentProps<"div"> & {
     config: ChartConfig
     children: React.ComponentProps<
-      typeof RechartsPrimitive.ResponsiveContainer
+      typeof RechartsPrimitive.Responsivecontainer
     >["children"]
   }
 >(({ id, className, children, config, ...props }, ref) => {
@@ -66,14 +66,14 @@ const Chartmax-w-[98%] = React.forwardRef<
         {...props}
       >
         <ChartStyle id={chartId} config={config} />
-        <RechartsPrimitive.ResponsiveContainer>
+        <RechartsPrimitive.Responsivecontainer>
           {children}
-        </RechartsPrimitive.ResponsiveContainer>
+        </RechartsPrimitive.Responsivecontainer>
       </div>
     </ChartContext.Provider>
   )
 })
-ChartContainer.displayName = "Chart"
+Chartcontainer.displayName = "Chart"
 
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
@@ -364,7 +364,7 @@ function getPayloadConfigFromPayload(
 }
 
 export {
-  ChartContainer,
+  Chartcontainer,
   ChartTooltip,
   ChartTooltipContent,
   ChartLegend,

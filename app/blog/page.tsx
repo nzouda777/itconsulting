@@ -148,7 +148,7 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -207,7 +207,7 @@ export default function BlogPage() {
       {/* Featured Articles */}
       <section className="py-16 bg-white">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -301,7 +301,7 @@ export default function BlogPage() {
       {/* Categories Filter */}
       <section className="py-8 bg-slate-50 border-y border-slate-200">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)
@@ -328,7 +328,7 @@ export default function BlogPage() {
       {/* Articles Grid */}
       <section className="py-16 bg-white">
 <<<<<<< HEAD
-        <div className="container mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden mx-auto px-6">
 =======
         <div className="max-w-[98%] mx-auto px-6">
 >>>>>>> 4fb5a3d (flipping card updates)
