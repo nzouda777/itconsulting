@@ -9,10 +9,10 @@ import { Menu, X, Terminal } from "lucide-react"
 import  Announcement  from "./announcement"
 
 const navigation = [
-  { name: "Accueil", href: "/" },
+  { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "À propos", href: "/about" },
+  { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ]
@@ -128,12 +128,12 @@ export default function Header() {
                 <div className="pt-4 border-t border-slate-200 space-y-2">
                   <Link href="/contact">
                     <Button variant="ghost" size="sm" className="w-full justify-start">
-                      Audit Gratuit
+                      Free Audit
                     </Button>
                   </Link>
                   <Link href="/contact">
                     <Button size="sm" className="w-full bg-slate-900 hover:bg-slate-800">
-                      Démarrer un Projet
+                      Start a Project
                     </Button>
                   </Link>
                 </div>

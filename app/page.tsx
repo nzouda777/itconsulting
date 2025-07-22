@@ -26,6 +26,8 @@ import {
   Cpu,
   Globe,
   Layers,
+  PenTool,
+  MessageCircle,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -55,7 +57,39 @@ const itemVariants = {
 const services = [
   {
     icon: Code2,
-    title: "Développement",
+    title: "Web Design & Maintenance",
+    description: "Applications web et mobiles haute performance",
+    features: ["React/Next.js", "Node.js/Python", "Architecture microservices"],
+    color: "from-blue-500/10 to-cyan-500/10",
+    iconColor: "text-blue-600",
+  },
+  {
+    icon: PenTool,
+    title: "Logo and Graphic Design",
+    description: "Solutions cloud et DevOps scalables",
+    features: ["AWS/Azure/GCP", "Kubernetes", "CI/CD Pipeline"],
+    color: "from-green-500/10 to-emerald-500/10",
+    iconColor: "text-green-600",
+  },
+  {
+    icon: Shield,
+    title: "Sécurité",
+    description: "Audit et protection des systèmes",
+    features: ["Pentest", "Conformité RGPD", "Zero Trust"],
+    color: "from-red-500/10 to-orange-500/10",
+    iconColor: "text-red-600",
+  },
+  {
+    icon: Zap,
+    title: "Performance",
+    description: "Optimisation et monitoring avancé",
+    features: ["Load Testing", "APM", "Observabilité"],
+    color: "from-purple-500/10 to-pink-500/10",
+    iconColor: "text-purple-600",
+  },
+  {
+    icon: Code2,
+    title: "Mobile Application",
     description: "Applications web et mobiles haute performance",
     features: ["React/Next.js", "Node.js/Python", "Architecture microservices"],
     color: "from-blue-500/10 to-cyan-500/10",
@@ -88,10 +122,10 @@ const services = [
 ]
 
 const metrics = [
-  { value: "99.9%", label: "Uptime garanti", icon: TrendingUp },
-  { value: "< 100ms", label: "Temps de réponse", icon: Zap },
-  { value: "50+", label: "Projets livrés", icon: Award },
-  { value: "24/7", label: "Support technique", icon: Users },
+  { value: "99.9%", label: "Uptime guaranteed", icon: TrendingUp },
+  { value: "< 100ms", label: "Response time", icon: Zap },
+  { value: "50+", label: "Delivered projects", icon: Award },
+  { value: "24/7", label: "Technical support", icon: Users },
 ]
 
 const testimonials = [
@@ -141,29 +175,66 @@ const techStack = [
 const features = [
   {
     icon: Terminal,
-    title: "Code de Qualité Entreprise",
-    description: "Standards de développement rigoureux avec tests automatisés, code review et documentation complète.",
+    title: "Expertise & Experience",
+    description: "Our team comprises seasoned professionals with deep industry knowledge and hands-on experience in the latest technologies and best practices.",
     image: "/placeholder.svg?height=400&width=600",
   },
   {
     icon: Cpu,
-    title: "Architecture Scalable",
+    title: "Tailored Solutions",
     description:
-      "Conception de systèmes capables de gérer une croissance exponentielle sans compromis sur les performances.",
+      "We don’t do one-size-fits-all. We customize IT solutions to perfectly fit your business needs, goals, and budget.",
     image: "/placeholder.svg?height=400&width=600",
   },
   {
     icon: Globe,
-    title: "Déploiement Multi-Cloud",
-    description: "Expertise sur AWS, Azure et GCP avec stratégies de déploiement automatisées et monitoring avancé.",
+    title: "Cutting-Edge Technology",
+    description: "We leverage the latest tools, platforms, and innovations to keep your business ahead of the competition.",
     image: "/placeholder.svg?height=400&width=600",
   },
   {
     icon: Layers,
-    title: "Intégration Continue",
-    description: "Pipelines CI/CD optimisés pour des déploiements rapides, sûrs et sans interruption de service.",
+    title: "Reliable Support & Maintenance",
+    description: "We provide continuous monitoring, quick issue resolution, and proactive maintenance to keep your IT infrastructure running smoothly.",
     image: "/placeholder.svg?height=400&width=600",
   },
+  {
+    title: "Cost Efficiency",
+    description: "Through smart planning and scalable solutions, we maximize your IT investment while minimizing unnecessary expenses.",
+    image: '/placeholder.svg?height=400&width=600 ',
+    icon: Layers
+  },
+  {
+    title: "Security First",
+    description: "We prioritize your data and network security with robust protocols, compliance standards, and ongoing risk management.",
+    image: '/placeholder.svg?height=400&width=600 ',
+    icon: Shield
+  },
+  {
+    title: "Proven Track Record",
+    description: "Our successful projects and satisfied clients speak to our ability to deliver on time and within scope.",
+    image: '/placeholder.svg?height=400&width=600 ',
+    icon: Award
+  }
+  ,
+  {
+    title: "Transparent Communication",
+    description: "We keep you informed at every stage with clear, honest, and timely communication.",
+    image: '/placeholder.svg?height=400&width=600 ',
+    icon: MessageCircle
+  },
+  {
+    title: "Innovation Partner",
+    description: "More than just a vendor, we aim to be your long-term IT partner, driving innovation and growth alongside your business.",
+    image: '/placeholder.svg?height=400&width=600 ',
+    icon: MessageCircle
+  },
+  {
+    title: "Global Reach, Local Touch",
+    description: "With access to global talent and technologies, we deliver solutions tailored to your local business environment.",
+    image: '/placeholder.svg?height=400&width=600 ',
+    icon: MessageCircle
+  }
 ]
 
 export default function HomePage() {
@@ -181,6 +252,7 @@ export default function HomePage() {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.3])
 
   const featuresInView = useInView(featuresRef, { once: true, margin: "-100px" })
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -227,66 +299,45 @@ export default function HomePage() {
             animate="visible"
             className="max-w-5xl mx-auto text-center h-full pt-24"
           >
-            <motion.div variants={itemVariants}>
+            {/* <motion.div variants={itemVariants}>
               <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
                 v2.0.1 • Production Ready
               </Badge>
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-bold mb-8 tracking-tight">
-              <span className="gradient-text">Solutions Techniques</span>
+              <span className="gradient-text">New Generation</span>
               <br />
-              <span className="text-slate-900">de Nouvelle Génération</span>
+              <span className="text-slate-900">Technical Solutions</span>
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
               className=" text-md md:text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed"
             >
-              Architecture moderne, sécurité renforcée et performance optimale. Nous transformons vos défis techniques
-              en avantages concurrentiels durables avec une expertise de niveau entreprise.
+              Our dedicated team of developers, designers, and engineers enables us to deliver high-quality websites and mobile applications that align seamlessly with our clients’ goals—efficiently, intelligently, and cost-effectively.
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <Link href="/contact">
                 <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-sm md:text-lg px-10 py-4 font-medium">
-                  Audit Technique Gratuit
+                Free Technical Audit
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button
+              <Link href="/portfolio">
+                <Button
                 size="lg"
                 variant="outline"
                 className="text-sm md:text-lg px-10 py-4 border-2 font-medium group"
-                onClick={() => setIsVideoPlaying(true)}
               >
-                <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-                Voir nos Réalisations
+                Our Achievements
               </Button>
+              </Link>
             </motion.div>
 
             {/* Animated Metrics */}
-            <motion.div
-              variants={containerVariants}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-            >
-              {metrics.map((metric, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="text-center group"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="flex items-center justify-center mb-3">
-                    <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mr-3 group-hover:bg-blue-50 transition-colors">
-                      <metric.icon className="w-6 h-6 text-slate-700 group-hover:text-blue-600 transition-colors" />
-                    </div>
-                    <span className="text-2xl md:text-3xl font-bold font-mono text-slate-900">{metric.value}</span>
-                  </div>
-                  <p className="text-sm text-slate-600 font-medium">{metric.label}</p>
-                </motion.div>
-              ))}
-            </motion.div>
+           
           </motion.div>
         </motion.div>
 
@@ -313,7 +364,7 @@ export default function HomePage() {
 
       {/* Services Section with Advanced Animations */}
       <section className="py-24 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto h-full overflow-x-hidden px-6 md:px-12  mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -322,22 +373,21 @@ export default function HomePage() {
             className="text-center mb-20"
           >
             <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Core Services</Badge>
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Expertise Technique Complète</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 gradient-text"> Full Technical Expertise</h2>
             <p className="text-md md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              De l'architecture système à la livraison, nous maîtrisons chaque étape du cycle de développement moderne
-              avec une approche centrée sur la performance et la scalabilité.
+            From system architecture to delivery, we master every stage of the modern development cycle, with a focus on performance and scalability.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex gap-8 px-4 md:px-0 snap-x snap-mandatory overflow-x-auto f-full py-8 hide-scrollbar">
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group perspective-1000 h-80"
+                transition={{ duration: 0.6, delay: index * 0.1, type: 'spring', stiffness: 100 }}
+                className="group perspective-1000 h-80 snap-start min-w-[250px] md:min-w-[300px] lg:min-w-[250px] flex-shrink-0"
               >
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                   {/* Front Side */}
@@ -345,7 +395,7 @@ export default function HomePage() {
                     className={`absolute inset-0 w-full h-full backface-hidden border-0 shadow-lg bg-gradient-to-br ${service.color} backdrop-blur-sm`}
                   >
                     <CardContent className="p-8 flex flex-col justify-center items-center text-center h-full">
-                      <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <div className="w-16 h-16 p-4 bg-white rounded-2xl inline-flex items-center justify-center mb-6 shadow-lg">
                         <service.icon className={`w-8 h-8 ${service.iconColor}`} />
                       </div>
                       <h3 className="text-2xl font-bold mb-4 text-slate-900">{service.title}</h3>
@@ -430,8 +480,8 @@ export default function HomePage() {
       </section>
 
       {/* Interactive Features Section */}
-      <section ref={featuresRef} className="py-24 bg-slate-50">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+      <section className="py-24 bg-slate-50">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-y-hidden px-6 md:px-12  mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -441,9 +491,9 @@ export default function HomePage() {
             <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
               Fonctionnalités Avancées
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Pourquoi Nous Choisir ?</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Why Choose Us?</h2>
             <p className="text-md md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Notre approche technique différenciante qui garantit des résultats exceptionnels
+            Our differentiating technical approach guarantees exceptional results
             </p>
           </motion.div>
 
@@ -466,10 +516,10 @@ export default function HomePage() {
 
                   <div className="space-y-4 mb-8">
                     {[
-                      "Standards industriels respectés",
-                      "Documentation technique complète",
-                      "Support et maintenance inclus",
-                      "Garantie de performance",
+                      // "Standards industriels respectés",
+                      // "Documentation technique complète",
+                      // "Support et maintenance inclus",
+                      // "Garantie de performance",
                     ].map((item, itemIndex) => (
                       <motion.div
                         key={itemIndex}
@@ -486,7 +536,7 @@ export default function HomePage() {
 
                   <Link href="/services">
                     <Button className="bg-slate-900 hover:bg-slate-800 font-medium">
-                      Découvrir cette expertise
+                      Discover
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </Link>
@@ -541,7 +591,7 @@ export default function HomePage() {
       </section>
 
       {/* Tech Stack Showcase */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-24 bg-white overflow-hidden hidden">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -581,7 +631,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Carousel */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-slate-50 hidden">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -720,25 +770,21 @@ export default function HomePage() {
             className="max-w-5xl mx-auto text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text">
-              Prêt à Transformer Votre Infrastructure ?
+            Ready to Transform Your Infrastructure ?
             </h2>
             <p className="text-xl text-slate-600 mb-16 max-w-3xl mx-auto leading-relaxed">
-              Commençons par un audit technique gratuit de votre système actuel. Identifions ensemble les opportunités
-              d'optimisation et définissons une roadmap technique adaptée à vos objectifs business.
+            Let's start with a free technical audit of your current system. Together we'll identify
+            optimization opportunities and define a technical roadmap tailored to your business objectives.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-lg px-10 py-4 font-medium">
-                  Planifier un Audit Gratuit
+                  Book an Appointment
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="text-lg px-10 py-4 border-2 font-medium">
-                  Discuter de votre Projet
-                </Button>
-              </Link>
+              
             </div>
           </motion.div>
         </div>
