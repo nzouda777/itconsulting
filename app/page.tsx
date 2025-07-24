@@ -369,7 +369,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="flex gap-8 px-4 md:px-0 snap-x snap-mandatory overflow-x-auto f-full py-8 hide-scrollbar">
+          <div className="flex grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 md:px-0 snap-x snap-mandatory overflow-x-hidden f-full py-8 hide-scrollbar">
             {services.map((service, index) => (
               <motion.div
                 key={index}
