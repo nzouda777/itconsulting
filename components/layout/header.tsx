@@ -58,7 +58,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                  pathname === item.href ? "text-blue-600" : "text-slate-600 hover:text-slate-900"
+                  pathname === item.href ? "text-prime" : "text-slate-600 hover:text-prime"
                 }`}
               >
                 {item.name}
