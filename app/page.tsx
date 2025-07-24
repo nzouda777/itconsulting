@@ -113,7 +113,7 @@ const services = [
   },
   {
     icon: Cloud,
-    title: "Linux/DevOps/Cloud consulting",
+    title: "Linux/DevOps & Cloud consulting",
     description: "DevSecOps and cloud consulting services to optimize your IT infrastructure.",
     features: ["Pentest", "Conformité RGPD", "Zero Trust"],
     color: "from-blue-500/10 to-blue-500/10",
@@ -387,7 +387,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="flex grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 md:px-0 snap-x snap-mandatory overflow-x-hidden f-full py-8 hide-scrollbar">
+          <div className="flex grid grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-0 snap-x    py-8 ">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -416,13 +416,13 @@ export default function HomePage() {
                   <Card
                     className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 border-0 shadow-lg bg-gradient-to-br from-prime to-second backdrop-blur-sm`}
                   >
-                    <CardContent className="p-8 h-full flex flex-col justify-between bg-white">
+                    <CardContent className="p-8 h-full flex flex-col justify-between bg-white w-full ">
                       <div>
                         <div className="flex items-center mb-1">
                           <div className="p-3 w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4 shadow-md">
                             <service.icon className={`w-6 h-6 ${service.iconColor}`} />
                           </div>
-                          <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
+                          <h3 className="text-xl font-bold text-slate-900 whitespace-wrap text-wrap w-2/3">{service.title}</h3>
                         </div>
 
                         <div className="space-y-2 mb-3">
