@@ -34,6 +34,8 @@ import {
   Cloud,
   Handshake,
   Target,
+  Phone,
+  Smartphone,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -63,18 +65,26 @@ const itemVariants = {
 const services = [
   {
     icon: Code2,
-    title: "Web & Mobile Developement",
-    description: "Custom websites and mobile apps with ongoing support and maintenance.",
+    title: "Web Developement",
+    description: "Custom websites with ongoing support and maintenance.",
     features: ["React/Next.js", "Node.js/Python", "Architecture microservices"],
     color: "from-blue-500/10 to-cyan-500/10",
     iconColor: "text-blue-600",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile Developement",
+    description: "Custom mobile apps with ongoing support and maintenance.",
+    features: ["React Native", "Flutter", "Swift/Kotlin"],
+    color: "from-green-500/10 to-emerald-500/10",
+    iconColor: "text-green-600",
   },
   {
     icon: PenTool,
     title: "UI/UX & Graphic Design",
     description: "Creative branding, UI/UX, flyers and brochures that communicate and captivate effectively.",
     features: ["AWS/Azure/GCP", "Kubernetes", "CI/CD Pipeline"],
-    color: "from-green-500/10 to-emerald-500/10",
+    color: "from-yellow-500/10 to-emerald-500/10",
     iconColor: "text-green-600",
   },
   {
@@ -98,16 +108,24 @@ const services = [
     title: "Community & Social Media Management",
     description: "Social media management and community engagement services.",
     features: ["AWS/Azure/GCP", "Kubernetes", "CI/CD Pipeline"],
-    color: "from-green-500/10 to-emerald-500/10",
+    color: "from-orange-500/10 to-emerald-500/10",
     iconColor: "text-green-600",
   },
   {
     icon: Cloud,
-    title: "DevSecOps & Cloud Consulting",
+    title: "Linux/DevOps/Cloud consulting",
     description: "DevSecOps and cloud consulting services to optimize your IT infrastructure.",
     features: ["Pentest", "Conformité RGPD", "Zero Trust"],
-    color: "from-red-500/10 to-orange-500/10",
-    iconColor: "text-red-600",
+    color: "from-blue-500/10 to-blue-500/10",
+    iconColor: "text-blue-600",
+  },
+  {
+    icon: Phone,
+    title: "Call Center",
+    description: "Call center services to handle your daily tasks and appointments.",
+    features: ["Call Center", "APM", "Observabilité"],
+    color: "from-purple-500/10 to-pink-500/10",
+    iconColor: "text-purple-600",
   }
 ]
 
@@ -369,7 +387,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="flex grid grid-cols-2 md:grid-cols-3  gap-8 px-4 md:px-0 snap-x snap-mandatory overflow-x-hidden f-full py-8 hide-scrollbar">
+          <div className="flex grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 md:px-0 snap-x snap-mandatory overflow-x-hidden f-full py-8 hide-scrollbar">
             {services.map((service, index) => (
               <motion.div
                 key={index}
