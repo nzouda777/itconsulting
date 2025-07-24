@@ -28,6 +28,12 @@ import {
   Layers,
   PenTool,
   MessageCircle,
+  Clapperboard,
+  Headset,
+  Rss,
+  Cloud,
+  Handshake,
+  Target,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -58,7 +64,7 @@ const services = [
   {
     icon: Code2,
     title: "Web & Mobile Developement",
-    description: "Applications web et mobiles haute performance",
+    description: "Custom websites and mobile apps with ongoing support and maintenance.",
     features: ["React/Next.js", "Node.js/Python", "Architecture microservices"],
     color: "from-blue-500/10 to-cyan-500/10",
     iconColor: "text-blue-600",
@@ -66,59 +72,43 @@ const services = [
   {
     icon: PenTool,
     title: "UI/UX & Graphic Design",
-    description: "Solutions cloud et DevOps scalables",
+    description: "Creative branding, UI/UX, flyers and brochures that communicate and captivate effectively.",
     features: ["AWS/Azure/GCP", "Kubernetes", "CI/CD Pipeline"],
     color: "from-green-500/10 to-emerald-500/10",
     iconColor: "text-green-600",
   },
   {
-    icon: Shield,
-    title: "Sécurité",
-    description: "Audit et protection des systèmes",
+    icon: Clapperboard,
+    title: "Motion Design & Ads",
+    description: "Creative motion design and ads that engage and inspire.",
     features: ["Pentest", "Conformité RGPD", "Zero Trust"],
     color: "from-red-500/10 to-orange-500/10",
     iconColor: "text-red-600",
   },
   {
-    icon: Zap,
-    title: "Performance",
-    description: "Optimisation et monitoring avancé",
+    icon: Headset,
+    title: "Virtual Assistant",
+    description: "Virtual assistant services to handle your daily tasks and appointments.",
     features: ["Load Testing", "APM", "Observabilité"],
     color: "from-purple-500/10 to-pink-500/10",
     iconColor: "text-purple-600",
   },
   {
-    icon: Code2,
-    title: "Mobile Application",
-    description: "Applications web et mobiles haute performance",
-    features: ["React/Next.js", "Node.js/Python", "Architecture microservices"],
-    color: "from-blue-500/10 to-cyan-500/10",
-    iconColor: "text-blue-600",
-  },
-  {
-    icon: Database,
-    title: "Infrastructure",
-    description: "Solutions cloud et DevOps scalables",
+    icon: Rss,
+    title: "Community & Social Media Management",
+    description: "Social media management and community engagement services.",
     features: ["AWS/Azure/GCP", "Kubernetes", "CI/CD Pipeline"],
     color: "from-green-500/10 to-emerald-500/10",
     iconColor: "text-green-600",
   },
   {
-    icon: Shield,
-    title: "Sécurité",
-    description: "Audit et protection des systèmes",
+    icon: Cloud,
+    title: "DevSecOps & Cloud Consulting",
+    description: "DevSecOps and cloud consulting services to optimize your IT infrastructure.",
     features: ["Pentest", "Conformité RGPD", "Zero Trust"],
     color: "from-red-500/10 to-orange-500/10",
     iconColor: "text-red-600",
-  },
-  {
-    icon: Zap,
-    title: "Performance",
-    description: "Optimisation et monitoring avancé",
-    features: ["Load Testing", "APM", "Observabilité"],
-    color: "from-purple-500/10 to-pink-500/10",
-    iconColor: "text-purple-600",
-  },
+  }
 ]
 
 const metrics = [
@@ -227,13 +217,13 @@ const features = [
     title: "Innovation Partner",
     description: "More than just a vendor, we aim to be your long-term IT partner, driving innovation and growth alongside your business.",
     image: '/placeholder.svg?height=400&width=600 ',
-    icon: MessageCircle
+    icon: Handshake
   },
   {
     title: "Global Reach, Local Touch",
     description: "With access to global talent and technologies, we deliver solutions tailored to your local business environment.",
     image: '/placeholder.svg?height=400&width=600 ',
-    icon: MessageCircle
+    icon: Target
   }
 ]
 
@@ -399,7 +389,7 @@ export default function HomePage() {
                         <service.icon className={`w-8 h-8 ${service.iconColor}`} />
                       </div>
                       <h3 className="text-2xl font-bold mb-4 text-slate-900">{service.title}</h3>
-                      <p className="text-slate-600 leading-relaxed">{service.description}</p>
+                      {/* <p className="text-slate-600 leading-relaxed">{service.description}</p> */}
                       {/* <div className="mt-6 text-sm text-slate-500 font-mono">Survolez pour plus de détails</div> */}
                     </CardContent>
                   </Card>
@@ -410,23 +400,25 @@ export default function HomePage() {
                   >
                     <CardContent className="p-8 h-full flex flex-col justify-between bg-white">
                       <div>
-                        <div className="flex items-center mb-6">
-                          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4 shadow-md">
+                        <div className="flex items-center mb-1">
+                          <div className="p-3 w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4 shadow-md">
                             <service.icon className={`w-6 h-6 ${service.iconColor}`} />
                           </div>
                           <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
                         </div>
 
-                        <div className="space-y-4 mb-6">
-                          <h4 className="font-semibold text-slate-800 text-sm uppercase tracking-wide">Technologies</h4>
-                          <ul className="space-y-2">
+                        <div className="space-y-2 mb-3">
+
+                      <p className="text-slate-600 leading-relaxed">{service.description}</p>
+                          {/* <h4 className="font-semibold text-slate-800 text-sm uppercase tracking-wide">Technologies</h4> */}
+                          {/* <ul className="space-y-2">
                             {service.features.map((feature, featureIndex) => (
                               <li key={featureIndex} className="flex items-center text-sm text-slate-700">
                                 <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                                 <span className="font-mono font-medium">{feature}</span>
                               </li>
                             ))}
-                          </ul>
+                          </ul> */}
                         </div>
 
                         <div className="space-y-3 mb-6 hidden">
@@ -465,7 +457,7 @@ export default function HomePage() {
                       </div>
 
                       <Link href="/services" className="w-full">
-                        <Button className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium">
+                        <Button className="w-full bg-second text-white font-medium hover:bg-gradient-to-r from-prime to-second duration-500 hover:bg-prime hover:duration-1000 transition-colors">
                           Découvrir
                           <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
@@ -480,8 +472,8 @@ export default function HomePage() {
       </section>
 
       {/* Interactive Features Section */}
-      <section className="py-24 bg-slate-50">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-y-hidden px-6 md:px-12  mx-auto px-6">
+      <section className="py-20 bg-slate-50">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-hidden px-6 py-6 md:px-12  mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

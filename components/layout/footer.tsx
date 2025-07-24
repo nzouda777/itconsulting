@@ -8,37 +8,39 @@ const footerSections = [
   {
     title: "Services",
     links: [
-      { name: "Développement Web", href: "/web-development" },
-      { name: "Applications Mobiles", href: "/mobile-apps" },
-      { name: "Cloud & DevOps", href: "/cloud-devops" },
-      { name: "Cybersécurité", href: "/cybersecurity" },
+      { name: "Web & Mobile Developement", href: "/services" },
+      { name: "UI/UX & Graphic Design", href: "/services" },
+      { name: "Motion Design & Ads", href: "/services" },
+      { name: "Virtual Assistant", href: "/services" },
+      { name: "Community & Social Media Management", href: "/services" },
+      { name: "DevSecOps & Cloud Consulting", href: "/services" },
     ],
   },
-  {
-    title: "Solutions",
-    links: [
-      { name: "Audit Technique", href: "/audit" },
-      { name: "Architecture Système", href: "/architecture" },
-      { name: "Optimisation Performance", href: "/optimization" },
-      { name: "Formation Équipes", href: "/training" },
-    ],
-  },
-  {
-    title: "Ressources",
-    links: [
-      { name: "Documentation", href: "/documentation" },
-      { name: "Études de Cas", href: "/case-studies" },
-      { name: "Guides Techniques", href: "/guides" },
-      { name: "API Reference", href: "/api-reference" },
-    ],
-  },
+  // {
+  //   title: "Solutions",
+  //   links: [
+  //     { name: "Audit Technique", href: "/audit" },
+  //     { name: "Architecture Système", href: "/architecture" },
+  //     { name: "Optimisation Performance", href: "/optimization" },
+  //     { name: "Formation Équipes", href: "/training" },
+  //   ],
+  // },
+  // {
+  //   title: "Ressources",
+  //   links: [
+  //     { name: "Documentation", href: "/documentation" },
+  //     { name: "Études de Cas", href: "/case-studies" },
+  //     { name: "Guides Techniques", href: "/guides" },
+  //     { name: "API Reference", href: "/api-reference" },
+  //   ],
+  // },
   {
     title: "Entreprise",
     links: [
-      { name: "À propos", href: "/about-us" },
-      { name: "Équipe", href: "/team" },
-      { name: "Carrières", href: "/careers" },
-      { name: "Partenaires", href: "/partners" },
+      { name: "About", href: "/about" },
+      { name: "Team", href: "/team" },
+      { name: "Careers", href: "/careers" },
+      // { name: "Partenaires", href: "/partners" },
     ],
   },
 ]

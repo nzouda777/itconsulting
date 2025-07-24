@@ -76,12 +76,12 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link href="/contact">
               <Button variant="ghost" size="sm">
-                Audit Gratuit
+                Free Audit
               </Button>
             </Link>
             <Link href="/contact">
-              <Button size="sm" className="bg-slate-900 hover:bg-slate-800">
-                Démarrer un Projet
+              <Button size="sm" className="bg-gradient-to-l from-prime to-second font-bold">
+                Start a Project
               </Button>
             </Link>
           </div>
@@ -116,8 +116,8 @@ export default function Header() {
                       href={item.href}
                       className={`block px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                         pathname === item.href
-                          ? "text-blue-600 bg-blue-50"
-                          : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                          ? "text-white bg-second"
+                          : "text-slate-600 hover:text-white hover:bg-second"
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
@@ -132,7 +132,7 @@ export default function Header() {
                     </Button>
                   </Link>
                   <Link href="/contact">
-                    <Button size="sm" className="w-full bg-slate-900 hover:bg-slate-800">
+                    <Button size="sm" className="w-full bg-gradient-to-l from-prime to-second font-bold">
                       Start a Project
                     </Button>
                   </Link>
