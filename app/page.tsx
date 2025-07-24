@@ -480,9 +480,9 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
+            {/* <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
               Fonctionnalités Avancées
-            </Badge>
+            </Badge> */}
             <h2 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Why Choose Us?</h2>
             <p className="text-md md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Our differentiating technical approach guarantees exceptional results
@@ -547,12 +547,12 @@ export default function HomePage() {
                       height={400}
                       className="w-full h-80 object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-second/20 to-transparent" />
                   </div>
 
                   {/* Floating Elements */}
                   <motion.div
-                    className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full opacity-20"
+                    className="absolute -top-4 -right-4 w-20 h-20 bg-prime rounded-full opacity-20"
                     animate={{
                       scale: [1, 1.2, 1],
                       rotate: [0, 180, 360],
@@ -564,7 +564,7 @@ export default function HomePage() {
                     }}
                   />
                   <motion.div
-                    className="absolute -bottom-6 -left-6 w-16 h-16 bg-green-500 rounded-full opacity-20"
+                    className="absolute -bottom-6 -left-6 w-16 h-16 bg-second rounded-full opacity-20"
                     animate={{
                       scale: [1.2, 1, 1.2],
                       rotate: [360, 180, 0],
