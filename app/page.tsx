@@ -57,7 +57,7 @@ const itemVariants = {
 const services = [
   {
     icon: Code2,
-    title: "Web Design & Maintenance",
+    title: "Web & Mobile Developement",
     description: "Applications web et mobiles haute performance",
     features: ["React/Next.js", "Node.js/Python", "Architecture microservices"],
     color: "from-blue-500/10 to-cyan-500/10",
@@ -65,7 +65,7 @@ const services = [
   },
   {
     icon: PenTool,
-    title: "Logo and Graphic Design",
+    title: "UI/UX & Graphic Design",
     description: "Solutions cloud et DevOps scalables",
     features: ["AWS/Azure/GCP", "Kubernetes", "CI/CD Pipeline"],
     color: "from-green-500/10 to-emerald-500/10",
@@ -320,7 +320,7 @@ export default function HomePage() {
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <Link href="/contact">
-                <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-sm md:text-lg px-10 py-4 font-medium">
+                <Button size="lg" className="bg-second text-sm md:text-lg px-10 py-4 font-medium">
                 Free Technical Audit
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -387,28 +387,28 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1, type: 'spring', stiffness: 100 }}
-                className="group perspective-1000 h-80 snap-start min-w-[250px] md:min-w-[300px] lg:min-w-[250px] flex-shrink-0"
+                className="group perspective-1000 h-80 snap-start min-w-[250px] md:min-w-[300px] lg:min-w-[250px] flex-shrink-0 p-0.5 bg-gradient-to-r rounded-sm from-prime to-second"
               >
-                <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+                <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180 ">
                   {/* Front Side */}
                   <Card
-                    className={`absolute inset-0 w-full h-full backface-hidden border-0 shadow-lg bg-gradient-to-br ${service.color} backdrop-blur-sm`}
+                    className={`absolute inset-0 w-full h-full backface-hidden border-0 shadow-sm bg-white  backdrop-blur-sm rounded-sm`}
                   >
                     <CardContent className="p-8 flex flex-col justify-center items-center text-center h-full">
-                      <div className="w-16 h-16 p-4 bg-white rounded-2xl inline-flex items-center justify-center mb-6 shadow-lg">
+                      <div className="w-16 h-16 p-4 bg-white rounded-2xl inline-flex items-center justify-center mb-6 shadow-md">
                         <service.icon className={`w-8 h-8 ${service.iconColor}`} />
                       </div>
                       <h3 className="text-2xl font-bold mb-4 text-slate-900">{service.title}</h3>
                       <p className="text-slate-600 leading-relaxed">{service.description}</p>
-                      <div className="mt-6 text-sm text-slate-500 font-mono">Survolez pour plus de détails</div>
+                      {/* <div className="mt-6 text-sm text-slate-500 font-mono">Survolez pour plus de détails</div> */}
                     </CardContent>
                   </Card>
 
                   {/* Back Side */}
                   <Card
-                    className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 border-0 shadow-lg bg-gradient-to-br ${service.color} backdrop-blur-sm`}
+                    className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 border-0 shadow-lg bg-gradient-to-br from-prime to-second backdrop-blur-sm`}
                   >
-                    <CardContent className="p-8 h-full flex flex-col justify-between">
+                    <CardContent className="p-8 h-full flex flex-col justify-between bg-white">
                       <div>
                         <div className="flex items-center mb-6">
                           <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4 shadow-md">
@@ -508,7 +508,7 @@ export default function HomePage() {
                 className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
                 <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                  <div className="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-b from-prime to-second rounded-2xl flex items-center justify-center mb-8">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-3xl font-bold text-slate-900 mb-6">{feature.title}</h3>
@@ -779,7 +779,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-lg px-10 py-4 font-medium">
+                <Button size="lg" className="bg-second hover:bg-slate-800 text-lg px-10 py-4 font-medium">
                   Book an Appointment
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
