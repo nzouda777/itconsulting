@@ -185,7 +185,7 @@ const features = [
     icon: Terminal,
     title: "Expertise & Experience",
     description: "Our team comprises seasoned professionals with deep industry knowledge and hands-on experience in the latest technologies and best practices.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://thumbs.dreamstime.com/b/expertise-expert-consulting-knowledge-advice-business-development-concept-businessman-pressing-button-virtual-screen-206759881.jpg",
   },
   {
     icon: Cpu,

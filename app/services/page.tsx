@@ -10,81 +10,82 @@ import { Code2, Shield, Cloud, ArrowRight } from "lucide-react"
 
 const serviceCategories = [
   {
-    title: "Développement",
-    description: "Solutions logicielles sur mesure",
+    title: "Development",
+    description: "Custom software solutions",
     icon: Code2,
     services: [
       {
-        name: "Applications Web",
-        description: "React, Next.js, Vue.js avec architecture moderne",
+        name: "Web applications",
+        description: "React, Next.js, Vue.js with modern architecture",
         technologies: ["TypeScript", "GraphQL", "Microservices"],
-        pricing: "À partir de 15k€",
+        pricing: "From 15k€",
       },
       {
-        name: "Applications Mobiles",
-        description: "iOS, Android natif et cross-platform",
-        technologies: ["React Native", "Flutter", "Swift/Kotlin"],
-        pricing: "À partir de 20k€",
+        name: "Mobile applications",
+        description: "iOS, Android native and cross-platform",
+        technologies: ["React Native", "Flutter", "Swift/Kotlin/Java"],
+        pricing: "From 20k€",
       },
       {
         name: "APIs & Backend",
-        description: "Services robustes et scalables",
-        technologies: ["Node.js", "Python", "Go", "Rust"],
-        pricing: "À partir de 10k€",
+        description: "Robust and scalable services",
+        technologies: ["Node.js", "Python", "Go", "PHP", "JAVA"],
+        pricing: "From 10k€",
       },
     ],
   },
   {
     title: "Infrastructure",
-    description: "Cloud et DevOps de niveau entreprise",
+    description: "Cloud and DevOps at the enterprise level",
     icon: Cloud,
     services: [
       {
         name: "Architecture Cloud",
-        description: "Migration et optimisation multi-cloud",
+        description: "Migration and multi-cloud optimization",
         technologies: ["AWS", "Azure", "GCP", "Terraform"],
-        pricing: "À partir de 25k€",
+        pricing: "From 25k€",
       },
       {
         name: "DevOps & CI/CD",
-        description: "Automatisation complète du déploiement",
-        technologies: ["Kubernetes", "Docker", "Jenkins", "GitLab"],
-        pricing: "À partir de 12k€",
+        description: "Complete deployment automation",
+        technologies: ["Kubernetes", "Docker", "Jenkins", "GitLab", "Jira", "Confluence", "Github Action"],
+        pricing: "From 12k€",
       },
       {
-        name: "Monitoring & Observabilité",
-        description: "Surveillance proactive des systèmes",
-        technologies: ["Prometheus", "Grafana", "ELK Stack"],
-        pricing: "À partir de 8k€",
+        name: "Monitoring & Observability",
+        description: "Proactive system monitoring",
+        technologies: ["Prometheus", "Grafana", "Datadog", "New Relic", "Sentry", "ELK Stack"],
+        pricing: "From 8k€",
       },
     ],
   },
   {
-    title: "Sécurité",
-    description: "Protection et conformité avancées",
+    title: "Security",
+    description: "Advanced protection and compliance",
     icon: Shield,
     services: [
       {
-        name: "Audit de Sécurité",
-        description: "Évaluation complète des vulnérabilités",
+        name: "Security Audit",
+        description: "Complete vulnerability assessment",
         technologies: ["OWASP", "Pentest", "Code Review"],
-        pricing: "À partir de 5k€",
+        pricing: "From 5k€",
       },
       {
-        name: "Implémentation Zero Trust",
-        description: "Architecture de sécurité moderne",
+        name: "Zero Trust Implementation",
+        description: "Modern security architecture",
         technologies: ["IAM", "MFA", "Network Segmentation"],
-        pricing: "À partir de 18k€",
+        pricing: "From 18k€",
       },
       {
-        name: "Conformité RGPD",
-        description: "Mise en conformité réglementaire",
+        name: "RGPD Compliance",
+        description: "Compliance with data protection regulations",
         technologies: ["Data Mapping", "Privacy by Design"],
-        pricing: "À partir de 7k€",
+        pricing: "From 7k€",
       },
     ],
   },
 ]
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -127,14 +128,13 @@ export default function ServicesPage() {
             </motion.div>
 
             <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-bold mb-8 gradient-text">
-              Expertise Technique
-              <br />
-              de Niveau Entreprise
+            Technical Expertise <br />
+            at the Enterprise Level
             </motion.h1>
 
             <motion.p variants={itemVariants} className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-              Solutions complètes de développement, infrastructure cloud et sécurité. Chaque projet est conçu pour la
-              performance, la scalabilité et la maintenabilité.
+            Comprehensive development, cloud infrastructure, and security solutions. Each project is designed for
+            performance, scalability, and maintainability.
             </motion.p>
           </motion.div>
         </div>
@@ -193,13 +193,13 @@ export default function ServicesPage() {
                           </div>
                         </div>
 
-                        <div className="mb-6">
+                        {/* <div className="mb-6">
                           <div className="text-2xl font-bold text-slate-900 mb-1">{service.pricing}</div>
                           <p className="text-sm text-slate-600">Devis personnalisé selon vos besoins</p>
-                        </div>
+                        </div> */}
 
-                        <Button className="w-full bg-slate-900 hover:bg-slate-800">
-                          Demander un Devis
+                        <Button className="w-full bg-gradient-to-r from-prime to-second">
+                          Request a Quote
                           <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                       </CardContent>
@@ -221,10 +221,10 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Méthodologie</Badge>
-            <h2 className="text-4xl font-bold mb-6 gradient-text">Processus de Développement Agile</h2>
+            {/* <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Méthodologie</Badge> */}
+            <h2 className="text-4xl font-bold mb-6 gradient-text">Agile Development Process</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Une approche structurée garantissant qualité, délais et budget maîtrisés
+              A structured approach ensuring quality, deadlines, and budget control
             </p>
           </motion.div>
 
@@ -232,23 +232,23 @@ export default function ServicesPage() {
             {[
               {
                 step: "01",
-                title: "Analyse & Audit",
-                description: "Évaluation technique complète de l'existant et définition des objectifs",
+                title: "Analysis & Audit",
+                description: "Complete technical evaluation of the existing system and definition of objectives",
               },
               {
                 step: "02",
                 title: "Architecture & Design",
-                description: "Conception de l'architecture système et des interfaces utilisateur",
+                description: "System architecture and user interface design",
               },
               {
                 step: "03",
-                title: "Développement Itératif",
-                description: "Implémentation par sprints avec validation continue",
+                title: "Iterative Development",
+                description: "Implementation by sprints with continuous validation",
               },
               {
                 step: "04",
-                title: "Déploiement & Support",
-                description: "Mise en production sécurisée et maintenance évolutive",
+                title: "Deployment & Support",
+                description: "Secure production deployment and evolving maintenance",
               },
             ].map((phase, index) => (
               <motion.div
@@ -259,7 +259,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 font-mono text-xl font-bold">
+                <div className="w-16 h-16 bg-gradient-to-tr from-prime to-second text-white rounded-2xl flex items-center justify-center mx-auto mb-6 font-mono text-xl font-bold">
                   {phase.step}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{phase.title}</h3>
