@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { useParams, useRouter } from "next/navigation"
 import Header from "@/components/layout/header"
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import Footer from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -45,7 +47,9 @@ L'architecture microservices décompose une application monolithique en plusieur
 - **Scalabilité indépendante** : Chaque service peut être mis à l'échelle selon ses besoins
 - **Technologie diversifiée** : Possibilité d'utiliser différentes technologies par service
 - **Déploiement indépendant** : Mise en production sans affecter les autres services
-- **Équipes autonomes** : Chaque équipe peut travailler sur son service
+- **Équipes autonomes** : Chaque équipe peut travailler sur son service.
+
+
 
 ## Meilleures Pratiques
 
@@ -60,6 +64,7 @@ Privilégiez les communications asynchrones via des message brokers comme Rabbit
 ### 3. Gestion des Données
 
 Chaque service doit avoir sa propre base de données pour maintenir l'indépendance et éviter les couplages de données.
+
 
 ## Défis et Solutions
 
@@ -162,18 +167,18 @@ export default function BlogArticlePage() {
                 <Calendar className="w-4 h-4 mr-1" />
                 {new Date(article.date).toLocaleDateString("fr-FR")}
               </div>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <Clock className="w-4 h-4 mr-1" />
                 {article.readTime}
-              </div>
+              </div> */}
               <div className="flex items-center">
                 <User className="w-4 h-4 mr-1" />
                 {article.author}
               </div>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <TrendingUp className="w-4 h-4 mr-1" />
                 {article.views} vues
-              </div>
+              </div> */}
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">{article.title}</h1>
@@ -261,17 +266,38 @@ export default function BlogArticlePage() {
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-slate prose-lg max-w-none">
-              <div
-                className="text-slate-700 leading-relaxed"
-                dangerouslySetInnerHTML={{
-                  __html: article.content
-                    .replace(/\n/g, "<br>")
-                    .replace(/#{1,6}\s/g, '<h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">')
-                    .replace(/<h2[^>]*>/g, '</p><h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">')
-                    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-                    .replace(/- (.*?)(<br>|$)/g, '<li class="mb-2">$1</li>'),
-                }}
-              />
+              <div className="text-slate-700 leading-relaxed">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    p: ({ node, ...props }) => <p className="text-slate-900/70 font-normal text-lg leading-relaxed" {...props} />,
+                    h1: ({ node, ...props }) => <h1 className="text-4xl font-bold text-slate-900 mt-8 mb-4" {...props} />,
+                    h2: ({ node, ...props }) => <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4" {...props} />,
+                    h3: ({ node, ...props }) => <h3 className="text-2xl font-bold text-slate-900 mt-8 mb-4" {...props} />,
+                    h4: ({ node, ...props }) => <h4 className="text-xl font-bold text-slate-900 mt-8 mb-4" {...props} />,
+                    h5: ({ node, ...props }) => <h5 className="text-lg font-bold text-slate-900 mt-8 mb-4" {...props} />,
+                    h6: ({ node, ...props }) => <h6 className="text-base font-bold text-slate-900 mt-8 mb-4" {...props} />,
+                    strong: ({ node, ...props }) => <strong className="text-slate-900" {...props} />,
+                    em: ({ node, ...props }) => <em className="text-slate-700" {...props} />,
+                    ul: ({ node, ...props }) => <ul className="mb-4" {...props} />,
+                    ol: ({ node, ...props }) => <ol className="mb-4" {...props} />,
+                    li: ({ node, ...props }) => <li className="mb-2 list-disc ml-6 text-lg" {...props} />,
+                    a: ({ node, ...props }) => <a className="text-blue-600 hover:text-blue-800" {...props} />,
+                    code: ({ node, inline, className, children, ...props }) => {
+                      if (inline) {
+                        return <code className="bg-slate-100 px-2 py-1 rounded" {...props}>{children}</code>;
+                      }
+                      return (
+                        <pre className="bg-slate-100 p-4 rounded-lg mb-4" {...props}>
+                          {children}
+                        </pre>
+                      );
+                    },
+                  }}
+                >
+                  {article.content}
+                </ReactMarkdown>
+              </div>
             </div>
 
             {/* Call to Action */}
