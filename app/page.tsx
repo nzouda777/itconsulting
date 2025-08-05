@@ -328,7 +328,7 @@ export default function HomePage() {
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <Link href="/contact">
-                <Button size="lg" className="bg-second text-sm md:text-lg px-10 py-4 font-medium">
+                <Button size="lg" className="bg-second hover:bg-prime text-sm md:text-lg px-10 py-4 font-medium">
                 Free Technical Audit
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -387,7 +387,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <div className="flex grid grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-0 snap-x    py-8 ">
+          <div className="flex grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 md:gap-8 gap-2 md:px-0 snap-x    py-8 ">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -395,18 +395,18 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1, type: 'spring', stiffness: 100 }}
-                className="group perspective-1000 h-80 snap-start min-w-[250px] md:min-w-[300px] lg:min-w-[250px] flex-shrink-0 p-0.5 bg-gradient-to-r rounded-sm from-prime to-second"
+                className="group perspective-1000 h-64 md:h-80 snap-start min-w-full md:min-w-[300px] lg:min-w-[250px] flex-shrink-0 p-0.5 bg-gradient-to-r rounded-sm from-prime to-second"
               >
-                <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180 ">
+                <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180 px-4">
                   {/* Front Side */}
                   <Card
                     className={`absolute inset-0 w-full h-full backface-hidden border-0 shadow-sm bg-white  backdrop-blur-sm rounded-sm`}
                   >
                     <CardContent className="p-8 flex flex-col justify-center items-center text-center h-full">
-                      <div className="w-16 h-16 p-4 bg-white rounded-2xl inline-flex items-center justify-center mb-6 shadow-md">
+                      <div className="md:w-16 md:h-16 w-12 h-12 p-4 bg-white rounded-2xl inline-flex items-center justify-center mb-6 shadow-md">
                         <service.icon className={`w-8 h-8 ${service.iconColor}`} />
                       </div>
-                      <h3 className="text-2xl font-bold mb-4 text-slate-900">{service.title}</h3>
+                      <h3 className="md:text-2xl text-xl font-bold mb-4 text-slate-900">{service.title}</h3>
                       {/* <p className="text-slate-600 leading-relaxed">{service.description}</p> */}
                       {/* <div className="mt-6 text-sm text-slate-500 font-mono">Survolez pour plus de détails</div> */}
                     </CardContent>
@@ -416,18 +416,18 @@ export default function HomePage() {
                   <Card
                     className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 border-0 shadow-lg bg-gradient-to-br from-prime to-second backdrop-blur-sm`}
                   >
-                    <CardContent className="p-8 h-full flex flex-col justify-between bg-white w-full ">
-                      <div>
-                        <div className="flex items-center mb-1">
-                          <div className="p-3 w-12 h-12 bg-white rounded-xl flex items-center justify-center mr-4 shadow-md">
+                    <CardContent className="p-2 md:p-8 h-full flex flex-col justify-between bg-white w-full  text-center">
+                      <div className="space-y-2">
+                        <div className="flex items-center mb-1 md:flex-row flex-col justify-center space-y-4">
+                          <div className="p-3 md:w-16 md:h-16 w-12 h-12 bg-white rounded-xl flex items-center justify-center  shadow-md">
                             <service.icon className={`w-6 h-6 ${service.iconColor}`} />
                           </div>
-                          <h3 className="text-xl font-bold text-slate-900 whitespace-wrap text-wrap w-2/3">{service.title}</h3>
+                          <h3 className="md:text-xl text-base font-bold text-slate-900 whitespace-wrap text-wrap w-full">{service.title}</h3>
                         </div>
 
                         <div className="space-y-2 mb-3">
 
-                      <p className="text-slate-600 leading-relaxed">{service.description}</p>
+                      <p className="text-slate-600 leading-relaxed md:text-base text-xs">{service.description}</p>
                           {/* <h4 className="font-semibold text-slate-800 text-sm uppercase tracking-wide">Technologies</h4> */}
                           {/* <ul className="space-y-2">
                             {service.features.map((feature, featureIndex) => (
@@ -475,8 +475,8 @@ export default function HomePage() {
                       </div>
 
                       <Link href="/services" className="w-full">
-                        <Button className="w-full bg-second text-white font-medium hover:bg-gradient-to-r from-prime to-second duration-500 hover:bg-prime hover:duration-1000 transition-colors">
-                          Découvrir
+                        <Button className="w-full bg-second text-white font-medium hover:bg-gradient-to-r from-prime to-second duration-500 hover:bg-prime hover:duration-1000 transition-colors md:text-base text-xs md:py-2 py-1 md:h-10 h-8">
+                          Discover
                           <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                       </Link>

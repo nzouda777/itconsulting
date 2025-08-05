@@ -123,9 +123,9 @@ export default function ServicesPage() {
             animate="visible"
             className="max-w-4xl mx-auto text-center"
           >
-            <motion.div variants={itemVariants}>
+            {/* <motion.div variants={itemVariants}>
               <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Services Techniques</Badge>
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-bold mb-8 gradient-text">
             Technical Expertise <br />

@@ -83,7 +83,7 @@ Implémentez le pattern Saga pour gérer les transactions distribuées de maniè
 L'architecture microservices n'est pas une solution miracle, mais elle offre des avantages significatifs pour les applications complexes nécessitant une haute scalabilité. La clé du succès réside dans une planification minutieuse et l'adoption progressive.
     `,
     category: "Architecture",
-    author: "Alexandre Martin",
+    author: "Ivan SAHA",
     date: "2024-01-15",
     readTime: "12 min",
     image: "/placeholder.svg?height=400&width=800",
@@ -142,7 +142,7 @@ export default function BlogArticlePage() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto  px-6 md:px-12  mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
