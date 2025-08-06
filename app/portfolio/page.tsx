@@ -15,89 +15,47 @@ const categories = ["Tous", "Web", "Mobile", "Cloud", "Sécurité", "IA/ML"]
 const projects = [
   {
     id: 1,
-    title: "Plateforme E-commerce Next-Gen",
+    title: "ITPath360",
     category: "Web",
     description:
-      "Architecture microservices avec React, Node.js et Kubernetes. Performance optimisée avec 99.9% d'uptime.",
-    image: "/placeholder.svg?height=400&width=600",
+      "E-learning platform for IT professionals and students.",
+    image: "/itpath360.png",
     technologies: ["React", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
     metrics: { users: "50K+", performance: "< 100ms", uptime: "99.9%" },
     year: "2024",
-    client: "RetailTech Corp",
+    client: "ITPath360",
     duration: "8 mois",
     team: "6 développeurs",
-    links: { demo: "#", github: "#", case: "#" },
+    links: { demo: "https://itpath360.com/", github: "#", case: "#" },
   },
   {
     id: 2,
-    title: "Application Mobile FinTech",
-    category: "Mobile",
-    description: "App bancaire sécurisée avec biométrie, transactions temps réel et conformité PCI DSS.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["React Native", "TypeScript", "GraphQL", "MongoDB", "Docker"],
-    metrics: { downloads: "100K+", rating: "4.8/5", transactions: "1M+/mois" },
+    title: "TradeZenith",
+    category: "Web",
+    description: "Trading platform to learn about crypto, forex and stocks.",
+    image: "/tradezenith.png",
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
+    metrics: { users: "100K+", rating: "4.8/5", transactions: "1M+/mois" },
     year: "2024",
-    client: "FinanceSecure",
-    duration: "12 mois",
-    team: "8 développeurs",
-    links: { demo: "#", github: "#", case: "#" },
+    client: "TradeZenith",
+    duration: "6 mois",
+    team: "6 développeurs",
+    links: { demo: "https://tradezennith.com/", github: "#", case: "#" },
   },
   {
     id: 3,
-    title: "Infrastructure Cloud Multi-Région",
-    category: "Cloud",
-    description: "Migration complète vers AWS avec auto-scaling, monitoring avancé et disaster recovery.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["AWS", "Terraform", "Kubernetes", "Prometheus", "Grafana", "ELK"],
-    metrics: { servers: "200+", regions: "3", availability: "99.99%" },
-    year: "2023",
-    client: "TechScale Inc",
-    duration: "6 mois",
-    team: "4 DevOps",
-    links: { demo: "#", github: "#", case: "#" },
-  },
-  {
-    id: 4,
-    title: "Système de Sécurité Zero Trust",
-    category: "Sécurité",
-    description: "Implémentation complète d'une architecture Zero Trust avec IAM avancé et monitoring.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["Okta", "Vault", "Istio", "Falco", "SIEM", "PKI"],
-    metrics: { threats: "99.9% bloquées", compliance: "SOC2", incidents: "0 breach" },
-    year: "2023",
-    client: "SecureGov",
-    duration: "10 mois",
-    team: "5 experts sécurité",
-    links: { demo: "#", github: "#", case: "#" },
-  },
-  {
-    id: 5,
-    title: "Plateforme IA de Recommandation",
-    category: "IA/ML",
-    description: "Système de recommandation ML avec traitement temps réel et A/B testing intégré.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["Python", "TensorFlow", "Kafka", "Spark", "MLflow", "Kubeflow"],
-    metrics: { accuracy: "94%", latency: "< 50ms", revenue: "+35%" },
-    year: "2024",
-    client: "MediaStream",
-    duration: "14 mois",
-    team: "6 data scientists",
-    links: { demo: "#", github: "#", case: "#" },
-  },
-  {
-    id: 6,
-    title: "Dashboard Analytics Temps Réel",
+    title: "Aspire SLD",
     category: "Web",
-    description: "Interface de monitoring avec visualisations interactives et alertes intelligentes.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["Vue.js", "D3.js", "WebSocket", "InfluxDB", "Go", "Docker"],
-    metrics: { datapoints: "1M+/sec", users: "500+", dashboards: "50+" },
+    description: "Aspire LD is a financial consulting firm dedicated to helping individuals and businesses achieve their financial goals. Our experienced professionals offer personalized, comprehensive advice on investments, retirement planning, budgeting, and debt management.",
+    image: "/asp.png",
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
+    metrics: { users: "200+", rating: "4.8/5", transactions: "1M+/mois" },
     year: "2023",
-    client: "DataViz Pro",
-    duration: "5 mois",
-    team: "4 développeurs",
-    links: { demo: "#", github: "#", case: "#" },
-  },
+    client: "Aspire SLD",
+    duration: "6 mois",
+    team: "6 développeurs",
+    links: { demo: "https://www.aspiresld.com/", github: "#", case: "#" },
+  }
 ]
 
 export default function PortfolioPage() {
@@ -120,18 +78,17 @@ export default function PortfolioPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
+            {/* <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
               Portfolio Technique
-            </Badge>
+            </Badge> */}
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Projets & Réalisations</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Projects & Realizations </h1>
 
             <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Découvrez nos projets les plus innovants, des architectures complexes aux solutions sur mesure qui
-              transforment les entreprises.
+              Discover our most innovative projects, from complex architectures to custom solutions that transform businesses.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-aut hidden">
               {[
                 { icon: Code2, value: "50+", label: "Projets livrés" },
                 { icon: Users, value: "200K+", label: "Utilisateurs actifs" },
@@ -169,7 +126,7 @@ export default function PortfolioPage() {
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full font-medium transition-all ${
                   activeCategory === category
-                    ? "bg-slate-900 text-white shadow-lg"
+                    ? "bg-prime text-white shadow-lg"
                     : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                 }`}
               >
@@ -208,7 +165,7 @@ export default function PortfolioPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-white/90 text-slate-700 font-mono text-xs">{project.category}</Badge>
+                        <Badge className="bg-second text-white font-mono text-xs">{project.category}</Badge>
                       </div>
                       <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="flex space-x-2">
@@ -232,7 +189,7 @@ export default function PortfolioPage() {
                         <span className="text-sm text-slate-500">{project.client}</span>
                       </div>
 
-                      <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-second transition-colors">
                         {project.title}
                       </h3>
 

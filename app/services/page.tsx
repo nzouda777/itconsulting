@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code2, Shield, Cloud, ArrowRight } from "lucide-react"
+import { Code2, Shield, Cloud, ArrowRight, PenIcon, Play, Headset, Rss} from "lucide-react"
 
 const serviceCategories = [
   {
@@ -30,6 +30,31 @@ const serviceCategories = [
         name: "APIs & Backend",
         description: "Robust and scalable services",
         technologies: ["Node.js", "Python", "Go", "PHP", "JAVA"],
+        pricing: "From 10k€",
+      },
+    ],
+  },
+  {
+    title: "UI/UX & Graphic Design",
+    description: "Creative branding, UI/UX, flyers and brochures that communicate and captivate effectively.",
+    icon: PenIcon,
+    services: [
+      {
+        name: "Branding",
+        description: "Logo, business cards, flyers, brochures, and more.",
+        technologies: ["Photoshop", "Illustrator", "Figma", "Canva"],
+        pricing: "From 15k€",
+      },
+      {
+        name: "UI/UX",
+        description: "User interface and experience design",
+        technologies: ["Figma", "Canva", "Adobe XD", "InVision"],
+        pricing: "From 20k€",
+      },
+      {
+        name: "Motion Design & Ads",
+        description: "Creative motion design and ads that engage and inspire.",
+        technologies: ["After Effects", "Figma", "Canva", "Adobe XD", "InVision"],
         pricing: "From 10k€",
       },
     ],
@@ -60,6 +85,25 @@ const serviceCategories = [
     ],
   },
   {
+    title: "Motion Design & Ads",
+    description: "Creative motion design and ads that engage and inspire.",
+    icon: Play,
+    services: [
+      {
+        name: "Motion Design",
+        description: "Creative motion design and ads that engage and inspire.",
+        technologies: ["After Effects", "Figma", "Canva", "Adobe XD", "InVision"],
+        pricing: "From 15k€",
+      },
+      {
+        name: "Ads",
+        description: "Creative motion design and ads that engage and inspire.",
+        technologies: ["After Effects", "Figma", "Canva", "Adobe XD", "InVision"],
+        pricing: "From 20k€",
+      },
+    ],
+  },
+  {
     title: "Security",
     description: "Advanced protection and compliance",
     icon: Shield,
@@ -81,6 +125,52 @@ const serviceCategories = [
         description: "Compliance with data protection regulations",
         technologies: ["Data Mapping", "Privacy by Design"],
         pricing: "From 7k€",
+      },
+    ],
+  },
+  {
+    title: "Virtual Assistant",
+    description: "Virtual assistant services to handle your daily tasks and appointments.",
+    icon: Headset,
+    services: [
+      {
+        name: "Virtual Assistant",
+        description: "Virtual assistant services to handle your daily tasks and appointments.",
+        technologies: [],
+        pricing: "From 15k€",
+      }
+    ],
+  },
+  {
+    title: "Community & Social Media Management",
+    description: "Social media management and community engagement services.",
+    icon: Rss,
+    services: [
+      {
+        name: "Social Media Management",
+        description: "Social media management and community engagement services.",
+        technologies: ['facebook', 'instagram', 'twitter', 'linkedin', 'youtube', 'tiktok', 'snapchat', 'whatsapp', 'telegram', 'discord'],
+        pricing: "From 20k€",
+      },
+      {
+        name: "Content Marketing",
+        description: "Social media management and community engagement services.",
+        technologies: ['facebook', 'instagram', 'twitter', 'linkedin', 'youtube', 'tiktok', 'snapchat', 'whatsapp', 'telegram', 'discord'],
+        pricing: "From 10k€",
+      },
+    ],
+  },
+
+  {
+    title: "Call Center",
+    description: "Call center services to handle your daily tasks and appointments.",
+    icon: Headset,
+    services: [
+      {
+        name: "Call Center",
+        description: "Call center services to handle your daily tasks and appointments.",
+        technologies: ['phone', 'whatsapp', 'telegram', 'discord'],
+        pricing: "From 20k€",
       },
     ],
   },

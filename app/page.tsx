@@ -192,55 +192,48 @@ const features = [
     title: "Tailored Solutions",
     description:
       "We don’t do one-size-fits-all. We customize IT solutions to perfectly fit your business needs, goals, and budget.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://as1.ftcdn.net/jpg/05/29/79/12/1000_F_529791276_TLGeByV4vnhTXvS2HUvr8Qiz7I1so95X.jpg",
   },
   {
     icon: Globe,
     title: "Cutting-Edge Technology",
     description: "We leverage the latest tools, platforms, and innovations to keep your business ahead of the competition.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://www.plataine.com/wp-content/uploads/2019/11/shutterstock_1282709413-1.jpg",
   },
   {
     icon: Layers,
     title: "Reliable Support & Maintenance",
     description: "We provide continuous monitoring, quick issue resolution, and proactive maintenance to keep your IT infrastructure running smoothly.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://wsconnect.in/wp-content/uploads/2024/04/maintenance-and-it-support-Johannesburg.jpg",
   },
   {
     title: "Cost Efficiency",
     description: "Through smart planning and scalable solutions, we maximize your IT investment while minimizing unnecessary expenses.",
-    image: '/placeholder.svg?height=400&width=600 ',
+    image: "https://prosperity.com.au/blog_how-to-realize-huge-cost-savings-for-enterprise-telecom-840x420.jpg",
     icon: Layers
   },
   {
     title: "Security First",
     description: "We prioritize your data and network security with robust protocols, compliance standards, and ongoing risk management.",
-    image: '/placeholder.svg?height=400&width=600 ',
+    image: 'https://connect.geant.org/wp-content/uploads/2023/10/security-culturejpg-990x596.jpg',
     icon: Shield
   },
   {
-    title: "Proven Track Record",
-    description: "Our successful projects and satisfied clients speak to our ability to deliver on time and within scope.",
-    image: '/placeholder.svg?height=400&width=600 ',
-    icon: Award
-  }
-  ,
-  {
     title: "Transparent Communication",
     description: "We keep you informed at every stage with clear, honest, and timely communication.",
-    image: '/placeholder.svg?height=400&width=600 ',
+    image: 'https://www.theladders.com/wp-content/uploads/handshake_190617.jpg',
     icon: MessageCircle
   },
   {
     title: "Innovation Partner",
     description: "More than just a vendor, we aim to be your long-term IT partner, driving innovation and growth alongside your business.",
-    image: '/placeholder.svg?height=400&width=600 ',
+    image: 'https://intuitconsultancy.com/wp-content/uploads/2023/11/Why-Is-Digital-transformation-About-People-and-Not-Just-About-Technology.png',
     icon: Handshake
   },
   {
     title: "Global Reach, Local Touch",
     description: "With access to global talent and technologies, we deliver solutions tailored to your local business environment.",
-    image: '/placeholder.svg?height=400&width=600 ',
+    image: 'https://cdn.prod.website-files.com/667a8a31f844cf6675e10801/66dfebdbce4538603a39c5d8_663067c92e822412ecc8d158_localglobal.png ',
     icon: Target
   }
 ]
