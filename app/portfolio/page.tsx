@@ -5,12 +5,13 @@ import { motion, AnimatePresence } from "framer-motion"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
+import Link from 'next/link'
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github, Play, Code2, TrendingUp, Users, Award, Calendar } from "lucide-react"
 import Image from "next/image"
 
-const categories = ["Tous", "Web", "Mobile", "Cloud", "Sécurité", "IA/ML"]
+const categories = ["All", "Web", "Mobile", "UI/UX Design", "Graphic Design", "Motion & Ads", "Devops & Cloud consulting"]
 
 const projects = [
   {
@@ -59,19 +60,19 @@ const projects = [
 ]
 
 export default function PortfolioPage() {
-  const [activeCategory, setActiveCategory] = useState("Tous")
+  const [activeCategory, setActiveCategory] = useState("All")
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
 
   const filteredProjects =
-    activeCategory === "Tous" ? projects : projects.filter((project) => project.category === activeCategory)
+    activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory)
 
   return (
     <div className="min-h-screen font-sans">
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+      <section className="pt-32 mt-24 pb-16 bg-gradient-to-tr from-prime via-transparent to-transparect">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -116,7 +117,7 @@ export default function PortfolioPage() {
 
       {/* Filter Categories */}
       <section className="py-8 bg-white border-b border-slate-200">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 ">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <motion.button
@@ -124,11 +125,10 @@ export default function PortfolioPage() {
                 onClick={() => setActiveCategory(category)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`px-6 py-3 rounded-full font-medium transition-all ${
-                  activeCategory === category
+                className={`md:px-6 md:py-3 px-4 py-1 text-sm md:text-base rounded-full font-medium transition-all ${activeCategory === category
                     ? "bg-prime text-white shadow-lg"
                     : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 {category}
               </motion.button>
@@ -321,14 +321,17 @@ export default function PortfolioPage() {
 
                 <div className="flex space-x-4">
                   <Button className="bg-slate-900 hover:bg-slate-800">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Voir le projet
+                    <Link href={selectedProject.links.demo} target="_blank" className="flex items-center">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      View Project
+                    </Link>
+
                   </Button>
                   <Button variant="outline">
                     <Github className="w-4 h-4 mr-2" />
-                    Code source
+                    Source Code
                   </Button>
-                  <Button variant="outline">Étude de cas complète</Button>
+                  {/* <Button variant="outline">Étude de cas complète</Button> */}
                 </div>
               </div>
             </motion.div>

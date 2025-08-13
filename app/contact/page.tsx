@@ -18,37 +18,37 @@ const contactMethods = [
     icon: Mail,
     title: "Email",
     description: "contact@ITCloudConsultings.com",
-    action: "Envoyer un email",
+    action: "Send an email",
   },
   {
     icon: Phone,
-    title: "Téléphone",
-    description: "+33 1 23 45 67 89",
-    action: "Programmer un appel",
+    title: "Phone",
+    description: "+1 (706) 581-1963",
+    action: "Schedule a call",
   },
   {
     icon: Calendar,
-    title: "Rendez-vous",
-    description: "Consultation technique gratuite",
-    action: "Réserver un créneau",
+    title: "Appointment",
+    description: "Free technical consultation",
+    action: "Schedule an appointment",
   },
   {
     icon: MessageSquare,
     title: "Chat",
-    description: "Support technique en direct",
-    action: "Démarrer une conversation",
+    description: "Support technical in real time",
+    action: "Start a conversation",
   },
 ]
 
 const serviceTypes = [
-  "Audit technique",
-  "Développement web",
-  "Application mobile",
-  "Infrastructure cloud",
-  "Sécurité & conformité",
-  "Optimisation performance",
-  "Formation équipe",
-  "Autre",
+  "Audit technical",
+  "Web development",
+  "Mobile application",
+  "Cloud infrastructure",
+  "Security & compliance",
+  "Performance optimization",
+  "Team training",
+  "Other",
 ]
 
 export default function ContactPage() {
@@ -90,20 +90,20 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+      <section className="pt-32 mt-24 pb-16 bg-gradient-to-b from-slate-50 to-white">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200 font-mono">Contact</Badge>
+            {/* <Badge className="mb-6 bg-blue-50 text-blue-700 border-blue-200 font-mono">Contact</Badge> */}
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Démarrons Votre Projet</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">Let's start your project</h1>
 
             <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-              Discutons de vos défis techniques et explorons ensemble les solutions les plus adaptées à vos objectifs.
+              Let's discuss your technical challenges and explore together the most suitable solutions for your objectives.
             </p>
           </motion.div>
         </div>
@@ -124,12 +124,12 @@ export default function ContactPage() {
               >
                 <Card className="text-center border-0 shadow-sm hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <method.icon className="w-6 h-6 text-slate-700" />
+                    <div className="w-12 h-12 bg-second/5 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <method.icon className="w-6 h-6 text-second" />
                     </div>
                     <h3 className="font-semibold text-slate-900 mb-2">{method.title}</h3>
                     <p className="text-slate-600 text-sm mb-4">{method.description}</p>
-                    <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-700">
+                    <Button variant="ghost" size="sm" className="text-second/80 hover:text-second hover:bg-second/10">
                       {method.action}
                     </Button>
                   </CardContent>
@@ -141,8 +141,8 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+      <section className="py-16 bg-white" id="contact">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 ">
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Form */}
@@ -154,9 +154,9 @@ export default function ContactPage() {
               >
                 <Card className="border-0 shadow-lg">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-slate-900">Formulaire de Contact</CardTitle>
+                    <CardTitle className="text-2xl text-slate-900">Contact form</CardTitle>
                     <p className="text-slate-600">
-                      Remplissez ce formulaire pour recevoir une réponse personnalisée sous 24h.
+                      Fill out this form to receive a personalized response within 24 hours.
                     </p>
                   </CardHeader>
                   <CardContent>
@@ -222,20 +222,20 @@ export default function ContactPage() {
                             onChange={handleInputChange}
                             className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           >
-                            <option value="">Sélectionnez une fourchette</option>
-                            <option value="< 10k€">Moins de 10k€</option>
+                            <option value="">Select a range</option>
+                            <option value="< 10k€">Less than 10k€</option>
                             <option value="10k€ - 25k€">10k€ - 25k€</option>
                             <option value="25k€ - 50k€">25k€ - 50k€</option>
                             <option value="50k€ - 100k€">50k€ - 100k€</option>
-                            <option value="> 100k€">Plus de 100k€</option>
+                            <option value="> 100k€">More than 100k€</option>
                           </select>
                         </div>
 
                         <div>
-                          <label className="block text-sm font-medium text-slate-700 mb-2">Urgence du projet</label>
+                          <label className="block text-sm font-medium text-slate-700 mb-2">Urgency of the project</label>
                           <div className="flex space-x-4">
                             {[
-                              { value: "low", label: "Pas urgent" },
+                              { value: "low", label: "Not urgent" },
                               { value: "normal", label: "Normal" },
                               { value: "high", label: "Urgent" },
                             ].map((option) => (
@@ -256,13 +256,13 @@ export default function ContactPage() {
 
                         <div>
                           <label className="block text-sm font-medium text-slate-700 mb-2">
-                            Description du projet *
+                            Project description *
                           </label>
                           <Textarea
                             name="message"
                             value={formData.message}
                             onChange={handleInputChange}
-                            placeholder="Décrivez votre projet, vos objectifs et vos contraintes techniques..."
+                            placeholder="Describe your project, its objectives and technical constraints..."
                             rows={5}
                             required
                           />
@@ -271,16 +271,16 @@ export default function ContactPage() {
                         <Button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full bg-slate-900 hover:bg-slate-800 text-lg py-3"
+                          className="w-full bg-second text-base py-3"
                         >
                           {isSubmitting ? (
                             <>
                               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-                              Envoi en cours...
+                              Sending in progress...
                             </>
                           ) : (
                             <>
-                              Envoyer ma demande
+                              Send my request
                               <Send className="ml-2 w-5 h-5" />
                             </>
                           )}
@@ -295,12 +295,12 @@ export default function ContactPage() {
                         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                           <CheckCircle className="w-8 h-8 text-green-600" />
                         </div>
-                        <h3 className="text-xl font-bold text-slate-900 mb-2">Message envoyé avec succès !</h3>
+                        <h3 className="text-xl font-bold text-slate-900 mb-2">Message sent successfully!</h3>
                         <p className="text-slate-600 mb-6">
-                          Nous vous recontacterons sous 24h pour discuter de votre projet.
+                          We will contact you within 24 hours to discuss your project.
                         </p>
                         <Button onClick={() => setIsSubmitted(false)} variant="outline">
-                          Envoyer un autre message
+                          Send another message
                         </Button>
                       </motion.div>
                     )}
@@ -317,23 +317,23 @@ export default function ContactPage() {
                 className="space-y-8"
               >
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Pourquoi Nous Choisir ?</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Why Choose Us?</h3>
                   <div className="space-y-4">
                     {[
                       {
                         icon: Code,
-                        title: "Expertise Technique",
-                        description: "15+ années d'expérience en développement et architecture système",
+                        title: "Technical expertise",
+                        description: "15+ years of experience in development and system architecture",
                       },
                       {
                         icon: Clock,
-                        title: "Réactivité",
-                        description: "Réponse sous 24h et support technique disponible",
+                        title: "Reactivity",
+                        description: "Response within 24 hours and technical support available",
                       },
                       {
                         icon: CheckCircle,
-                        title: "Qualité Garantie",
-                        description: "Code review, tests automatisés et documentation complète",
+                        title: "Quality guaranteed",
+                        description: "Code review, automated tests and complete documentation",
                       },
                     ].map((benefit, index) => (
                       <div key={index} className="flex items-start space-x-4">
@@ -351,19 +351,19 @@ export default function ContactPage() {
 
                 <Card className="border-0 bg-slate-50">
                   <CardContent className="p-6">
-                    <h4 className="font-semibold text-slate-900 mb-4">Informations Pratiques</h4>
+                    <h4 className="font-semibold text-slate-900 mb-4">Practical Information</h4>
                     <div className="space-y-3 text-sm">
-                      <div className="flex items-center space-x-3">
+                      {/* <div className="flex items-center space-x-3">
                         <MapPin className="w-4 h-4 text-slate-600" />
                         <span className="text-slate-600">Paris, France (Remote possible)</span>
-                      </div>
+                      </div> */}
                       <div className="flex items-center space-x-3">
                         <Clock className="w-4 h-4 text-slate-600" />
-                        <span className="text-slate-600">Lun-Ven 9h-18h (CET)</span>
+                        <span className="text-slate-600">Mon-Fri 9h-18h (CET)</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <Mail className="w-4 h-4 text-slate-600" />
-                        <span className="text-slate-600">Réponse garantie sous 24h</span>
+                        <span className="text-slate-600">Response guaranteed within 24h</span>
                       </div>
                     </div>
                   </CardContent>

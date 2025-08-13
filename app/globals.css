@@ -141,3 +141,7 @@
 .service-card-flip:hover {
   transform: rotateY(180deg);
 }
+
+*{
+  scroll-behavior: smooth;
+}

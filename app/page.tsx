@@ -467,7 +467,7 @@ export default function HomePage() {
                         </div>
                       </div>
 
-                      <Link href="/services" className="w-full">
+                      <Link href={`/services#${service.title.toLowerCase().replace(" ", "-")}`} className="w-full">
                         <Button className="w-full bg-second text-white font-medium hover:bg-gradient-to-r from-prime to-second duration-500 hover:bg-prime hover:duration-1000 transition-colors md:text-base text-xs md:py-2 py-1 md:h-10 h-8">
                           Discover
                           <ArrowRight className="ml-2 w-4 h-4" />
@@ -764,7 +764,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -782,7 +782,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-second hover:bg-slate-800 text-lg px-10 py-4 font-medium">
+                <Button size="lg" className="bg-second hover:bg-second/90 text-lg px-10 py-4 font-medium">
                   Book an Appointment
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>

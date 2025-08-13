@@ -13,7 +13,7 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "About", href: "/about" },
-  { name: "Blog", href: "/blog" },
+  // { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -39,7 +39,7 @@ export default function Header() {
       }`}
     >
       <Announcement />
-      <nav className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  bg-white mx-auto px-6 py-2">
+      <nav className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  bg-white  py-2">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
@@ -57,7 +57,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                className={`relative px-4 py-2 text-sm font-semibold transition-colors rounded-lg ${
                   pathname === item.href ? "text-prime" : "text-slate-600 hover:text-prime"
                 }`}
               >
@@ -79,7 +79,7 @@ export default function Header() {
                 Free Audit
               </Button>
             </Link>
-            <Link href="/contact">
+            <Link href="/contact#contact">
               <Button size="sm" className="bg-gradient-to-l from-prime to-second font-bold">
                 Start a Project
               </Button>
@@ -131,7 +131,7 @@ export default function Header() {
                       Free Audit
                     </Button>
                   </Link>
-                  <Link href="/contact">
+                  <Link href="/contact#contact">
                     <Button size="sm" className="w-full bg-gradient-to-l from-prime to-second font-bold">
                       Start a Project
                     </Button>

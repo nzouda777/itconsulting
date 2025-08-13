@@ -45,8 +45,8 @@ const team = [
     name: "Rodrigue NZOUDA",
     role: "Fullstack engineer & Lead Shopify dev",
     image: "/placeholder.svg?height=300&width=300",
-    bio: "Expert React/Next.js et développement mobile. Passionné par l'UX et les performances web.",
-    skills: ["React", "TypeScript", "React Native", "GraphQL"],
+    bio: "Passionate about UX and web performance.",
+    skills: ["ReactJS", "NextJS", "TypeScript", "Javascript", "Vue.JS", "Shopify", "PHP", "Laravel", "Tailwindcss", "CI/CD", "SCSS/SASS", "css"],
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
@@ -62,38 +62,38 @@ const team = [
 const timeline = [
   {
     year: "2019",
-    title: "Création de ITCloudConsultings",
-    description: "Lancement avec une équipe de 3 développeurs seniors",
+    title: "Creation of ITCloudConsultings",
+    description: "Launch with a team of 3 senior developers",
     icon: Target,
   },
   {
     year: "2020",
-    title: "Première certification AWS",
+    title: "First AWS certification",
     description: "Obtention du statut AWS Advanced Consulting Partner",
     icon: Cloud,
   },
   {
     year: "2021",
     title: "Expansion mobile",
-    description: "Lancement de notre division développement mobile",
+    description: "Launch of our mobile development division",
     icon: Smartphone,
   },
   {
     year: "2022",
-    title: "Expertise sécurité",
-    description: "Création de notre pôle cybersécurité et conformité",
+    title: "Security expertise",
+    description: "Creation of our cybersecurity and compliance team",
     icon: Shield,
   },
   {
     year: "2023",
-    title: "50+ projets livrés",
-    description: "Franchissement du cap des 50 projets avec 99.9% de satisfaction",
+    title: "50+ projects delivered",
+    description: "Crossing the 50-project milestone with 99.9% satisfaction",
     icon: Award,
   },
   {
     year: "2024",
-    title: "Innovation IA",
-    description: "Intégration de l'IA dans nos processus de développement",
+    title: "Innovation AI",
+    description: "Integration of AI in our development processes",
     icon: Zap,
   },
 ]
@@ -101,31 +101,31 @@ const timeline = [
 const values = [
   {
     icon: Code2,
-    title: "Excellence Technique",
-    description: "Code de qualité, architecture robuste et bonnes pratiques de développement",
+    title: "Excellence Technical",
+    description: "Code of quality, robust architecture and good development practices",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "Travail en équipe, communication transparente et partage de connaissances",
+    description: "Teamwork, transparent communication and knowledge sharing",
   },
   {
     icon: TrendingUp,
     title: "Innovation Continue",
-    description: "Veille technologique constante et adoption des dernières innovations",
+    description: "Constant technology watch and adoption of the latest innovations",
   },
   {
     icon: CheckCircle,
-    title: "Engagement Qualité",
-    description: "Tests rigoureux, documentation complète et support long terme",
+    title: "Engagement Quality",
+    description: "Thorough testing, complete documentation and long-term support",
   },
 ]
 
 const stats = [
-  { value: "50+", label: "Projets livrés", icon: Award },
-  { value: "200K+", label: "Utilisateurs impactés", icon: Users },
-  { value: "99.9%", label: "Satisfaction client", icon: TrendingUp },
-  { value: "24/7", label: "Support technique", icon: Zap },
+  { value: "50+", label: "Projects delivered", icon: Award },
+  { value: "200K+", label: "Users impacted", icon: Users },
+  { value: "99.9%", label: "Client satisfaction", icon: TrendingUp },
+  { value: "24/7", label: "Technical support", icon: Zap },
 ]
 
 export default function AboutPage() {
@@ -134,28 +134,27 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+      <section className="pt-32 mt-24 pb-16 bg-gradient-to-b from-slate-50 to-white">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">À propos de nous</Badge>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">About Us</Badge>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">
-              L'Équipe Derrière
+              The Team Behind
               <br />
-              Vos Succès Techniques
+              Your Technical Success
             </h1>
 
             <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Une équipe d'experts passionnés, unis par la même vision : transformer vos défis techniques en avantages
-              concurrentiels durables.
+              A team of passionate experts united by a shared vision: transforming your technical challenges into durable competitive advantages.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+            <div className="gr-id grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto hidden">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -178,7 +177,7 @@ export default function AboutPage() {
 
       {/* Mission Section */}
       <section className="py-24 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -187,20 +186,18 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
             >
               <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
-                Notre Mission
+                Our Mission
               </Badge>
-              <h2 className="text-4xl font-bold mb-6 gradient-text">Démocratiser l'Excellence Technique</h2>
+              <h2 className="text-4xl font-bold mb-6 gradient-text">Democratizing Technical Excellence</h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Nous croyons que chaque entreprise, quelle que soit sa taille, mérite d'avoir accès aux meilleures
-                technologies et pratiques de développement. Notre mission est de rendre l'excellence technique
-                accessible et abordable.
+                We believe that every company, regardless of size, deserves access to the best technologies and development practices. Our mission is to make technical excellence accessible and affordable.
               </p>
               <div className="space-y-4">
                 {[
-                  "Architecture moderne et scalable",
-                  "Sécurité et conformité intégrées",
-                  "Performance et optimisation continue",
-                  "Support et maintenance long terme",
+                  "Modern and scalable architecture",
+                  "Integrated security and compliance",
+                  "Continuous performance optimization",
+                  "Long-term support and maintenance",
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -227,7 +224,7 @@ export default function AboutPage() {
               <div className="relative">
                 <Image
                   src="/placeholder.svg?height=500&width=600"
-                  alt="Notre équipe au travail"
+                  alt="Our team at work"
                   width={600}
                   height={500}
                   className="rounded-2xl shadow-2xl"
@@ -241,17 +238,17 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <section className="py-24 bg-slate-50">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Nos Valeurs</Badge>
-            <h2 className="text-4xl font-bold mb-6 gradient-text">Ce Qui Nous Guide</h2>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Our Values</Badge>
+            <h2 className="text-4xl font-bold mb-6 gradient-text">What Guides Us</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Des principes fondamentaux qui définissent notre approche et notre engagement
+              Fundamental principles that define our approach and commitment
             </p>
           </motion.div>
 
@@ -282,7 +279,7 @@ export default function AboutPage() {
 
       {/* Timeline Section */}
       <section className="py-24 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -292,9 +289,9 @@ export default function AboutPage() {
             <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
               Notre Histoire
             </Badge>
-            <h2 className="text-4xl font-bold mb-6 gradient-text">5 Années d'Innovation</h2>
+            <h2 className="text-4xl font-bold mb-6 gradient-text">5 Years of Innovation</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              De startup à référence technique, découvrez les étapes clés de notre évolution
+              From startup to technical reference, discover the key steps of our evolution
             </p>
           </motion.div>
 
@@ -332,7 +329,7 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section className="py-24 bg-slate-50">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -340,9 +337,9 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Notre Équipe</Badge>
-            <h2 className="text-4xl font-bold mb-6 gradient-text">Les Experts Derrière Vos Projets</h2>
+            <h2 className="text-4xl font-bold mb-6 gradient-text">The Experts Behind Your Projects</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Une équipe multidisciplinaire d'experts passionnés par l'innovation technique
+              A multidisciplinary team of experts passionate about technical innovation
             </p>
           </motion.div>
 
@@ -409,27 +406,26 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Rejoignez Notre Aventure</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Join Our Adventure</h2>
             <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-              Nous recherchons constamment des talents exceptionnels pour renforcer notre équipe. Découvrez nos
-              opportunités de carrière.
+              We are constantly searching for exceptional talents to strengthen our team. Discover our career opportunities.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-lg px-8 py-4">
                 <Users className="w-5 h-5 mr-2" />
-                Voir nos Offres
+                See our Offers
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-2">
                 <MapPin className="w-5 h-5 mr-2" />
-                Nous Rencontrer
+                Meet Us
               </Button>
             </div>
           </motion.div>

@@ -6,11 +6,12 @@ import Footer from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code2, Shield, Cloud, ArrowRight, PenIcon, Play, Headset, Rss} from "lucide-react"
+import { Code2, Shield, Cloud, ArrowRight, PenTool, Play, Headset, Rss} from "lucide-react"
 
 const serviceCategories = [
   {
     title: "Development",
+    tag: "Web Developement",
     description: "Custom software solutions",
     icon: Code2,
     services: [
@@ -36,8 +37,9 @@ const serviceCategories = [
   },
   {
     title: "UI/UX & Graphic Design",
+    tag: "UI/UX & Graphic Design",
     description: "Creative branding, UI/UX, flyers and brochures that communicate and captivate effectively.",
-    icon: PenIcon,
+    icon: PenTool,
     services: [
       {
         name: "Branding",
@@ -51,16 +53,11 @@ const serviceCategories = [
         technologies: ["Figma", "Canva", "Adobe XD", "InVision"],
         pricing: "From 20k€",
       },
-      {
-        name: "Motion Design & Ads",
-        description: "Creative motion design and ads that engage and inspire.",
-        technologies: ["After Effects", "Figma", "Canva", "Adobe XD", "InVision"],
-        pricing: "From 10k€",
-      },
     ],
   },
   {
     title: "Infrastructure",
+    tag: "Linux/DevOps & Cloud consulting",
     description: "Cloud and DevOps at the enterprise level",
     icon: Cloud,
     services: [
@@ -86,6 +83,7 @@ const serviceCategories = [
   },
   {
     title: "Motion Design & Ads",
+    tag: "Motion Design & Ads",
     description: "Creative motion design and ads that engage and inspire.",
     icon: Play,
     services: [
@@ -104,66 +102,9 @@ const serviceCategories = [
     ],
   },
   {
-    title: "Security",
-    description: "Advanced protection and compliance",
-    icon: Shield,
-    services: [
-      {
-        name: "Security Audit",
-        description: "Complete vulnerability assessment",
-        technologies: ["OWASP", "Pentest", "Code Review"],
-        pricing: "From 5k€",
-      },
-      {
-        name: "Zero Trust Implementation",
-        description: "Modern security architecture",
-        technologies: ["IAM", "MFA", "Network Segmentation"],
-        pricing: "From 18k€",
-      },
-      {
-        name: "RGPD Compliance",
-        description: "Compliance with data protection regulations",
-        technologies: ["Data Mapping", "Privacy by Design"],
-        pricing: "From 7k€",
-      },
-    ],
-  },
-  {
-    title: "Virtual Assistant",
+    title: "Virtual Assistant & Call Center",
+    tag: "Virtual Assistant",
     description: "Virtual assistant services to handle your daily tasks and appointments.",
-    icon: Headset,
-    services: [
-      {
-        name: "Virtual Assistant",
-        description: "Virtual assistant services to handle your daily tasks and appointments.",
-        technologies: [],
-        pricing: "From 15k€",
-      }
-    ],
-  },
-  {
-    title: "Community & Social Media Management",
-    description: "Social media management and community engagement services.",
-    icon: Rss,
-    services: [
-      {
-        name: "Social Media Management",
-        description: "Social media management and community engagement services.",
-        technologies: ['facebook', 'instagram', 'twitter', 'linkedin', 'youtube', 'tiktok', 'snapchat', 'whatsapp', 'telegram', 'discord'],
-        pricing: "From 20k€",
-      },
-      {
-        name: "Content Marketing",
-        description: "Social media management and community engagement services.",
-        technologies: ['facebook', 'instagram', 'twitter', 'linkedin', 'youtube', 'tiktok', 'snapchat', 'whatsapp', 'telegram', 'discord'],
-        pricing: "From 10k€",
-      },
-    ],
-  },
-
-  {
-    title: "Call Center",
-    description: "Call center services to handle your daily tasks and appointments.",
     icon: Headset,
     services: [
       {
@@ -172,8 +113,15 @@ const serviceCategories = [
         technologies: ['phone', 'whatsapp', 'telegram', 'discord'],
         pricing: "From 20k€",
       },
+      {
+        name: "Virtual Assistant",
+        description: "Virtual assistant services to handle your daily tasks and appointments.",
+        technologies: [],
+        pricing: "From 15k€",
+      }
     ],
   },
+
 ]
 
 
@@ -205,8 +153,8 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className=" flex items-center justify-center h-screen pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+      <section className=" flex items-center justify-center h-full mt-24 pt-32 pb-16 bg-gradient-to-tr from-second via-transparent to-transparent">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -231,8 +179,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Categories */}
-      <section className="py-24">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+      <section className="pt-16 pb-24">
+        <div className="2xl:container  max-w-[100%] mx-auto  px-6 md:px-12 ">
           {serviceCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -242,17 +190,17 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               className="mb-24 last:mb-0"
             >
-              <div className="flex items-center mb-12">
-                <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mr-6">
-                  <category.icon className="w-8 h-8 text-slate-700" />
+              <div className="flex items-start gap-4 md:items-center mb-12" id={ category.title.toLowerCase().replace(" ", "-") }>
+                <div className="w-12 h-12 md:w-16 md:h-16  bg-slate-100 md:rounded-2xl rounded-lg p-2 inline-flex items-center justify-center ">
+                  <category.icon className="md:w-8 md:h-8 w-6 h-6 text-slate-700" />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-slate-900 mb-2">{category.title}</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">{category.title}</h2>
                   <p className="text-lg text-slate-600">{category.description}</p>
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className={`grid md:grid-cols-${category.services.length === 3 ? 3 : 2} gap-8`}>
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.name}

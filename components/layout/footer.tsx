@@ -63,10 +63,10 @@ export default function Footer() {
                 ITCloud <span className="text-blue-600">Consultings</span>
               </span>
             </Link>
-            <p className="text-slate-600 mb-6 max-w-md">
-              Expertise technique avancée pour transformer vos défis digitaux en opportunités de croissance.
+            {/* <p className="text-slate-600 mb-6 max-w-md">
+              Advanced technical expertise to transform your digital challenges into growth opportunities.
             </p>
-            
+             */}
           </div>
 
           {footerSections.map((section, index) => (
