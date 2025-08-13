@@ -2,15 +2,29 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Terminal, Github, Linkedin, Twitter } from "lucide-react"
+import { Terminal, Github, Linkedin, Facebook, Youtube, Instagram } from "lucide-react"
 
 const footerSections = [
+  {
+    title: "Entreprise",
+    links: [
+      { name: "About", href: "/about" },
+      { name: "Team", href: "/team" },
+      { name: "Careers", href: "/careers" },
+      // { name: "Partenaires", href: "/partners" },
+    ],
+  },
   {
     title: "Services",
     links: [
       { name: "Web & Mobile Developement", href: "/services" },
       { name: "UI/UX & Graphic Design", href: "/services" },
       { name: "Motion Design & Ads", href: "/services" },
+    ],
+  },
+  {
+    title: "Services",
+    links: [
       { name: "Virtual Assistant", href: "/services" },
       { name: "Community & Social Media Management", href: "/services" },
       { name: "DevSecOps & Cloud Consulting", href: "/services" },
@@ -34,15 +48,7 @@ const footerSections = [
   //     { name: "API Reference", href: "/api-reference" },
   //   ],
   // },
-  {
-    title: "Entreprise",
-    links: [
-      { name: "About", href: "/about" },
-      { name: "Team", href: "/team" },
-      { name: "Careers", href: "/careers" },
-      // { name: "Partenaires", href: "/partners" },
-    ],
-  },
+  
 ]
 
 export default function Footer() {
@@ -60,25 +66,7 @@ export default function Footer() {
             <p className="text-slate-600 mb-6 max-w-md">
               Expertise technique avancée pour transformer vos défis digitaux en opportunités de croissance.
             </p>
-            <div className="flex space-x-4">
-              {[
-                { icon: Github, href: "https://github.com" },
-                { icon: Linkedin, href: "https://linkedin.com" },
-                { icon: Twitter, href: "https://twitter.com" },
-              ].map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-slate-600 hover:text-slate-900 hover:shadow-md transition-all"
-                >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
-              ))}
-            </div>
+            
           </div>
 
           {footerSections.map((section, index) => (
@@ -100,15 +88,28 @@ export default function Footer() {
         <div className="border-t border-slate-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-600 text-sm">© 2024 ITCloudConsultings. Tous droits réservés.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy-policy" className="text-slate-600 hover:text-slate-900 text-sm transition-colors">
-              Confidentialité
-            </Link>
-            <Link href="/terms-of-service" className="text-slate-600 hover:text-slate-900 text-sm transition-colors">
-              Conditions
-            </Link>
-            <Link href="/cookie-policy" className="text-slate-600 hover:text-slate-900 text-sm transition-colors">
-              Cookies
-            </Link>
+          <div className="flex space-x-4">
+              {[
+                { icon: Linkedin, href: "https://linkedin.com" },
+                { icon: Facebook, href: "https://facebook.com"},
+                { icon: Youtube, href: "https://youtube.com"},
+                // { icon: TikTok, href: "https://tiktok.com"},
+                { icon: Instagram, href: "https://instagram.com"},
+
+              ].map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-slate-600 hover:text-slate-900 hover:shadow-md transition-all"
+                >
+                  <social.icon className="w-5 h-5" />
+                </motion.a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
