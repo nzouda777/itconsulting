@@ -44,7 +44,7 @@ const team = [
   {
     name: "Rodrigue NZOUDA",
     role: "Fullstack engineer & Lead Shopify dev",
-    image: "/rn.jpg",
+    image: "/rn.JPG",
     bio: "Passionate about UX and web performance.",
     skills: ["ReactJS", "NextJS", "TypeScript", "Javascript", "Vue.JS", "Shopify", "PHP", "Laravel", "Tailwindcss", "CI/CD", "SCSS/SASS", "css"],
     social: { github: "#", linkedin: "#", twitter: "#" },
@@ -60,7 +60,7 @@ const team = [
   {
     name: "Manuella SAHA",
     role: "Freelance Marketplace Manager & Front end developper",
-    image: "/media.jpeg",
+    image: "/Media.jpeg",
     bio: "skilled in creating modern, responsive, and user-friendly web interfaces while also managing freelance marketplace profiles on platforms like Fiverr and Upwork.",
     skills: ["ReactJS", "TypeScript", "Javascript", "Vue.JS", "Tailwindcss", "SCSS/SASS", "css"],
     social: { github: "#", linkedin: "#", twitter: "#" },
