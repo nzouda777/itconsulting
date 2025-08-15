@@ -77,19 +77,19 @@ const team = [
   {
     name: "Audrey SAHA",
     role: "Intern developer",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/audrey.png",
     bio: "Fullstack developer intern at ITCloudConsultings.",
     skills: ["ReactJS", "TypeScript", "Javascript", "PHP", "Laravel", "Tailwindcss", "SCSS/SASS", "css"],
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
-    name: "TALLE Manuella",
+    name: "TALLE Kely",
     role: "Community Manager & Social Media Manager",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/kely.png",
     bio: "passionate about communication, I develop communities where every voice matters",
     skills: ["ReactJS", "TypeScript", "Javascript", "PHP", "Laravel", "Tailwindcss", "SCSS/SASS", "css"],
     social: { github: "#", linkedin: "#", twitter: "#" },
-  },
+  }, 
   
 ]
 
