@@ -35,28 +35,62 @@ const team = [
   },
   {
     name: "Gilles KEMGOUM",
-    role: "Lead Devs",
+    role: "Lead Software Developer",
     image: "/placeholder.svg?height=300&width=300",
-    bio: "15+ years of experience in system architecture and full-stack development. Expert in microservices and cloud-native.",
-    skills: ["DevOps", "Terraform", "Docker", "Monitoring"],
+    bio: "Responsible for the design, development, and quality of the company’s software solutions. I lead the technical team, defines technology choices, and ensures the performance, security, and scalability of delivered applications.",
+    skills: ["Java", "Spring Boot", "Angular", "Laravel"],
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
     name: "Rodrigue NZOUDA",
     role: "Fullstack engineer & Lead Shopify dev",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/rn.jpg",
     bio: "Passionate about UX and web performance.",
     skills: ["ReactJS", "NextJS", "TypeScript", "Javascript", "Vue.JS", "Shopify", "PHP", "Laravel", "Tailwindcss", "CI/CD", "SCSS/SASS", "css"],
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
-    name: "Manuella SAHA",
-    role: "Web developer",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Expert en sécurité applicative et conformité. Certifiée CISSP et spécialiste Zero Trust.",
-    skills: ["Sécurité", "Pentest", "Compliance", "Zero Trust"],
+    name: "Cyrille Toumi",
+    role: "Software Engineer – Web, Mobile & Backend Developer",
+    image: "/profile.jpg",
+    bio: "Passionate about developing performant and scalable applications, he masters Spring Boot for the backend, Vue.js for the frontend and Flutter for mobile applications.",
+    skills: ["Spring Boot", "Vue.js", "Flutter"],
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
+  {
+    name: "Manuella SAHA",
+    role: "Freelance Marketplace Manager & Front end developper",
+    image: "/media.jpeg",
+    bio: "skilled in creating modern, responsive, and user-friendly web interfaces while also managing freelance marketplace profiles on platforms like Fiverr and Upwork.",
+    skills: ["ReactJS", "TypeScript", "Javascript", "Vue.JS", "Tailwindcss", "SCSS/SASS", "css"],
+    social: { github: "#", linkedin: "#", twitter: "#" },
+  },
+
+  {
+    name: "Pouotouo Abdel ",
+    role: "Software Engineer",
+    image: "/placeholder.svg?height=300&width=300",
+    bio: "Backend web and mobile dev.",
+    skills: ["Django", "Spring Boot", "Flutter"],
+    social: { github: "#", linkedin: "#", twitter: "#" },
+  },
+  {
+    name: "Audrey SAHA",
+    role: "Intern developer",
+    image: "/placeholder.svg?height=300&width=300",
+    bio: "Fullstack developer intern at ITCloudConsultings.",
+    skills: ["ReactJS", "TypeScript", "Javascript", "PHP", "Laravel", "Tailwindcss", "SCSS/SASS", "css"],
+    social: { github: "#", linkedin: "#", twitter: "#" },
+  },
+  {
+    name: "TALLE Manuella",
+    role: "Community Manager & Social Media Manager",
+    image: "/placeholder.svg?height=300&width=300",
+    bio: "passionate about communication, I develop communities where every voice matters",
+    skills: ["ReactJS", "TypeScript", "Javascript", "PHP", "Laravel", "Tailwindcss", "SCSS/SASS", "css"],
+    social: { github: "#", linkedin: "#", twitter: "#" },
+  },
+  
 ]
 
 const timeline = [
@@ -223,13 +257,13 @@ export default function AboutPage() {
             >
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src="https://img.freepik.com/free-vector/cloud-internet-technology_53876-94170.jpg?t=st=1746121333~exp=1746124933~hmac=071a5604998e64b05870d0dc2e6b3c028a8f88570fbda8e14369f08bd2229f15"
                   alt="Our team at work"
                   width={600}
                   height={500}
                   className="rounded-2xl shadow-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl" /> */}
               </div>
             </motion.div>
           </div>
@@ -287,7 +321,7 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">
-              Notre Histoire
+              Our History
             </Badge>
             <h2 className="text-4xl font-bold mb-6 gradient-text">5 Years of Innovation</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
@@ -309,13 +343,13 @@ export default function AboutPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="relative flex items-start mb-12 last:mb-0"
                 >
-                  <div className="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mr-8 relative z-10">
+                  <div className="w-16 h-16 bg-second/80 rounded-2xl flex items-center justify-center mr-8 relative z-10">
                     <event.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1 pt-2">
                     <div className="flex items-center mb-2">
                       <span className="text-2xl font-bold font-mono text-slate-900 mr-4">{event.year}</span>
-                      <Badge className="bg-blue-50 text-blue-700 font-mono text-xs">Milestone</Badge>
+                      <Badge className="bg-second/5 text-second font-mono text-xs">Milestone</Badge>
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">{event.title}</h3>
                     <p className="text-slate-600 leading-relaxed">{event.description}</p>
@@ -360,7 +394,7 @@ export default function AboutPage() {
                       alt={member.name}
                       width={300}
                       height={300}
-                      className="w-full h-64 object-cover"
+                      className="w-full h-64 md:h-72 object-cover top-0"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 left-4 right-4 opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -382,7 +416,7 @@ export default function AboutPage() {
 
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h3>
-                    <p className="text-blue-600 font-medium mb-4">{member.role}</p>
+                    <p className="text-second font-medium mb-4">{member.role}</p>
                     <p className="text-slate-600 text-sm mb-4 leading-relaxed">{member.bio}</p>
 
                     <div className="flex flex-wrap gap-2">
@@ -390,7 +424,7 @@ export default function AboutPage() {
                         <Badge
                           key={skill}
                           variant="secondary"
-                          className="bg-slate-100 text-slate-700 font-mono text-xs"
+                          className="bg-second/5 text-second font-mono text-xs"
                         >
                           {skill}
                         </Badge>
@@ -419,7 +453,7 @@ export default function AboutPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-lg px-8 py-4">
+              <Button size="lg" className="bg-second hover:bg-second/80 text-lg px-8 py-4">
                 <Users className="w-5 h-5 mr-2" />
                 See our Offers
               </Button>

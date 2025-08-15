@@ -185,14 +185,14 @@ const features = [
     icon: Terminal,
     title: "Expertise & Experience",
     description: "Our team comprises seasoned professionals with deep industry knowledge and hands-on experience in the latest technologies and best practices.",
-    image: "https://thumbs.dreamstime.com/b/expertise-expert-consulting-knowledge-advice-business-development-concept-businessman-pressing-button-virtual-screen-206759881.jpg",
+    image: "https://polymerexpert.fr/app/uploads/2023/04/Marketing-innovation.jpeg",
   },
   {
     icon: Cpu,
     title: "Tailored Solutions",
     description:
       "We don’t do one-size-fits-all. We customize IT solutions to perfectly fit your business needs, goals, and budget.",
-    image: "https://as1.ftcdn.net/jpg/05/29/79/12/1000_F_529791276_TLGeByV4vnhTXvS2HUvr8Qiz7I1so95X.jpg",
+    image: "https://excellencetraining.co.uk/wp-content/uploads/2016/04/Keyboard-Button-Tailored-3.jpg",
   },
   {
     icon: Globe,
