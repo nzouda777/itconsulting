@@ -267,7 +267,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section with Parallax */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-tr from-second via-transparent to-transparent">
         <div className="absolute inset-0 tech-grid opacity-30"  />
 
         {/* Animated Background Elements */}

@@ -168,7 +168,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 mt-24 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      <section className="pt-32 mt-24 pb-16  bg-gradient-to-tr from-second via-transparent to-transparent">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -362,7 +362,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-slate-50 " id="teams">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}

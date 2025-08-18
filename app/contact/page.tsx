@@ -17,7 +17,7 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    description: "contact@ITCloudConsultings.com",
+    description: "support@itcloudconsultings.com",
     action: "Send an email",
   },
   {
@@ -90,7 +90,7 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 mt-24 pb-16 bg-gradient-to-b from-slate-50 to-white">
+      <section className="pt-32 mt-24 pb-16 bg-gradient-to-tr from-second via-transparent to-transparent">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -108,43 +108,11 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Contact Methods */}
-      <section className="py-16">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-6 mb-16">
-            {contactMethods.map((method, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -4 }}
-              >
-                <Card className="text-center border-0 shadow-sm hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-second/5 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <method.icon className="w-6 h-6 text-second" />
-                    </div>
-                    <h3 className="font-semibold text-slate-900 mb-2">{method.title}</h3>
-                    <p className="text-slate-600 text-sm mb-4">{method.description}</p>
-                    <Button variant="ghost" size="sm" className="text-second/80 hover:text-second hover:bg-second/10">
-                      {method.action}
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section className="py-16 bg-white" id="contact">
+  {/* Contact Form */}
+  <section className="py-16 bg-white" id="contact">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 ">
           <div className="max-w-4xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className=" gap-12">
               {/* Form */}
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
@@ -271,7 +239,7 @@ export default function ContactPage() {
                         <Button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full bg-second text-base py-3"
+                          className="w-full bg-second text-base py-3 hover:bg-second/80"
                         >
                           {isSubmitting ? (
                             <>
@@ -309,70 +277,43 @@ export default function ContactPage() {
               </motion.div>
 
               {/* Info */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="space-y-8"
-              >
-                <div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Why Choose Us?</h3>
-                  <div className="space-y-4">
-                    {[
-                      {
-                        icon: Code,
-                        title: "Technical expertise",
-                        description: "15+ years of experience in development and system architecture",
-                      },
-                      {
-                        icon: Clock,
-                        title: "Reactivity",
-                        description: "Response within 24 hours and technical support available",
-                      },
-                      {
-                        icon: CheckCircle,
-                        title: "Quality guaranteed",
-                        description: "Code review, automated tests and complete documentation",
-                      },
-                    ].map((benefit, index) => (
-                      <div key={index} className="flex items-start space-x-4">
-                        <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <benefit.icon className="w-5 h-5 text-slate-700" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-slate-900 mb-1">{benefit.title}</h4>
-                          <p className="text-slate-600 text-sm">{benefit.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <Card className="border-0 bg-slate-50">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold text-slate-900 mb-4">Practical Information</h4>
-                    <div className="space-y-3 text-sm">
-                      {/* <div className="flex items-center space-x-3">
-                        <MapPin className="w-4 h-4 text-slate-600" />
-                        <span className="text-slate-600">Paris, France (Remote possible)</span>
-                      </div> */}
-                      <div className="flex items-center space-x-3">
-                        <Clock className="w-4 h-4 text-slate-600" />
-                        <span className="text-slate-600">Mon-Fri 9h-18h (CET)</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <Mail className="w-4 h-4 text-slate-600" />
-                        <span className="text-slate-600">Response guaranteed within 24h</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              
             </div>
           </div>
         </div>
       </section>
+      {/* Contact Methods */}
+      <section className="py-16">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-6 mb-16">
+            {contactMethods.map((method, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -4 }}
+              >
+                <Card className="text-center border-0 shadow-sm hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-second/5 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <method.icon className="w-6 h-6 text-second" />
+                    </div>
+                    <h3 className="font-semibold text-slate-900 mb-2">{method.title}</h3>
+                    <p className="text-slate-600 text-sm mb-4">{method.description}</p>
+                    <Button variant="ghost" size="sm" className="text-second/80 hover:text-second hover:bg-second/10">
+                      {method.action}
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+    
 
       <Footer />
     </div>

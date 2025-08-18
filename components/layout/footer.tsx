@@ -9,7 +9,7 @@ const footerSections = [
     title: "Entreprise",
     links: [
       { name: "About", href: "/about" },
-      { name: "Team", href: "/team" },
+      { name: "Team", href: "/about#teams" },
       { name: "Careers", href: "/careers" },
       // { name: "Partenaires", href: "/partners" },
     ],

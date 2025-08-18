@@ -190,7 +190,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               className="mb-24 last:mb-0"
             >
-              <div className="flex items-start gap-4 md:items-center mb-12" id={ category.title.toLowerCase().replace(" ", "-") }>
+              <div className="flex items-start gap-4 md:items-center md:justify-center mb-12" id={ category.title.toLowerCase().replace(" ", "-") }>
                 <div className="w-12 h-12 md:w-16 md:h-16  bg-slate-100 md:rounded-2xl rounded-lg p-2 inline-flex items-center justify-center ">
                   <category.icon className="md:w-8 md:h-8 w-6 h-6 text-slate-700" />
                 </div>
