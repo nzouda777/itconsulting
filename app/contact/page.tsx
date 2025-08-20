@@ -8,6 +8,7 @@ import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Link from "next/link"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -17,24 +18,28 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
+    link: "mailto:support@itcloudconsultings.com",
     description: "support@itcloudconsultings.com",
     action: "Send an email",
   },
   {
     icon: Phone,
     title: "Phone",
+    link: "+17065811963",
     description: "+1 (706) 581-1963",
     action: "Schedule a call",
   },
   {
     icon: Calendar,
     title: "Appointment",
+    link: "https://wa.me/+17065811963",
     description: "Free technical consultation",
     action: "Schedule an appointment",
   },
   {
     icon: MessageSquare,
     title: "Chat",
+    link: "https://wa.me/+17065811963",
     description: "Support technical in real time",
     action: "Start a conversation",
   },
@@ -108,8 +113,8 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-  {/* Contact Form */}
-  <section className="py-16 bg-white" id="contact">
+      {/* Contact Form */}
+      <section className="py-16 bg-white" id="contact">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 ">
           <div className="max-w-4xl mx-auto">
             <div className=" gap-12">
@@ -132,7 +137,7 @@ export default function ContactPage() {
                       <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid md:grid-cols-2 gap-4">
                           <div>
-                            <label className="block text-sm font-medium text-slate-700 mb-2">Nom complet *</label>
+                            <label className="block text-sm font-medium text-slate-700 mb-2">Full name *</label>
                             <Input
                               name="name"
                               value={formData.name}
@@ -155,17 +160,17 @@ export default function ContactPage() {
                         </div>
 
                         <div>
-                          <label className="block text-sm font-medium text-slate-700 mb-2">Entreprise</label>
+                          <label className="block text-sm font-medium text-slate-700 mb-2">Company</label>
                           <Input
                             name="company"
                             value={formData.company}
                             onChange={handleInputChange}
-                            placeholder="Nom de votre entreprise"
+                            placeholder="Company name"
                           />
                         </div>
 
                         <div>
-                          <label className="block text-sm font-medium text-slate-700 mb-2">Service concerné *</label>
+                          <label className="block text-sm font-medium text-slate-700 mb-2">Service concerned *</label>
                           <select
                             name="service"
                             value={formData.service}
@@ -173,7 +178,7 @@ export default function ContactPage() {
                             className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             required
                           >
-                            <option value="">Sélectionnez un service</option>
+                            <option value="">Select a service</option>
                             {serviceTypes.map((service) => (
                               <option key={service} value={service}>
                                 {service}
@@ -183,7 +188,7 @@ export default function ContactPage() {
                         </div>
 
                         <div>
-                          <label className="block text-sm font-medium text-slate-700 mb-2">Budget estimé</label>
+                          <label className="block text-sm font-medium text-slate-700 mb-2">Estimated budget</label>
                           <select
                             name="budget"
                             value={formData.budget}
@@ -277,14 +282,14 @@ export default function ContactPage() {
               </motion.div>
 
               {/* Info */}
-              
+
             </div>
           </div>
         </div>
       </section>
       {/* Contact Methods */}
       <section className="py-16">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 ">
           <div className="grid md:grid-cols-4 gap-6 mb-16">
             {contactMethods.map((method, index) => (
               <motion.div
@@ -303,7 +308,9 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-slate-900 mb-2">{method.title}</h3>
                     <p className="text-slate-600 text-sm mb-4">{method.description}</p>
                     <Button variant="ghost" size="sm" className="text-second/80 hover:text-second hover:bg-second/10">
+                    <Link href={method.link}>
                       {method.action}
+                    </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -313,7 +320,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-    
+
 
       <Footer />
     </div>

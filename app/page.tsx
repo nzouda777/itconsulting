@@ -365,7 +365,7 @@ export default function HomePage() {
 
       {/* Services Section with Advanced Animations */}
       <section className="py-24 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto h-full overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto h-full overflow-x-hidden px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

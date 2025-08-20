@@ -10,7 +10,7 @@ const footerSections = [
     links: [
       { name: "About", href: "/about" },
       { name: "Team", href: "/about#teams" },
-      { name: "Careers", href: "/careers" },
+      // { name: "Careers", href: "/careers" },
       // { name: "Partenaires", href: "/partners" },
     ],
   },
@@ -48,7 +48,7 @@ const footerSections = [
   //     { name: "API Reference", href: "/api-reference" },
   //   ],
   // },
-  
+
 ]
 
 export default function Footer() {
@@ -88,13 +88,13 @@ export default function Footer() {
         <div className="border-t border-slate-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-600 text-sm">© 2024 ITCloudConsultings. Tous droits réservés.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-          <div className="flex space-x-4">
+            <div className="flex space-x-4">
               {[
                 { icon: Linkedin, href: "https://linkedin.com" },
-                { icon: Facebook, href: "https://facebook.com"},
-                { icon: Youtube, href: "https://youtube.com"},
-                // { icon: TikTok, href: "https://tiktok.com"},
-                { icon: Instagram, href: "https://instagram.com"},
+                { icon: Facebook, href: "https://facebook.com" },
+                { icon: Youtube, href: "https://youtube.com" },
+                { icon: "TikTok", href: "https://tiktok.com" },
+                { icon: Instagram, href: "https://instagram.com" },
 
               ].map((social, index) => (
                 <motion.a
@@ -106,7 +106,13 @@ export default function Footer() {
                   whileTap={{ scale: 0.95 }}
                   className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-slate-600 hover:text-slate-900 hover:shadow-md transition-all"
                 >
-                  <social.icon className="w-5 h-5" />
+                  {social.icon === "TikTok" ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 md:w-5 md:h-5  " viewBox="0 0 24 24">
+                      <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.2 10.1c0 .22-.18.401-.4.39a8 8 0 0 1-3.362-.93c-.281-.15-.638.045-.638.364V15.5a6 6 0 1 1-6.4-5.987a.38.38 0 0 1 .4.387v2.8c0 .22-.18.397-.398.433A2.4 2.4 0 1 0 12.2 15.5V2.9a.4.4 0 0 1 .4-.4h2.8a.43.43 0 0 1 .418.4a4.4 4.4 0 0 0 3.983 3.982c.22.02.4.197.4.418z"></path>
+                    </svg>
+                  ) : (
+                    <social.icon className="w-5 h-5" />
+                  )}
                 </motion.a>
               ))}
             </div>

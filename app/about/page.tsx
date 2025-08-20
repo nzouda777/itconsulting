@@ -45,8 +45,8 @@ const team = [
     name: "Rodrigue NZOUDA",
     role: "Fullstack engineer & Lead Shopify dev",
     image: "/rn.JPG",
-    bio: "Passionate about UX and web performance.",
-    skills: ["ReactJS", "NextJS", "TypeScript", "Javascript", "Vue.JS", "Shopify", "PHP", "Laravel", "Tailwindcss", "CI/CD", "SCSS/SASS", "css"],
+    bio: "Fullstack developer. Ensure performance, security, and scalability of our Shopify applications.",
+    skills: [ "NextJS", "TypeScript", "Javascript", "Shopify", "Laravel", "CI/CD"],
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
@@ -62,7 +62,7 @@ const team = [
     role: "Freelance Marketplace Manager & Front end developper",
     image: "/Media.jpeg",
     bio: "skilled in creating modern, responsive, and user-friendly web interfaces while also managing freelance marketplace profiles on platforms like Fiverr and Upwork.",
-    skills: ["ReactJS", "TypeScript", "Javascript", "Vue.JS", "Tailwindcss", "SCSS/SASS", "css"],
+    skills: ["ReactJS", "Wordpress", "Fiverr", "Upwork"],
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
 
@@ -79,7 +79,7 @@ const team = [
     role: "Intern developer",
     image: "/audrey.png",
     bio: "Fullstack developer intern at ITCloudConsultings.",
-    skills: ["ReactJS", "TypeScript", "Javascript", "PHP", "Laravel", "Tailwindcss", "SCSS/SASS", "css"],
+    skills: ["ReactJS", "Wordpress"],
     social: { github: "#", linkedin: "#", twitter: "#" },
   },
   {
@@ -87,7 +87,7 @@ const team = [
     role: "Community Manager & Social Media Manager",
     image: "/kely.png",
     bio: "passionate about communication, I develop communities where every voice matters",
-    skills: ["ReactJS", "TypeScript", "Javascript", "PHP", "Laravel", "Tailwindcss", "SCSS/SASS", "css"],
+    skills: ["Social Media", "Content Marketing", "Community Management"],
     social: { github: "#", linkedin: "#", twitter: "#" },
   }, 
   
@@ -363,7 +363,7 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section className="py-24 bg-slate-50 " id="teams">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
+        <div className="2xl:container  max-w-[100%] mx-auto  px-6 md:px-12  ">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

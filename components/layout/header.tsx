@@ -74,11 +74,11 @@ export default function Header() {
           </div>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="/contact">
+            {/* <Link href="/contact">
               <Button variant="ghost" size="sm">
                 Free Audit
               </Button>
-            </Link>
+            </Link> */}
             <Link href="/contact#contact">
               <Button size="sm" className="bg-gradient-to-l from-prime to-second font-bold">
                 Start a Project
@@ -126,11 +126,11 @@ export default function Header() {
                   </motion.div>
                 ))}
                 <div className="pt-4 border-t border-slate-200 space-y-2">
-                  <Link href="/contact">
+                  {/* <Link href="/contact">
                     <Button variant="ghost" size="sm" className="w-full justify-start">
                       Free Audit
                     </Button>
-                  </Link>
+                  </Link> */}
                   <Link href="/contact#contact">
                     <Button size="sm" className="w-full bg-gradient-to-l from-prime to-second font-bold">
                       Start a Project

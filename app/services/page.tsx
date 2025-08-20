@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 import { Code2, Shield, Cloud, ArrowRight, PenTool, Play, Headset, Rss} from "lucide-react"
 
 const serviceCategories = [
@@ -64,13 +65,13 @@ const serviceCategories = [
       {
         name: "Architecture Cloud",
         description: "Migration and multi-cloud optimization",
-        technologies: ["AWS", "Azure", "GCP", "Terraform"],
+        technologies: ["AWS", "Azure", "GCP"],
         pricing: "From 25k€",
       },
       {
         name: "DevOps & CI/CD",
         description: "Complete deployment automation",
-        technologies: ["Kubernetes", "Docker", "Jenkins", "GitLab", "Jira", "Confluence", "Github Action"],
+        technologies: ["Kubernetes", "Docker", "Jenkins", "GitLab", "Jira", "Confluence", "Github Action", "Terraform"],
         pricing: "From 12k€",
       },
       {
@@ -190,8 +191,8 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               className="mb-24 last:mb-0"
             >
-              <div className="flex items-start gap-4 md:items-center md:justify-center mb-12" id={ category.title.toLowerCase().replace(" ", "-") }>
-                <div className="w-12 h-12 md:w-16 md:h-16  bg-slate-100 md:rounded-2xl rounded-lg p-2 inline-flex items-center justify-center ">
+              <div className="flex items-start gap-4 md:items-center md:justify-center md:flex-col md:text-center mb-12" id={ category.title.toLowerCase().replace(" ", "-") }>
+                <div className="w-12 h-12 md:w-16 md:h-16  bg-gradient-to-tr from-second/25 via-second/10 to-prime/25 md:rounded-2xl rounded-lg p-2 inline-flex items-center justify-center ">
                   <category.icon className="md:w-8 md:h-8 w-6 h-6 text-slate-700" />
                 </div>
                 <div>
@@ -210,17 +211,31 @@ export default function ServicesPage() {
                     transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                     whileHover={{ y: -4 }}
                   >
-                    <Card className="h-full border-0 shadow-sm hover:shadow-lg transition-all duration-300">
-                      <CardHeader>
+                    <Card className="!h-full w-full border-0 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between items-start">
+                      <CardHeader className="w-full">
                         <CardTitle className="text-xl text-slate-900">{service.name}</CardTitle>
                         <p className="text-slate-600">{service.description}</p>
                       </CardHeader>
-                      <CardContent>
-                        <div className="mb-6">
-                          <h4 className="font-semibold text-slate-900 mb-3">Technologies</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {service.technologies.map((tech) => (
+                      <CardContent className="w-full">
+                        { service.technologies.length < 1 ? (
+                          <div className="mb-6">
+                            {/* <h4 className="font-semibold text-slate-900 mb-3">Technologies</h4>
+                            <div className="flex flex-wrap gap-2">
                               <Badge
+                                key={service.name}
+                                variant="secondary"
+                                className="bg-slate-100 text-slate-700 font-mono text-xs"
+                              >
+                                {service.name}
+                              </Badge>
+                            </div> */}
+                          </div>
+                        ) : (
+                          <div className="mb-6">
+                            <h4 className="font-semibold text-slate-900 mb-3">Technologies</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {service.technologies.map((tech) => (
+                                <Badge
                                 key={tech}
                                 variant="secondary"
                                 className="bg-slate-100 text-slate-700 font-mono text-xs"
@@ -230,6 +245,7 @@ export default function ServicesPage() {
                             ))}
                           </div>
                         </div>
+                        )}
 
                         {/* <div className="mb-6">
                           <div className="text-2xl font-bold text-slate-900 mb-1">{service.pricing}</div>
@@ -237,7 +253,9 @@ export default function ServicesPage() {
                         </div> */}
 
                         <Button className="w-full bg-gradient-to-r from-prime to-second">
-                          Request a Quote
+                          <Link href="/contact#contact">
+                            Request a Quote
+                          </Link>
                           <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                       </CardContent>
