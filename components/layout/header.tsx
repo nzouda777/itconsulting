@@ -42,7 +42,7 @@ export default function Header() {
       <nav className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  bg-white  py-2">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
-            <img src="/logo.png" alt="ITCloudConsultings" className="w-full h-24 object-cover"/>
+            <img src="/logo.png" alt="ITCloudConsultings" className="w-full h-8 object-contain"/>
           </Link>
 
           {/* Desktop Navigation */}
