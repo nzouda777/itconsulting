@@ -8,8 +8,10 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mon
 
 export const metadata: Metadata = {
   title: "ITCloud Consultings- Solutions IT & Digitales",
-  description: "Expertise technique avancée en développement, design et stratégie digitale"
-  
+  description: "Expertise technique avancée en développement, design et stratégie digitale",
+  icons: {
+    icon: "/favbg.png",
+  },
 }
 
 export default function RootLayout({

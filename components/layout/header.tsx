@@ -42,13 +42,7 @@ export default function Header() {
       <nav className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  bg-white  py-2">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <Terminal className="w-8 h-8 text-slate-900 group-hover:text-blue-600 transition-colors" />
-              <div className="absolute -inset-1 bg-blue-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity blur-sm" />
-            </div>
-            <span className="text-xl font-bold font-mono tracking-tight">
-              ITCloud<span className="text-blue-600"> Consultings</span>
-            </span>
+            <img src="/logo.png" alt="ITCloudConsultings" className="w-full h-24 object-cover"/>
           </Link>
 
           {/* Desktop Navigation */}
