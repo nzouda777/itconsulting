@@ -32,7 +32,7 @@ const contactMethods = [
   {
     icon: Calendar,
     title: "Appointment",
-    link: "https://calendly.com/itcloudconsultings-support/30min,
+    link: "https://calendly.com/itcloudconsultings-support/30min",
     description: "Free technical consultation",
     action: "Schedule an appointment",
   },
