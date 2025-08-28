@@ -18,9 +18,21 @@ jobs:
       with:
         node-version: '18.x'
         cache: 'npm'
+        
+    - name: Deploy to VPS
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        script: |
+          cd /home/apps/prod/itcc-website-frontend
+          git pull origin prod || git clone https://github.com/ITCloud-Consulting/itcc-website-frontend.git .
+          npm ci --legacy-peer-deps
+          npm run build
     
-    - name: Install dependencies
-      run: npm ci --legacy-peer-deps
+    # - name: Install dependencies
+    #   run: npm ci --legacy-peer-deps
     
     # - name: Run linting
     #   run: npm run lint
@@ -28,8 +40,8 @@ jobs:
     # - name: Run tests 
     #   run: npm test
     
-    - name: Build application
-      run: npm run build
+    # - name: Build application
+    #   run: npm run build
       
     # - name: Check for TypeScript errors
     #   run: npx tsc --noEmit
