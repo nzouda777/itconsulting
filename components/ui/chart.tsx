@@ -39,7 +39,7 @@ const Chartcontainer = React.forwardRef<
   React.ComponentProps<"div"> & {
     config: ChartConfig
     children: React.ComponentProps<
-      typeof RechartsPrimitive.Responsivecontainer
+      typeof RechartsPrimitive.ResponsiveContainer
     >["children"]
   }
 >(({ id, className, children, config, ...props }, ref) => {
@@ -58,9 +58,9 @@ const Chartcontainer = React.forwardRef<
         {...props}
       >
         <ChartStyle id={chartId} config={config} />
-        <RechartsPrimitive.Responsivecontainer>
+        <RechartsPrimitive.ResponsiveContainer>
           {children}
-        </RechartsPrimitive.Responsivecontainer>
+        </RechartsPrimitive.ResponsiveContainer>
       </div>
     </ChartContext.Provider>
   )
