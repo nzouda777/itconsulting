@@ -28,21 +28,13 @@ function useChart() {
   const context = React.useContext(ChartContext)
 
   if (!context) {
-<<<<<<< HEAD
     throw new Error("useChart must be used within a <Chartcontainer />")
-=======
-    throw new Error("useChart must be used within a <Chartmax-w-[98%] />")
->>>>>>> 4fb5a3d (flipping card updates)
   }
 
   return context
 }
 
-<<<<<<< HEAD
 const Chartcontainer = React.forwardRef<
-=======
-const Chartmax-w-[98%] = React.forwardRef<
->>>>>>> 4fb5a3d (flipping card updates)
   HTMLDivElement,
   React.ComponentProps<"div"> & {
     config: ChartConfig
