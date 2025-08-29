@@ -34,7 +34,7 @@ const contactMethods = [
     title: "Appointment",
     link: "https://calendly.com/itcloudconsultings-support/30min",
     description: "Free technical consultation",
-    action: "Schedule an appointment",
+    action: "Schedule an appointment", 
   },
   {
     icon: MessageSquare,

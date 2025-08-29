@@ -28,26 +28,18 @@ function useChart() {
   const context = React.useContext(ChartContext)
 
   if (!context) {
-<<<<<<< HEAD
     throw new Error("useChart must be used within a <Chartcontainer />")
-=======
-    throw new Error("useChart must be used within a <Chartmax-w-[98%] />")
->>>>>>> 4fb5a3d (flipping card updates)
   }
 
   return context
 }
 
-<<<<<<< HEAD
 const Chartcontainer = React.forwardRef<
-=======
-const Chartmax-w-[98%] = React.forwardRef<
->>>>>>> 4fb5a3d (flipping card updates)
   HTMLDivElement,
   React.ComponentProps<"div"> & {
     config: ChartConfig
     children: React.ComponentProps<
-      typeof RechartsPrimitive.Responsivecontainer
+      typeof RechartsPrimitive.ResponsiveContainer
     >["children"]
   }
 >(({ id, className, children, config, ...props }, ref) => {
@@ -66,9 +58,9 @@ const Chartmax-w-[98%] = React.forwardRef<
         {...props}
       >
         <ChartStyle id={chartId} config={config} />
-        <RechartsPrimitive.Responsivecontainer>
+        <RechartsPrimitive.ResponsiveContainer>
           {children}
-        </RechartsPrimitive.Responsivecontainer>
+        </RechartsPrimitive.ResponsiveContainer>
       </div>
     </ChartContext.Provider>
   )
