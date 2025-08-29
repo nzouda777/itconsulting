@@ -32,6 +32,7 @@ jobs:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.DEPLOY_KEY }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
           cd /home/apps/prod/itcc-website-frontend
           git pull origin prod || git clone https://github.com/ITCloud-Consulting/itcc-website-frontend.git .
