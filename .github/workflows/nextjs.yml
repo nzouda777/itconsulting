@@ -23,15 +23,15 @@ jobs:
     - name: Debug secrets
       run: |
         echo "Host: ${{ secrets.VPS_HOST }}"
-        echo "Username: ${{ secrets.VPS_USERNAME }}"
-        echo "Key length: ${{ secrets.VPS_SSH_KEY }}"
+        echo "Username: ${{ secrets.VPS_USER }}"
+        echo "Key length: ${{ secrets.DEPLOY_KEY }}"
     
     - name: Deploy to VPS
       uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.VPS_HOST }}
-        username: ${{ secrets.VPS_USERNAME }}
-        key: ${{ secrets.VPS_SSH_KEY }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.DEPLOY_KEY }}
         script: |
           cd /home/apps/prod/itcc-website-frontend
           git pull origin prod || git clone https://github.com/ITCloud-Consulting/itcc-website-frontend.git .
