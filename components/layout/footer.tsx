@@ -58,12 +58,12 @@ export default function Footer() {
         <div className="grid lg:grid-cols-6 gap-12">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 group mb-6">
-              <img src="/logo.png" alt="ITCloudConsultings" className="w-full h-24 object-cover"/>
+              <img src="/logo.png" alt="ITCloudConsultings" className="w-8/12 h-24 object-contain"/>
             </Link>
-            {/* <p className="text-slate-600 mb-6 max-w-md">
+            <p className="text-slate-600 mb-6 max-w-md">
               Advanced technical expertise to transform your digital challenges into growth opportunities.
             </p>
-             */}
+            
           </div>
 
           {footerSections.map((section, index) => (

@@ -28,7 +28,7 @@ const team = [
   {
     name: "Ivan SAHA",
     role: "CEO & Cloud Architect",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/ivan.JPG",
     bio: "15+ years of experience in system architecture and full-stack development. Expert in microservices and cloud-native.",
     skills: ["Architecture", "Node.js", "AWS", "Kubernetes"],
     social: { github: "#", linkedin: "#", twitter: "#" },
@@ -36,7 +36,7 @@ const team = [
   {
     name: "Gilles KEMGOUM",
     role: "Lead Software Developer",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/gilles.jpg",
     bio: "Responsible for the design, development, and quality of the company’s software solutions. I lead the technical team, defines technology choices, and ensures the performance, security, and scalability of delivered applications.",
     skills: ["Java", "Spring Boot", "Angular", "Laravel"],
     social: { github: "#", linkedin: "#", twitter: "#" },
@@ -209,6 +209,82 @@ export default function AboutPage() {
         </div>
       </section>
 
+{/* Team Section */}
+<section className="py-24 bg-slate-50 " id="teams">
+        <div className="2xl:container  max-w-[100%] mx-auto  px-6 md:px-12  ">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Notre Équipe</Badge>
+            <h2 className="text-4xl font-bold mb-6 gradient-text">The Experts Behind Your Projects</h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              A multidisciplinary team of experts passionate about technical innovation
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+              >
+                <Card className="border-0 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <div className="relative">
+                    <Image
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      width={300}
+                      height={300}
+                      className="w-full h-64 md:h-72 object-cover top-0"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-4 left-4 right-4 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                      <div className="flex space-x-2">
+                        {Object.entries(member.social).map(([platform, url]) => (
+                          <Button
+                            key={platform}
+                            size="sm"
+                            className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/30"
+                          >
+                            {platform === "github" && <Github className="w-4 h-4" />}
+                            {platform === "linkedin" && <Linkedin className="w-4 h-4" />}
+                            {platform === "twitter" && <Twitter className="w-4 h-4" />}
+                          </Button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h3>
+                    <p className="text-second font-medium mb-4">{member.role}</p>
+                    <p className="text-slate-600 text-sm mb-4 leading-relaxed">{member.bio}</p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {member.skills.map((skill) => (
+                        <Badge
+                          key={skill}
+                          variant="secondary"
+                          className="bg-second/5 text-second font-mono text-xs"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Mission Section */}
       <section className="py-24 bg-white">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  ">
@@ -361,82 +437,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-24 bg-slate-50 " id="teams">
-        <div className="2xl:container  max-w-[100%] mx-auto  px-6 md:px-12  ">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Notre Équipe</Badge>
-            <h2 className="text-4xl font-bold mb-6 gradient-text">The Experts Behind Your Projects</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              A multidisciplinary team of experts passionate about technical innovation
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-              >
-                <Card className="border-0 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
-                  <div className="relative">
-                    <Image
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-64 md:h-72 object-cover top-0"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute bottom-4 left-4 right-4 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                      <div className="flex space-x-2">
-                        {Object.entries(member.social).map(([platform, url]) => (
-                          <Button
-                            key={platform}
-                            size="sm"
-                            className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/30"
-                          >
-                            {platform === "github" && <Github className="w-4 h-4" />}
-                            {platform === "linkedin" && <Linkedin className="w-4 h-4" />}
-                            {platform === "twitter" && <Twitter className="w-4 h-4" />}
-                          </Button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h3>
-                    <p className="text-second font-medium mb-4">{member.role}</p>
-                    <p className="text-slate-600 text-sm mb-4 leading-relaxed">{member.bio}</p>
-
-                    <div className="flex flex-wrap gap-2">
-                      {member.skills.map((skill) => (
-                        <Badge
-                          key={skill}
-                          variant="secondary"
-                          className="bg-second/5 text-second font-mono text-xs"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="py-24 bg-white">

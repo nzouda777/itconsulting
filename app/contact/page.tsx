@@ -25,7 +25,7 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Phone",
-    link: "+17065811963",
+    link: "tel:+17065811963",
     description: "+1 (706) 581-1963",
     action: "Schedule a call",
   },
