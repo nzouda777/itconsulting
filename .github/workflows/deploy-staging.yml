@@ -43,7 +43,7 @@ jobs:
       # Déploiement
       - name: Deploy to server
         run: |
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p /var/www/staging"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p /var/www/staging/itcc-website-frontend"
 
           rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
             --exclude='node_modules' \
@@ -51,8 +51,8 @@ jobs:
             --exclude='.github' \
             --exclude='.env.local' \
             --exclude='.next/cache' \
-            ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/staging/
+            ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/staging/itcc-website-frontend/
 
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/staging && npm ci --legacy-peer-deps --only=staging"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/staging/itcc-website-frontend && npm ci --legacy-peer-deps --only=staging"
 
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/staging && \ pm2 describe itcc-website-frontend > /dev/null \ && pm2 reload itcc-website-frontend \ || pm2 start npm --name 'itcc-website-frontend' -- start"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/staging/itcc-website-frontend && \ pm2 describe itcc-website-frontend > /dev/null \ && pm2 reload itcc-website-frontend \ || pm2 start npm --name 'itcc-website-frontend' -- start"
