@@ -37,10 +37,6 @@ jobs:
       - name: Deploy to server
         run: |
           rsync -avz --delete \
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p /var/www/prod/itcc-website-frontend"
-
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
-            --exclude='node_modules' \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='node_modules' \
@@ -53,11 +49,3 @@ jobs:
             npm ci --omit=dev && \
             pm2 reload itcc-website-frontend || pm2 start npm --name itcc-website-frontend -- start
           "
-
-            --exclude='.env.local' \
-            --exclude='.next/cache' \
-            ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/prod/itcc-website-frontend/
-
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/prod/itcc-website-frontend && npm ci --legacy-peer-deps --only=production"
-
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "cd /var/www/prod/itcc-website-frontend && \ pm2 describe itcc-website-frontend > /dev/null \ && pm2 reload itcc-website-frontend \ || pm2 start npm --name 'itcc-website-frontend' -- start"
