@@ -35,8 +35,8 @@ const team = [
   },
   {
     name: "Gilles KEMGOUM",
-    role: "Lead Software Developer",
-    image: "/gilles.jpg",
+    role: "Lead Software Engineer",
+    image: "/gilles.png",
     bio: "Responsible for the design, development, and quality of the company’s software solutions. I lead the technical team, defines technology choices, and ensures the performance, security, and scalability of delivered applications.",
     skills: ["Java", "Spring Boot", "Angular", "Laravel"],
     social: { github: "#", linkedin: "#", twitter: "#" },
