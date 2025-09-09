@@ -53,6 +53,12 @@ const serviceTypes = [
   "Security & compliance",
   "Performance optimization",
   "Team training",
+  "UI/UX Design",
+  "Graphic Design",
+  "Motion & Ads",
+  "Virtual Assistant",
+  "Community & Social Media Management",
+  "DevSecOps & Cloud Consulting",
   "Other",
 ]
 
@@ -60,7 +66,7 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
+    subject: "",
     service: "",
     budget: "",
     message: "",
@@ -75,7 +81,29 @@ export default function ContactPage() {
     setIsSubmitting(true)
 
     // Simulation d'envoi (remplacer par vraie API)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    // await new Promise((resolve) => setTimeout(resolve, 2000))
+    
+    try {
+      const response = await fetch("https://api.itcloudconsultings.com/api/v1/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: `Message: ${formData.message}\nBudget: ${formData.budget}\nUrgency: ${formData.urgency}\nService: ${formData.service}`,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error(response.statusText)
+      }
+    } catch (error) {
+      console.error("Error sending contact form:", error)
+    }
+
 
     setIsSubmitting(false)
 
@@ -160,12 +188,13 @@ export default function ContactPage() {
                         </div>
 
                         <div>
-                          <label className="block text-sm font-medium text-slate-700 mb-2">Company</label>
+                          <label className="block text-sm font-medium text-slate-700 mb-2">Subject *</label>
                           <Input
-                            name="company"
-                            value={formData.company}
+                            name="subject"
+                            value={formData.subject}
                             onChange={handleInputChange}
-                            placeholder="Company name"
+                            placeholder="Subject"
+                            required
                           />
                         </div>
 

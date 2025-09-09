@@ -69,7 +69,7 @@ const team = [
   {
     name: "Pouotouo Abdel ",
     role: "Software Engineer",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/abdel.jpg",
     bio: "Backend web and mobile dev.",
     skills: ["Django", "Spring Boot", "Flutter"],
     social: { github: "#", linkedin: "#", twitter: "#" },

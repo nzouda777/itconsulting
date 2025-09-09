@@ -63,12 +63,12 @@ export default function ContactSuccessPage() {
                       Back to home
                     </Button>
                   </Link>
-                  <Link href="/blog">
+                  {/* <Link href="/blog">
                     <Button variant="outline">
                       <ArrowRight className="w-4 h-4 mr-2" />
                       Read our blog
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-slate-200">
