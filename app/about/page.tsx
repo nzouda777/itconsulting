@@ -28,7 +28,7 @@ const team = [
   {
     name: "Ivan SAHA",
     role: "CEO & Cloud Architect",
-    image: "/ivan.JPG",
+    image: "/ivan.jpg",
     bio: "15+ years of experience in system architecture and full-stack development. Expert in microservices and cloud-native.",
     skills: ["Architecture", "Node.js", "AWS", "Kubernetes"],
     social: { github: "#", linkedin: "#", twitter: "#" },
