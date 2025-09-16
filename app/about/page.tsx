@@ -218,7 +218,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Notre Équipe</Badge>
+            <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Our Team</Badge>
             <h2 className="text-4xl font-bold mb-6 gradient-text">The Experts Behind Your Projects</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               A multidisciplinary team of experts passionate about technical innovation
@@ -242,7 +242,7 @@ export default function AboutPage() {
                       alt={member.name}
                       width={300}
                       height={300}
-                      className="w-full h-64 md:h-72 object-cover top-0"
+                      className={`w-full h-64 md:h-72 object-cover ${ member.name == 'Ivan SAHA' ? 'object-top':"" } top-0`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 left-4 right-4 opacity-0 hover:opacity-100 transition-opacity duration-300">
