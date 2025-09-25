@@ -1,0 +1,789 @@
+{
+    "Navigation": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "blog": "Blog",
+        "testimonials": "Testimonials",
+        "contact": "Contact"
+    },
+    "Footer": {
+        "company": {
+            "title": "Company",
+            "description": "Advanced technical expertise to transform your digital challenges into growth opportunities.",
+            "links": {
+                "about": "About",
+                "team": "Team",
+                "careers": "Careers",
+                "partners": "Partners"
+            }
+        },
+        "services": {
+            "title": "Services",
+            "web_mobile": "Web & Mobile Development",
+            "ui_ux": "UI/UX & Graphic Design",
+            "motion_ads": "Motion Design & Ads",
+            "virtual_assistant": "Virtual Assistant",
+            "social_media": "Community & Social Media Management",
+            "devops_cloud": "DevSecOps & Cloud Consulting"
+        },
+        "solutions": {
+            "title": "Solutions",
+            "audit": "Technical Audit",
+            "architecture": "System Architecture",
+            "optimization": "Performance Optimization",
+            "training": "Team Training"
+        },
+        "resources": {
+            "title": "Resources",
+            "documentation": "Documentation",
+            "case_studies": "Case Studies",
+            "guides": "Technical Guides",
+            "api_reference": "API Reference"
+        },
+        "copyright": "© 2025 ITCloudConsultings. All rights reserved."
+    },
+    "HomePage": {
+        "hero": {
+            "title": "New Generation Technical Solutions",
+            "description": "Our dedicated team of developers, designers, and engineers enables us to deliver high-quality websites and mobile applications that align seamlessly with our clients’ goals—efficiently, intelligently, and cost-effectively.",
+            "cta": "Free Technical Audit",
+            "ctaOutline": "Our Achievements"
+        },
+        "services": {
+            "badge": "Core Services",
+            "title": "Full Technical Expertise",
+            "description": "From system architecture to delivery, we master every stage of the modern development cycle, with a focus on performance and scalability.",
+            "serviceItems": {
+                "web_development": {
+                    "title": "Web Development",
+                    "description": "Custom websites with ongoing support and maintenance.",
+                    "features": [
+                        "React/Next.js",
+                        "Node.js/Python",
+                        "Microservices Architecture"
+                    ],
+                    "cta": "Discover"
+                },
+                "mobile_development": {
+                    "title": "Mobile Development",
+                    "description": "Custom mobile apps with ongoing support and maintenance.",
+                    "features": [
+                        "React Native",
+                        "Flutter",
+                        "Swift/Kotlin"
+                    ],
+                    "cta": "Discover"
+                },
+                "ui_ux_design": {
+                    "title": "UI/UX & Graphic Design",
+                    "description": "Creative branding, UI/UX, flyers and brochures that communicate and captivate effectively.",
+                    "features": [
+                        "Figma/Adobe XD",
+                        "Branding",
+                        "Print Design"
+                    ],
+                    "cta": "Discover"
+                },
+                "motion_design": {
+                    "title": "Motion Design & Ads",
+                    "description": "Creative motion design and ads that engage and inspire.",
+                    "features": [
+                        "After Effects",
+                        "Blender",
+                        "Ad Campaigns"
+                    ],
+                    "cta": "Discover"
+                },
+                "virtual_assistant": {
+                    "title": "Virtual Assistant",
+                    "description": "Virtual assistant services to handle your daily tasks and appointments.",
+                    "features": [
+                        "Schedule Management",
+                        "Customer Support",
+                        "Administrative Tasks"
+                    ],
+                    "cta": "Discover"
+                },
+                "social_media": {
+                    "title": "Community & Social Media Management",
+                    "description": "Social media management and community engagement services.",
+                    "features": [
+                        "Content Strategy",
+                        "Community Management",
+                        "Analytics"
+                    ],
+                    "cta": "Discover"
+                },
+                "devops_cloud": {
+                    "title": "Linux/DevOps & Cloud Consulting",
+                    "description": "DevSecOps and cloud consulting services to optimize your IT infrastructure.",
+                    "features": [
+                        "AWS/Azure/GCP",
+                        "Kubernetes",
+                        "CI/CD Pipeline"
+                    ],
+                    "cta": "Discover"
+                },
+                "call_center": {
+                    "title": "Call Center",
+                    "description": "Call center services to handle your daily tasks and appointments.",
+                    "features": [
+                        "Phone Support",
+                        "Call Management",
+                        "Customer Service"
+                    ],
+                    "cta": "Discover"
+                }
+            }
+        },
+        "featureSection": {
+            "badge": "",
+            "title": "Why Choose Us ?",
+            "description": "Our differentiating technical approach guarantees exceptional results",
+            "expertise": {
+                "title": "Expertise & Experience",
+                "description": "Our team comprises seasoned professionals with deep industry knowledge and hands-on experience in the latest technologies and best practices.",
+                "image": "https://polymerexpert.fr/app/uploads/2023/04/Marketing-innovation.jpeg",
+                "cta": "Discover"
+            },
+            "tailored": {
+                "title": "Tailored Solutions",
+                "description": "We don’t do one-size-fits-all. We customize IT solutions to perfectly fit your business needs, goals, and budget.",
+                "image": "https://excellencetraining.co.uk/wp-content/uploads/2016/04/Keyboard-Button-Tailored-3.jpg",
+                "cta": "Discover"
+            },
+            "technology": {
+                "title": "Cutting-Edge Technology",
+                "description": "We leverage the latest tools, platforms, and innovations to keep your business ahead of the competition.",
+                "image": "https://www.plataine.com/wp-content/uploads/2019/11/shutterstock_1282709413-1.jpg",
+                "cta": "Discover"
+            },
+            "support": {
+                "title": "Reliable Support & Maintenance",
+                "description": "We provide continuous monitoring, quick issue resolution, and proactive maintenance to keep your IT infrastructure running smoothly.",
+                "image": "https://wsconnect.in/wp-content/uploads/2024/04/maintenance-and-it-support-Johannesburg.jpg",
+                "cta": "Discover"
+            },
+            "cost": {
+                "title": "Cost Efficiency",
+                "description": "Through smart planning and scalable solutions, we maximize your IT investment while minimizing unnecessary expenses.",
+                "image": "https://prosperity.com.au/blog_how-to-realize-huge-cost-savings-for-enterprise-telecom-840x420.jpg",
+                "cta": "Discover"
+            },
+            "security": {
+                "title": "Security First",
+                "description": "We prioritize your data and network security with robust protocols, compliance standards, and ongoing risk management.",
+                "image": "https://connect.geant.org/wp-content/uploads/2023/10/security-culturejpg-990x596.jpg",
+                "cta": "Discover"
+            },
+            "communication": {
+                "title": "Transparent Communication",
+                "description": "We keep you informed at every stage with clear, honest, and timely communication.",
+                "image": "https://www.theladders.com/wp-content/uploads/handshake_190617.jpg",
+                "cta": "Discover"
+            },
+            "innovation": {
+                "title": "Innovation Partner",
+                "description": "More than just a vendor, we aim to be your long-term IT partner, driving innovation and growth alongside your business.",
+                "image": "https://intuitconsultancy.com/wp-content/uploads/2023/11/Why-Is-Digital-transformation-About-People-and-Not-Just-About-Technology.png",
+                "cta": "Discover"
+            },
+            "global": {
+                "title": "Global Reach, Local Touch",
+                "description": "With access to global talent and technologies, we deliver solutions tailored to your local business environment.",
+                "image": "https://cdn.prod.website-files.com/667a8a31f844cf6675e10801/66dfebdbce4538603a39c5d8_663067c92e822412ecc8d158_localglobal.png",
+                "cta": "Discover"
+            }
+        },
+        "ctaSection": {
+            "title": "Ready to transform your business?",
+            "description": "Let's start with a free technical audit of your current system. Together we'll identify optimization opportunities and define a technical roadmap tailored to your business objectives.",
+            "cta": "Book an Appointment"
+        }
+    },
+    "AboutPage": {
+        "badge": "About us",
+        "title": "The Team Behind Your Technical Success",
+        "description": "A team of passionate experts united by a shared vision: transforming your technical challenges into durable competitive advantages.",
+        "team": {
+            "badge": "Our team",
+            "title": "The Experts Behind Your Projects",
+            "description": "A multidisciplinary team of experts passionate about technical innovation",
+            "members": [
+                {
+                    "key": 0,
+                    "name": "Ivan SAHA",
+                    "role": "CEO & Cloud Architect",
+                    "image": "/ivan.jpg",
+                    "bio": "15+ years of experience in system architecture and full-stack development. Expert in microservices and cloud-native.",
+                    "skills": [
+                        "Architecture",
+                        "Node.js",
+                        "AWS",
+                        "Kubernetes"
+                    ],
+                    "social": {
+                        "github": "#",
+                        "linkedin": "#",
+                        "twitter": "#"
+                    }
+                },
+                {
+                    "key": 1,
+                    "name": "Gilles KEMGOUM",
+                    "role": "Lead Software Engineer",
+                    "image": "gilles.png",
+                    "bio": "Responsible for the design, development, and quality of the company’s software solutions. I lead the technical team, defines technology choices, and ensures the performance, security, and scalability of delivered applications.",
+                    "skills": [
+                        "Java",
+                        "Spring Boot",
+                        "Angular",
+                        "Laravel"
+                    ],
+                    "social": {
+                        "github": "#",
+                        "linkedin": "#",
+                        "twitter": "#"
+                    }
+                },
+                {
+                    "key": 2,
+                    "name": "Rodrigue NZOUDA",
+                    "role": "Fullstack engineer & Lead Shopify dev",
+                    "image": "rn.JPG",
+                    "bio": "Fullstack developer. Ensure performance, security, and scalability of our Shopify applications.",
+                    "skills": [
+                        "NextJS",
+                        "TypeScript",
+                        "Javascript",
+                        "Shopify",
+                        "Laravel",
+                        "CI/CD"
+                    ],
+                    "social": {
+                        "github": "#",
+                        "linkedin": "#",
+                        "twitter": "#"
+                    }
+                },
+                {
+                    "key": 3,
+                    "name": "Cyrille Toumi",
+                    "role": "Software Engineer – Web, Mobile & Backend Developer",
+                    "image": "profile.jpg",
+                    "bio": "Passionate about developing performant and scalable applications, he masters Spring Boot for the backend, Vue.js for the frontend and Flutter for mobile applications.",
+                    "skills": [
+                        "Spring Boot",
+                        "Vue.js",
+                        "Flutter"
+                    ],
+                    "social": {
+                        "github": "#",
+                        "linkedin": "#",
+                        "twitter": "#"
+                    }
+                },
+                {
+                    "key": 4,
+                    "name": "Manuella SAHA",
+                    "role": "Freelance Marketplace Manager & Front end developper",
+                    "image": "Media.jpeg",
+                    "bio": "Skilled in creating modern, responsive, and user-friendly web interfaces while also managing freelance marketplace profiles on platforms like Fiverr and Upwork.",
+                    "skills": [
+                        "ReactJS",
+                        "Wordpress",
+                        "Fiverr",
+                        "Upwork"
+                    ],
+                    "social": {
+                        "github": "#",
+                        "linkedin": "#",
+                        "twitter": "#"
+                    }
+                },
+                {
+                    "key": 5,
+                    "name": "Pouotouo Abdel",
+                    "role": "Software Engineer",
+                    "image": "abdel.jpg",
+                    "bio": "Backend web and mobile dev.",
+                    "skills": [
+                        "Django",
+                        "Spring Boot",
+                        "Flutter"
+                    ],
+                    "social": {
+                        "github": "#",
+                        "linkedin": "#",
+                        "twitter": "#"
+                    }
+                },
+                {
+                    "key": 6,
+                    "name": "Audrey SAHA",
+                    "role": "Intern developer",
+                    "image": "audrey.png",
+                    "bio": "Fullstack developer intern at ITCloudConsultings.",
+                    "skills": [
+                        "ReactJS",
+                        "Wordpress"
+                    ],
+                    "social": {
+                        "github": "#",
+                        "linkedin": "#",
+                        "twitter": "#"
+                    }
+                },
+                {
+                    "key": 7,
+                    "name": "TALLE Kely",
+                    "role": "Community Manager & Social Media Manager",
+                    "image": "kely.png",
+                    "bio": "Passionate about communication, I develop communities where every voice matters.",
+                    "skills": [
+                        "Social Media",
+                        "Content Marketing",
+                        "Community Management"
+                    ],
+                    "social": {
+                        "github": "#",
+                        "linkedin": "#",
+                        "twitter": "#"
+                    }
+                }
+            ]
+        },
+        "mission": {
+            "badge": "Our Mission",
+            "title": "Democratizing Technical Excellence",
+            "description": "We believe that every company, regardless of size, deserves access to the best technologies and development practices. Our mission is to make technical excellence accessible and affordable.",
+            "items": [
+                "Modern and scalable architecture",
+                "Integrated security and compliance",
+                "Continuous performance optimization",
+                "Long-term support and maintenance"
+            ]
+        },
+        "values": {
+            "badge": "Our Values",
+            "title": "What Guides Us",
+            "description": "Fundamental principles that define our approach and commitment",
+            "items": [
+                {
+                    "key": 0,
+                    "title": "Technical Excellence",
+                    "description": "Code of quality, robust architecture and good development practices"
+                },
+                {
+                    "key": 1,
+                    "title": "Collaboration",
+                    "description": "Teamwork, transparent communication and knowledge sharing"
+                },
+                {
+                    "key": 2,
+                    "title": "Continuous Innovation",
+                    "description": "Constant technology watch and adoption of the latest innovations"
+                },
+                {
+                    "key": 3,
+                    "title": "Quality Engagement",
+                    "description": "Thorough testing, complete documentation and long-term support"
+                }
+            ]
+        },
+        "timeline": {
+            "badge": "Our History",
+            "title": "5 years of innovation",
+            "description": "From startup to technical reference, discover the key steps of our evolution",
+            "items": [
+                {
+                    "year": "2019",
+                    "title": "Creation of ITCloudConsultings",
+                    "description": "Launch with a team of 3 senior developers"
+                },
+                {
+                    "year": "2020",
+                    "title": "First AWS certification",
+                    "description": "Obtention du statut AWS Advanced Consulting Partner"
+                },
+                {
+                    "year": "2021",
+                    "title": "Expansion mobile",
+                    "description": "Launch of our mobile development division"
+                },
+                {
+                    "year": "2022",
+                    "title": "Security expertise",
+                    "description": "Creation of our cybersecurity and compliance team"
+                },
+                {
+                    "year": "2023",
+                    "title": "50+ projects delivered",
+                    "description": "Crossing the 50-project milestone with 99.9% satisfaction"
+                },
+                {
+                    "year": "2024",
+                    "title": "Innovation AI",
+                    "description": "Integration of AI in our development processes"
+                }
+            ]
+        }
+    },
+    "ServicesPage": {
+        "title": "Technical Expertise at the Enterprise Level",
+        "description": "Comprehensive development, cloud infrastructure, and security solutions. Each project is designed for performance, scalability, and maintainability.",
+        "serviceCategories": [
+            {
+                "title": "Development",
+                "tag": "Web Developement",
+                "description": "Custom software solutions",
+                "services": [
+                    {
+                        "name": "Web applications",
+                        "description": "React, Next.js, Vue.js with modern architecture",
+                        "technologies": [
+                            "TypeScript",
+                            "GraphQL",
+                            "Microservices"
+                        ],
+                        "pricing": "From 15k€"
+                    },
+                    {
+                        "name": "Mobile applications",
+                        "description": "iOS, Android native and cross-platform",
+                        "technologies": [
+                            "React Native",
+                            "Flutter",
+                            "Swift/Kotlin/Java"
+                        ],
+                        "pricing": "From 20k€"
+                    },
+                    {
+                        "name": "APIs & Backend",
+                        "description": "Robust and scalable services",
+                        "technologies": [
+                            "Node.js",
+                            "Python",
+                            "Go",
+                            "PHP",
+                            "JAVA"
+                        ],
+                        "pricing": "From 10k€"
+                    }
+                ]
+            },
+            {
+                "title": "UI/UX & Graphic Design",
+                "tag": "UI/UX & Graphic Design",
+                "description": "Creative branding, UI/UX, flyers and brochures that communicate and captivate effectively.",
+                "services": [
+                    {
+                        "name": "Branding",
+                        "description": "Logo, business cards, flyers, brochures, and more.",
+                        "technologies": [
+                            "Photoshop",
+                            "Illustrator",
+                            "Figma",
+                            "Canva"
+                        ],
+                        "pricing": "From 15k€"
+                    },
+                    {
+                        "name": "UI/UX",
+                        "description": "User interface and experience design",
+                        "technologies": [
+                            "Figma",
+                            "Canva",
+                            "Adobe XD",
+                            "InVision"
+                        ],
+                        "pricing": "From 20k€"
+                    }
+                ]
+            },
+            {
+                "title": "Infrastructure",
+                "tag": "Linux/DevOps & Cloud consulting",
+                "description": "Cloud and DevOps at the enterprise level",
+                "services": [
+                    {
+                        "name": "Architecture Cloud",
+                        "description": "Migration and multi-cloud optimization",
+                        "technologies": [
+                            "AWS",
+                            "Azure",
+                            "GCP"
+                        ],
+                        "pricing": "From 25k€"
+                    },
+                    {
+                        "name": "DevOps & CI/CD",
+                        "description": "Complete deployment automation",
+                        "technologies": [
+                            "Kubernetes",
+                            "Docker",
+                            "Jenkins",
+                            "GitLab",
+                            "Jira",
+                            "Confluence",
+                            "Github Action",
+                            "Terraform"
+                        ],
+                        "pricing": "From 12k€"
+                    },
+                    {
+                        "name": "Monitoring & Observability",
+                        "description": "Proactive system monitoring",
+                        "technologies": [
+                            "Prometheus",
+                            "Grafana",
+                            "Datadog",
+                            "New Relic",
+                            "Sentry",
+                            "ELK Stack"
+                        ],
+                        "pricing": "From 8k€"
+                    }
+                ]
+            },
+            {
+                "title": "Motion Design & Ads",
+                "tag": "Motion Design & Ads",
+                "description": "Creative motion design and ads that engage and inspire.",
+                "services": [
+                    {
+                        "name": "Motion Design",
+                        "description": "Creative motion design and ads that engage and inspire.",
+                        "technologies": [
+                            "After Effects",
+                            "Figma",
+                            "Canva",
+                            "Adobe XD",
+                            "InVision"
+                        ],
+                        "pricing": "From 15k€"
+                    },
+                    {
+                        "name": "Ads",
+                        "description": "Creative motion design and ads that engage and inspire.",
+                        "technologies": [
+                            "After Effects",
+                            "Figma",
+                            "Canva",
+                            "Adobe XD",
+                            "InVision"
+                        ],
+                        "pricing": "From 20k€"
+                    }
+                ]
+            },
+            {
+                "title": "Virtual Assistant & Call Center",
+                "tag": "Virtual Assistant",
+                "description": "Virtual assistant services to handle your daily tasks and appointments.",
+                "services": [
+                    {
+                        "name": "Call Center",
+                        "description": "Call center services to handle your daily tasks and appointments.",
+                        "technologies": [
+                            "phone",
+                            "whatsapp",
+                            "telegram",
+                            "discord"
+                        ],
+                        "pricing": "From 20k€"
+                    },
+                    {
+                        "name": "Virtual Assistant",
+                        "description": "Virtual assistant services to handle your daily tasks and appointments.",
+                        "technologies": [],
+                        "pricing": "From 15k€"
+                    }
+                ]
+            }
+        ],
+        "cta": "Request a quote",
+        "process": {
+            "heading": "Agile Development Process",
+            "description": "A structured approach ensuring quality, deadlines, and budget control",
+            "steps": [
+                {
+                    "step": "01",
+                    "title": "Analysis & Audit",
+                    "description": "Complete technical evaluation of the existing system and definition of objectives"
+                },
+                {
+                    "step": "02",
+                    "title": "Architecture & Design",
+                    "description": "System architecture and user interface design"
+                },
+                {
+                    "step": "03",
+                    "title": "Iterative Development",
+                    "description": "Implementation by sprints with continuous validation"
+                },
+                {
+                    "step": "04",
+                    "title": "Deployment & Support",
+                    "description": "Secure production deployment and evolving maintenance"
+                }
+            ]
+        }
+    },
+    "PortfolioPage": {
+        "heading": "Projects & Realizations",
+        "description": "Discover our most innovative projects, from complex architectures to custom solutions that transform businesses.",
+      
+        "categories": [
+            "All",
+            "Web",
+            "Mobile",
+            "UI/UX Design",
+            "Graphic Design",
+            "Motion & Ads",
+            "Devops & Cloud consulting"
+        ],
+        "projects": [
+            {
+                "id": 1,
+                "title": "ITPath360",
+                "category": "Web",
+                "description": "E-learning platform for IT professionals and students.",
+                "image": "/itpath360.png",
+                "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
+                "metrics": { "users": "50K+", "performance": "< 100ms", "uptime": "99.9%" },
+                "year": "2024",
+                "client": "ITPath360",
+                "duration": "8 mois",
+                "team": "6 développeurs",
+                "links": { "demo": "https://itpath360.com/", "github": "#", "case": "#" }
+            },
+            {
+                "id": 2,
+                "title": "TradeZenith",
+                "category": "Web",
+                "description": "Trading platform to learn about crypto, forex and stocks.",
+                "image": "/tradezenith.png",
+                "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
+                "metrics": { "users": "100K+", "rating": "4.8/5", "transactions": "1M+/mois" },
+                "year": "2024",
+                "client": "TradeZenith",
+                "duration": "6 mois",
+                "team": "6 développeurs",
+                "links": { "demo": "https://tradezennith.com/", "github": "#", "case": "#" }
+            },
+            {
+                "id": 3,
+                "title": "Aspires LD",
+                "category": "Web",
+                "description": "Aspires LD is a financial consulting firm dedicated to helping individuals and businesses achieve their financial goals. Our experienced professionals offer personalized, comprehensive advice on investments, retirement planning, budgeting, and debt management.",
+                "image": "/asp.png",
+                "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
+                "metrics": { "users": "200+", "rating": "4.8/5", "transactions": "1M+/mois" },
+                "year": "2023",
+                "client": "Aspires LD",
+                "duration": "6 mois",
+                "team": "6 développeurs",
+                "links": { "demo": "https://www.aspiresld.com/", "github": "#", "case": "#" }
+            },
+            {
+                "id": 4,
+                "title": "TradeZenith",
+                "category": "Graphic Design",
+                "description": "Trading platform to learn about crypto, forex and stocks.",
+                "image": "/graphic_design/td.JPG",
+                "technologies": ["Illustrator"],
+                "metrics": { "users": "", "rating": "", "transactions": "" },
+                "year": "2024",
+                "client": "TradeZenith",
+                "duration": "2 days",
+                "team": "1 designer",
+                "links": { "demo": "https://tradezennith.com/", "github": "#", "case": "#" }
+            },
+            {
+                "id": 5,
+                "title": "ITCloudConsultings",
+                "category": "Graphic Design",
+                "description": "IT Company",
+                "image": "/graphic_design/itcc.JPG",
+                "technologies": ["Illustrator"],
+                "metrics": { "users": "", "rating": "", "transactions": "" },
+                "year": "2024",
+                "client": "ITCloudConsultings",
+                "duration": "2 days",
+                "team": "1 designer",
+                "links": { "demo": "https://itcloudconsultings.com/", "github": "#", "case": "#" }
+            },
+            {
+                "id": 6,
+                "title": "Aspires LD",
+                "category": "Graphic Design",
+                "description": "Aspires LD is a financial consulting firm dedicated to helping individuals and businesses achieve their financial goals. Our experienced professionals offer personalized, comprehensive advice on investments, retirement planning, budgeting, and debt management.",
+                "image": "/graphic_design/aspire.JPG",
+                "technologies": ["Illustrator"],
+                "metrics": { "users": "", "rating": "", "transactions": "" },
+                "year": "2024",
+                "client": "Aspires LD",
+                "duration": "2 days",
+                "team": "1 designer",
+                "links": { "demo": "https://www.aspiresld.com/", "github": "#", "case": "#" }
+            },
+            {
+                "id": 7,
+                "title": "DelivX",
+                "category": "Graphic Design",
+                "description": "DelivX is mobile marketplace application",
+                "image": "/graphic_design/delivx.JPG",
+                "technologies": ["Illustrator"],
+                "metrics": { "users": "", "rating": "", "transactions": "" },
+                "year": "2024",
+                "client": "DelivX",
+                "duration": "1 days",
+                "team": "1 designer",
+                "links": { "demo": "#", "github": "#", "case": "#" }
+            },
+            {
+                "id": 8,
+                "title": "ITPath",
+                "category": "Graphic Design",
+                "description": "ITPath is a e-leaning website",
+                "image": "/graphic_design/itpath.JPG",
+                "technologies": ["Illustrator"],
+                "metrics": { "users": "", "rating": "", "transactions": "" },
+                "year": "2024",
+                "client": "ITPath",
+                "duration": "2 days",
+                "team": "1 designer",
+                "links": { "demo": "#", "github": "#", "case": "#" }
+            }
+
+        ]
+
+    },
+    "ContactPage": {
+        "title": "Contact us",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "send": "Send"
+        }
+    },
+    "Common": {
+        "buttons": {
+            "learn_more": "Learn more",
+            "contact_us": "Contact us",
+            "get_started": "Get started",
+            "read_more": "Read more",
+            "back": "Back"
+        },
+        "footer": {
+            "copyright": "© 2024 IT Cloud Consultings. All rights reserved.",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service"
+        }
+    }
+}

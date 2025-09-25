@@ -3,6 +3,12 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Terminal, Github, Linkedin, Facebook, Youtube, Instagram } from "lucide-react"
+import { useTranslation, type Locale } from '../../lib/i18n'
+import { useLocale } from '../../hooks/useLocale'
+
+interface FooterProps {
+  locale: Locale
+}
 
 const footerSections = [
   {
@@ -52,6 +58,8 @@ const footerSections = [
 ]
 
 export default function Footer() {
+  const locale = useLocale()
+  console.log("footer locale", locale)
   return (
     <footer className="bg-slate-50 border-t border-slate-200">
       <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 py-16">

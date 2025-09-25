@@ -7,20 +7,27 @@ import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Terminal } from "lucide-react"
 import  Announcement  from "./announcement"
+import { useTranslation, type Locale } from '../../lib/i18n';
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "About", href: "/about" },
-  // { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
-]
 
-export default function Header() {
+interface NavigationProps {
+    locale: Locale;
+}
+
+export default function Navigation({ locale }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
+
+  const { t } = useTranslation(locale)
+  const navigation = [
+    { name: "Home", href: `/${locale}` },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "About", href: "/about" },
+    // { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +49,7 @@ export default function Header() {
       <nav className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  bg-white  py-2">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
-            <img src="/logo.png" alt="ITCloudConsultings" className="w-full h-8 object-contain"/>
+            <img src={`/logo.png`} alt="ITCloudConsultings" className="w-full h-8 object-contain"/>
           </Link>
 
           {/* Desktop Navigation */}
