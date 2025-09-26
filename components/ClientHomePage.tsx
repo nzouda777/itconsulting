@@ -6,7 +6,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import Navigation from './Navigation';
 
 
-import { motion, useScroll, useTransform, useInView } from "framer-motion"
+import { motion, useScroll, useTransform, useInView, type Variants, easeOut, easeInOut } from "framer-motion"
 import { useRef, useState, useEffect } from "react"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
@@ -53,7 +53,7 @@ interface ClientHomePageProps {
     locale: Locale;
   }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -63,14 +63,14 @@ const containerVariants = {
   },
 }
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: easeOut,
     },
   },
 }
@@ -546,7 +546,7 @@ export default function ClientHomePage({ locale }: ClientHomePageProps) {
                     transition={{
                       duration: 8,
                       repeat: Number.POSITIVE_INFINITY,
-                      ease: "linear",
+                      ease: linear,
                     }}
                   />
                   <motion.div
@@ -558,7 +558,7 @@ export default function ClientHomePage({ locale }: ClientHomePageProps) {
                     transition={{
                       duration: 6,
                       repeat: Number.POSITIVE_INFINITY,
-                      ease: "linear",
+                      ease: linear,
                     }}
                   />
                 </motion.div>
@@ -629,7 +629,7 @@ export default function ClientHomePage({ locale }: ClientHomePageProps) {
               <motion.div
                 className="flex"
                 animate={{ x: `${-currentTestimonial * 100}%` }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: easeInOut }}
               >
                 {testimonials.map((testimonial, index) => (
                   <div key={index} className="w-full flex-shrink-0 px-4">
