@@ -35,31 +35,41 @@ const footerSections = [
       { name: "Community & Social Media Management", href: "/services" },
       { name: "DevSecOps & Cloud Consulting", href: "/services" },
     ],
-  },
-  // {
-  //   title: "Solutions",
-  //   links: [
-  //     { name: "Audit Technique", href: "/audit" },
-  //     { name: "Architecture Système", href: "/architecture" },
-  //     { name: "Optimisation Performance", href: "/optimization" },
-  //     { name: "Formation Équipes", href: "/training" },
-  //   ],
-  // },
-  // {
-  //   title: "Ressources",
-  //   links: [
-  //     { name: "Documentation", href: "/documentation" },
-  //     { name: "Études de Cas", href: "/case-studies" },
-  //     { name: "Guides Techniques", href: "/guides" },
-  //     { name: "API Reference", href: "/api-reference" },
-  //   ],
-  // },
+  }
 
 ]
 
 export default function Footer() {
   const locale = useLocale()
-  console.log("footer locale", locale)
+  const { t } = useTranslation(locale)
+  const footerSections = [
+    {
+      title: "Entreprise",
+      links: [
+        { name: ( t('Footer.company.links.about') ), href: "/about" },
+        { name: ( t('Footer.company.links.team') ), href: "/about#teams" },
+        // { name: "Careers", href: "/careers" },
+        // { name: "Partenaires", href: "/partners" },
+      ],
+    },
+    {
+      title: "Services",
+      links: [
+        { name: ( t('Footer.services.web_mobile') ), href: "/services" },
+        { name: ( t('Footer.services.ui_ux') ), href: "/services" },
+        { name: ( t('Footer.services.motion_ads') ), href: "/services" },
+      ],
+    },
+    {
+      title: "",
+      links: [
+        { name: ( t('Footer.services.virtual_assistant') ), href: "/services" },
+        { name: ( t('Footer.services.social_media') ), href: "/services" },
+        { name: ( t('Footer.services.devops_cloud') ), href: "/services" },
+      ],
+    }
+  
+  ]
   return (
     <footer className="bg-slate-50 border-t border-slate-200">
       <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 py-16">
@@ -69,7 +79,7 @@ export default function Footer() {
               <img src="/logo.png" alt="ITCloudConsultings" className="w-8/12 h-24 object-contain"/>
             </Link>
             <p className="text-slate-600 mb-6 max-w-md">
-              Advanced technical expertise to transform your digital challenges into growth opportunities.
+              { t('Footer.company.description') }
             </p>
             
           </div>

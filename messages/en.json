@@ -6,7 +6,8 @@
         "portfolio": "Portfolio",
         "blog": "Blog",
         "testimonials": "Testimonials",
-        "contact": "Contact"
+        "contact": "Contact",
+        "cta": "Start a Project"
     },
     "Footer": {
         "company": {
@@ -216,7 +217,7 @@
                     "key": 0,
                     "name": "Ivan SAHA",
                     "role": "CEO & Cloud Architect",
-                    "image": "/ivan.jpg",
+                    "image": "ivan.jpg",
                     "bio": "15+ years of experience in system architecture and full-stack development. Expert in microservices and cloud-native.",
                     "skills": [
                         "Architecture",
@@ -647,11 +648,15 @@
         ],
         "projects": [
             {
-                "id": 1,
+                "id": 0,
                 "title": "ITPath360",
                 "category": "Web",
                 "description": "E-learning platform for IT professionals and students.",
                 "image": "/itpath360.png",
+                "durationKey": "Duration",
+                "teamKey": "Team",
+                "metricsKey": "Metrics",
+                "technologiesKey": "Technologies",
                 "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
                 "metrics": { "users": "50K+", "performance": "< 100ms", "uptime": "99.9%" },
                 "year": "2024",
@@ -661,11 +666,15 @@
                 "links": { "demo": "https://itpath360.com/", "github": "#", "case": "#" }
             },
             {
-                "id": 2,
+                "id": 1,
                 "title": "TradeZenith",
                 "category": "Web",
                 "description": "Trading platform to learn about crypto, forex and stocks.",
                 "image": "/tradezenith.png",
+                "durationKey": "Duration",
+                "teamKey": "Team",
+                "metricsKey": "Metrics",
+                "technologiesKey": "Technologies",
                 "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
                 "metrics": { "users": "100K+", "rating": "4.8/5", "transactions": "1M+/mois" },
                 "year": "2024",
@@ -675,11 +684,15 @@
                 "links": { "demo": "https://tradezennith.com/", "github": "#", "case": "#" }
             },
             {
-                "id": 3,
+                "id": 2,
                 "title": "Aspires LD",
                 "category": "Web",
                 "description": "Aspires LD is a financial consulting firm dedicated to helping individuals and businesses achieve their financial goals. Our experienced professionals offer personalized, comprehensive advice on investments, retirement planning, budgeting, and debt management.",
                 "image": "/asp.png",
+                "durationKey": "Duration",
+                "teamKey": "Team",
+                "metricsKey": "Metrics",
+                "technologiesKey": "Technologies",
                 "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "AWS"],
                 "metrics": { "users": "200+", "rating": "4.8/5", "transactions": "1M+/mois" },
                 "year": "2023",
@@ -689,11 +702,15 @@
                 "links": { "demo": "https://www.aspiresld.com/", "github": "#", "case": "#" }
             },
             {
-                "id": 4,
+                "id": 3,
                 "title": "TradeZenith",
                 "category": "Graphic Design",
                 "description": "Trading platform to learn about crypto, forex and stocks.",
                 "image": "/graphic_design/td.JPG",
+                "durationKey": "Duration",
+                "teamKey": "Team",
+                "metricsKey": "Metrics",
+                "technologiesKey": "Technologies",
                 "technologies": ["Illustrator"],
                 "metrics": { "users": "", "rating": "", "transactions": "" },
                 "year": "2024",
@@ -703,11 +720,15 @@
                 "links": { "demo": "https://tradezennith.com/", "github": "#", "case": "#" }
             },
             {
-                "id": 5,
+                "id": 4,
                 "title": "ITCloudConsultings",
                 "category": "Graphic Design",
                 "description": "IT Company",
                 "image": "/graphic_design/itcc.JPG",
+                "durationKey": "Duration",
+                "teamKey": "Team",
+                "metricsKey": "Metrics",
+                "technologiesKey": "Technologies",
                 "technologies": ["Illustrator"],
                 "metrics": { "users": "", "rating": "", "transactions": "" },
                 "year": "2024",
@@ -717,11 +738,15 @@
                 "links": { "demo": "https://itcloudconsultings.com/", "github": "#", "case": "#" }
             },
             {
-                "id": 6,
+                "id": 5,
                 "title": "Aspires LD",
                 "category": "Graphic Design",
                 "description": "Aspires LD is a financial consulting firm dedicated to helping individuals and businesses achieve their financial goals. Our experienced professionals offer personalized, comprehensive advice on investments, retirement planning, budgeting, and debt management.",
                 "image": "/graphic_design/aspire.JPG",
+                "durationKey": "Duration",
+                "teamKey": "Team",
+                "metricsKey": "Metrics",
+                "technologiesKey": "Technologies",
                 "technologies": ["Illustrator"],
                 "metrics": { "users": "", "rating": "", "transactions": "" },
                 "year": "2024",
@@ -731,11 +756,15 @@
                 "links": { "demo": "https://www.aspiresld.com/", "github": "#", "case": "#" }
             },
             {
-                "id": 7,
+                "id": 6,
                 "title": "DelivX",
                 "category": "Graphic Design",
                 "description": "DelivX is mobile marketplace application",
                 "image": "/graphic_design/delivx.JPG",
+                "durationKey": "Duration",
+                "teamKey": "Team",
+                "metricsKey": "Metrics",
+                "technologiesKey": "Technologies",
                 "technologies": ["Illustrator"],
                 "metrics": { "users": "", "rating": "", "transactions": "" },
                 "year": "2024",
@@ -745,11 +774,15 @@
                 "links": { "demo": "#", "github": "#", "case": "#" }
             },
             {
-                "id": 8,
+                "id": 7,
                 "title": "ITPath",
                 "category": "Graphic Design",
                 "description": "ITPath is a e-leaning website",
                 "image": "/graphic_design/itpath.JPG",
+                "durationKey": "Duration",
+                "teamKey": "Team",
+                "metricsKey": "Metrics",
+                "technologiesKey": "Technologies",
                 "technologies": ["Illustrator"],
                 "metrics": { "users": "", "rating": "", "transactions": "" },
                 "year": "2024",
@@ -762,16 +795,100 @@
         ]
 
     },
-    "ContactPage": {
-        "title": "Contact us",
-        "form": {
-            "name": "Name",
-            "email": "Email",
-            "subject": "Subject",
-            "message": "Message",
-            "send": "Send"
-        }
+    
+  "ContactPage": {
+    "heading": "Let's start your project",
+    "description": "Let's discuss your technical challenges and explore together the most suitable solutions for your objectives.",
+    "form": {
+      "title": "Contact form",
+      "subtitle": "Fill out this form to receive a personalized response within 24 hours.",
+      "fields": {
+        "nameLabel": "Full name *",
+        "namePlaceholder": "John Doe",
+        "emailLabel": "Email *",
+        "emailPlaceholder": "john@company.com",
+        "subjectLabel": "Subject *",
+        "subjectPlaceholder": "Subject",
+        "serviceLabel": "Service concerned *",
+        "servicePlaceholder": "Select a service",
+        "budgetLabel": "Estimated budget",
+        "budgetPlaceholder": "Select a range",
+        "budgetOptions": {
+          "lt10k": "Less than 10k€",
+          "b10_25k": "10k€ - 25k€",
+          "b25_50k": "25k€ - 50k€",
+          "b50_100k": "50k€ - 100k€",
+          "gt100k": "More than 100k€"
+        },
+        "urgencyLabel": "Urgency of the project",
+        "urgencyOptions": {
+          "low": "Not urgent",
+          "normal": "Normal",
+          "high": "Urgent"
+        },
+        "messageLabel": "Project description *",
+        "messagePlaceholder": "Describe your project, its objectives and technical constraints..."
+      },
+      "submit": {
+        "sending": "Sending in progress...",
+        "label": "Send my request"
+      },
+      "success": {
+        "title": "Message sent successfully!",
+        "description": "We will contact you within 24 hours to discuss your project.",
+        "sendAnother": "Send another message"
+      }
     },
+    "methods": {
+      "email": {
+        "title": "Email",
+        "description": "support@itcloudconsultings.com",
+        "action": "Send an email"
+      },
+      "phone": {
+        "title": "Phone",
+        "description": "+1 (706) 581-1963",
+        "action": "Schedule a call"
+      },
+      "appointment": {
+        "title": "Appointment",
+        "description": "Free technical consultation",
+        "action": "Schedule an appointment"
+      },
+      "chat": {
+        "title": "Chat",
+        "description": "Support technical in real time",
+        "action": "Start a conversation"
+      }
+    },
+    "urgencyKey": "Urgency of the project",
+    "urgencyOptions": {
+        "low": "Not urgent",
+        "normal": "Normal",
+        "high": "Urgent"
+    },
+    "projectDescriptionKey": "Project description",
+    "projectDescriptionPlaceholder": "Describe your project, its objectives and technical constraints...",
+    "buttonLabel": "Send my request",
+    "processing": "Sending in progress...",
+    "services": [
+      "Audit technical",
+      "Web development",
+      "Mobile application",
+      "Cloud infrastructure",
+      "Security & compliance",
+      "Performance optimization",
+      "Team training",
+      "UI/UX Design",
+      "Graphic Design",
+      "Motion & Ads",
+      "Virtual Assistant",
+      "Community & Social Media Management",
+      "DevSecOps & Cloud Consulting",
+      "Other"
+    ]
+  }
+,
     "Common": {
         "buttons": {
             "learn_more": "Learn more",

@@ -6,7 +6,8 @@
         "portfolio": "Portfolio",
         "blog": "Blog",
         "testimonials": "Témoignages",
-        "contact": "Contact"
+        "contact": "Contact",
+        "cta": "Commencer un projet"
     },
     "Footer": {
         "company": {
@@ -651,19 +652,16 @@
         ],
         "projects": [
             {
-                "id": 1,
+                "id": 0,
                 "title": "ITPath360",
                 "category": "Web",
                 "description": "Plateforme e-learning pour les professionnels et étudiants en informatique.",
                 "image": "/itpath360.png",
+                "technologiesKey": "Technologies",
                 "technologies": [
-                    "React",
-                    "Node.js",
-                    "PostgreSQL",
-                    "Redis",
-                    "Kubernetes",
-                    "AWS"
+                    "Wordpress"
                 ],
+                "metricsKey": "Metrics",
                 "metrics": {
                     "users": "50K+",
                     "performance": "< 100ms",
@@ -671,6 +669,8 @@
                 },
                 "year": "2024",
                 "client": "ITPath360",
+                "durationKey": "Durée du projet",
+                "teamKey": "Équipe",
                 "duration": "8 mois",
                 "team": "6 développeurs",
                 "links": {
@@ -680,19 +680,16 @@
                 }
             },
             {
-                "id": 2,
+                "id": 1,
                 "title": "TradeZenith",
                 "category": "Web",
                 "description": "Plateforme de trading pour apprendre la crypto, le forex et les actions.",
                 "image": "/tradezenith.png",
+                "technologiesKey": "Technologies",
                 "technologies": [
-                    "React",
-                    "Node.js",
-                    "PostgreSQL",
-                    "Redis",
-                    "Kubernetes",
-                    "AWS"
+                    "Wordpress"
                 ],
+                "metricsKey": "Metrics",
                 "metrics": {
                     "users": "100K+",
                     "rating": "4,8/5",
@@ -700,6 +697,8 @@
                 },
                 "year": "2024",
                 "client": "TradeZenith",
+                "durationKey": "Durée du projet",
+                "teamKey": "Équipe",
                 "duration": "6 mois",
                 "team": "6 développeurs",
                 "links": {
@@ -709,11 +708,12 @@
                 }
             },
             {
-                "id": 3,
+                "id": 2,
                 "title": "Aspires LD",
                 "category": "Web",
                 "description": "Aspires LD est un cabinet de conseil financier dédié à aider les particuliers et les entreprises à atteindre leurs objectifs financiers. Nos professionnels expérimentés offrent des conseils personnalisés et complets sur les investissements, la planification de la retraite, la gestion budgétaire et l’endettement.",
                 "image": "/asp.png",
+                "technologiesKey": "Technologies",
                 "technologies": [
                     "React",
                     "Node.js",
@@ -722,6 +722,7 @@
                     "Kubernetes",
                     "AWS"
                 ],
+                "metricsKey": "Metrics",
                 "metrics": {
                     "users": "200+",
                     "rating": "4,8/5",
@@ -729,6 +730,8 @@
                 },
                 "year": "2023",
                 "client": "Aspires LD",
+                "durationKey": "Durée du projet",
+                "teamKey": "Équipe",
                 "duration": "6 mois",
                 "team": "6 développeurs",
                 "links": {
@@ -738,14 +741,16 @@
                 }
             },
             {
-                "id": 4,
+                "id": 3,
                 "title": "TradeZenith",
                 "category": "Design Graphique",
                 "description": "Plateforme de trading pour apprendre la crypto, le forex et les actions.",
                 "image": "/graphic_design/td.JPG",
+                "technologiesKey": "Technologies",
                 "technologies": [
                     "Illustrator"
                 ],
+                "metricsKey": "Metrics",
                 "metrics": {
                     "users": "",
                     "rating": "",
@@ -753,6 +758,8 @@
                 },
                 "year": "2024",
                 "client": "TradeZenith",
+                "durationKey": "Durée du projet",
+                "teamKey": "Équipe",
                 "duration": "2 jours",
                 "team": "1 designer",
                 "links": {
@@ -762,14 +769,16 @@
                 }
             },
             {
-                "id": 5,
+                "id": 4,
                 "title": "ITCloudConsultings",
                 "category": "Design Graphique",
                 "description": "Entreprise IT",
                 "image": "/graphic_design/itcc.JPG",
+                "technologiesKey": "Technologies",
                 "technologies": [
                     "Illustrator"
                 ],
+                "metricsKey": "Metrics",
                 "metrics": {
                     "users": "",
                     "rating": "",
@@ -777,6 +786,8 @@
                 },
                 "year": "2024",
                 "client": "ITCloudConsultings",
+                "durationKey": "Durée du projet",
+                "teamKey": "Équipe",
                 "duration": "2 jours",
                 "team": "1 designer",
                 "links": {
@@ -786,14 +797,16 @@
                 }
             },
             {
-                "id": 6,
+                "id": 5,
                 "title": "Aspires LD",
                 "category": "Design Graphique",
                 "description": "Aspires LD est un cabinet de conseil financier dédié à aider les particuliers et entreprises à atteindre leurs objectifs financiers. Nos professionnels expérimentés offrent des conseils personnalisés et complets sur les investissements, la planification de la retraite, la gestion budgétaire et l’endettement.",
                 "image": "/graphic_design/aspire.JPG",
+                "technologiesKey": "Technologies",
                 "technologies": [
                     "Illustrator"
                 ],
+                "metricsKey": "Metrics",
                 "metrics": {
                     "users": "",
                     "rating": "",
@@ -801,6 +814,8 @@
                 },
                 "year": "2024",
                 "client": "Aspires LD",
+                "durationKey": "Durée du projet",
+                "teamKey": "Équipe",
                 "duration": "2 jours",
                 "team": "1 designer",
                 "links": {
@@ -810,14 +825,16 @@
                 }
             },
             {
-                "id": 7,
+                "id": 6,
                 "title": "DelivX",
                 "category": "Design Graphique",
                 "description": "DelivX est une application de marketplace mobile.",
                 "image": "/graphic_design/delivx.JPG",
+                "technologiesKey": "Technologies",
                 "technologies": [
                     "Illustrator"
                 ],
+                "metricsKey": "Metrics",
                 "metrics": {
                     "users": "",
                     "rating": "",
@@ -825,6 +842,8 @@
                 },
                 "year": "2024",
                 "client": "DelivX",
+                "durationKey": "Durée du projet",
+                "teamKey": "Équipe",
                 "duration": "1 jour",
                 "team": "1 designer",
                 "links": {
@@ -834,14 +853,16 @@
                 }
             },
             {
-                "id": 8,
+                "id": 7,
                 "title": "ITPath",
                 "category": "Design Graphique",
                 "description": "ITPath est un site d’e-learning.",
                 "image": "/graphic_design/itpath.JPG",
+                "technologiesKey": "Technologies",
                 "technologies": [
                     "Illustrator"
                 ],
+                "metricsKey": "Metrics",
                 "metrics": {
                     "users": "",
                     "rating": "",
@@ -849,6 +870,8 @@
                 },
                 "year": "2024",
                 "client": "ITPath",
+                "durationKey": "Durée du projet",
+                "teamKey": "Équipe",
                 "duration": "2 jours",
                 "team": "1 designer",
                 "links": {
@@ -860,14 +883,98 @@
         ]
     },
     "ContactPage": {
-        "title": "Contactez-nous",
+        "heading": "Démarrons votre projet",
+        "description": "Discutons de vos enjeux techniques et explorons ensemble les solutions les plus adaptées à vos objectifs.",
         "form": {
-            "name": "Nom",
-            "email": "E-mail",
-            "subject": "Objet",
-            "message": "Message",
-            "send": "Envoyer"
-        }
+            "title": "Formulaire de contact",
+            "subtitle": "Remplissez ce formulaire pour recevoir une réponse personnalisée sous 24 heures.",
+            "fields": {
+                "nameLabel": "Nom complet *",
+                "namePlaceholder": "Jean Dupont",
+                "emailLabel": "Email *",
+                "emailPlaceholder": "jean@entreprise.com",
+                "subjectLabel": "Sujet *",
+                "subjectPlaceholder": "Sujet",
+                "serviceLabel": "Service concerné *",
+                "servicePlaceholder": "Sélectionnez un service",
+                "budgetLabel": "Budget estimé",
+                "budgetPlaceholder": "Sélectionnez une tranche",
+                "budgetOptions": {
+                    "lt10k": "Moins de 10k€",
+                    "b10_25k": "10k€ - 25k€",
+                    "b25_50k": "25k€ - 50k€",
+                    "b50_100k": "50k€ - 100k€",
+                    "gt100k": "Plus de 100k€"
+                },
+                "urgencyLabel": "Urgence du projet",
+                "urgencyOptions": {
+                    "low": "Pas urgent",
+                    "normal": "Normal",
+                    "high": "Urgent"
+                },
+                "messageLabel": "Description du projet *",
+                "messagePlaceholder": "Décrivez votre projet, ses objectifs et contraintes techniques..."
+            },
+            "submit": {
+                "sending": "Envoi en cours...",
+                "label": "Envoyer ma demande"
+            },
+            "success": {
+                "title": "Message envoyé avec succès !",
+                "description": "Nous vous contacterons sous 24 heures pour discuter de votre projet.",
+                "sendAnother": "Envoyer un autre message"
+            }
+        },
+        "methods": {
+            "email": {
+                "title": "Email",
+                "description": "support@itcloudconsultings.com",
+                "action": "Envoyer un email"
+            },
+            "phone": {
+                "title": "Téléphone",
+                "description": "+1 (706) 581-1963",
+                "action": "Planifier un appel"
+            },
+            "appointment": {
+                "title": "Rendez-vous",
+                "description": "Consultation technique gratuite",
+                "action": "Prendre un rendez-vous"
+            },
+            "chat": {
+                "title": "Chat",
+                "description": "Support technique en temps réel",
+                "action": "Démarrer une conversation"
+            }
+        },
+        
+        "servicesKey": "Selectionner un service",
+        "services": [
+            "Audit technique",
+            "Développement web",
+            "Application mobile",
+            "Infrastructure cloud",
+            "Sécurité & conformité",
+            "Optimisation des performances",
+            "Formation d'équipe",
+            "UI/UX Design",
+            "Design Graphique",
+            "Motion & Ads",
+            "Assistant Virtuel",
+            "Community & Social Media Management",
+            "DevSecOps & Conseil Cloud",
+            "Autre"
+        ],
+        "urgencyKey": "Urgence du projet",
+        "urgencyOptions": {
+            "low": "Pas urgent",
+            "normal": "Normal",
+            "high": "Urgent"
+        },
+        "projectDescriptionKey": "Description du projet",
+        "projectDescriptionPlaceholder": "Décrivez votre projet, ses objectifs et contraintes techniques...",
+        "buttonLabel": "Envoyer ma demande",
+        "processing": "Envoi en cours..."
     },
     "Common": {
         "buttons": {

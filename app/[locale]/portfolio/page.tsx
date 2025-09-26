@@ -20,11 +20,12 @@ interface PortfolioPageProps {
   locale: Locale
 }
 
-const categories = ["All", "Web", "Mobile", "UI/UX Design", "Graphic Design", "Motion & Ads", "Devops & Cloud consulting"]
 
+  // const locale = useLocale(PortfolioPageProps.locale);
+  
 const projects = [
   {
-    id: 1,
+    id: 0,
     title: "ITPath360",
     category: "Web",
     description:
@@ -39,7 +40,7 @@ const projects = [
     links: { demo: "https://itpath360.com/", github: "#", case: "#" },
   },
   {
-    id: 2,
+    id: 1,
     title: "TradeZenith",
     category: "Web",
     description: "Trading platform to learn about crypto, forex and stocks.",
@@ -53,7 +54,7 @@ const projects = [
     links: { demo: "https://tradezennith.com/", github: "#", case: "#" },
   },
   {
-    id: 3,
+    id: 2,
     title: "Aspires LD",
     category: "Web",
     description: "Aspires LD is a financial consulting firm dedicated to helping individuals and businesses achieve their financial goals. Our experienced professionals offer personalized, comprehensive advice on investments, retirement planning, budgeting, and debt management.",
@@ -67,7 +68,7 @@ const projects = [
     links: { demo: "https://www.aspiresld.com/", github: "#", case: "#" },
   },
   {
-    id: 4,
+    id: 3,
     title: "TradeZenith",
     category: "Graphic Design",
     description: "Trading platform to learn about crypto, forex and stocks.",
@@ -81,7 +82,7 @@ const projects = [
     links: { demo: "https://tradezennith.com/", github: "#", case: "#" },
   },
   {
-    id: 5,
+    id: 4,
     title: "ITCloudConsultings",
     category: "Graphic Design",
     description: "IT Company",
@@ -95,7 +96,7 @@ const projects = [
     links: { demo: "https://itcloudconsultings.com/", github: "#", case: "#" },
   },
   {
-    id: 6,
+    id: 5,
     title: "Aspires LD",
     category: "Graphic Design",
     description: "Aspires LD is a financial consulting firm dedicated to helping individuals and businesses achieve their financial goals. Our experienced professionals offer personalized, comprehensive advice on investments, retirement planning, budgeting, and debt management.",
@@ -109,7 +110,7 @@ const projects = [
     links: { demo: "https://www.aspiresld.com/", github: "#", case: "#" },
   },
   {
-    id: 7,
+    id: 6,
     title: "DelivX",
     category: "Graphic Design",
     description: "DelivX is mobile marketplace application",
@@ -123,7 +124,7 @@ const projects = [
     links: { demo: "#", github: "#", case: "#" },
   },
   {
-    id: 8,
+    id: 7,
     title: "ITPath",
     category: "Graphic Design",
     description: "ITPath is a e-leaning website",
@@ -139,14 +140,56 @@ const projects = [
 ]
 
 export default function PortfolioPage() {
-  const [activeCategory, setActiveCategory] = useState("All")
+  const [activeCategory, setActiveCategory] = useState<
+    "all" | "web" | "mobile" | "uiux" | "graphic" | "motion" | "devops"
+  >("all")
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
    const locale = useLocale()
     const { t } = useTranslation(locale)
     console.log(t("AboutPage.title"))
+    const isFrench = locale === 'fr';
+
+  // Localized labels for display, stable keys for logic
+  const categories = isFrench
+    ? [
+        { key: "all" as const, label: "Tous" },
+        { key: "web" as const, label: "Web" },
+        { key: "mobile" as const, label: "Mobile" },
+        { key: "uiux" as const, label: "UI/UX Design" },
+        { key: "graphic" as const, label: "Design Graphique" },
+        { key: "motion" as const, label: "Motion & Ads" },
+        { key: "devops" as const, label: "Devops & Cloud" },
+      ]
+    : [
+        { key: "all" as const, label: "All" },
+        { key: "web" as const, label: "Web" },
+        { key: "mobile" as const, label: "Mobile" },
+        { key: "uiux" as const, label: "UI/UX Design" },
+        { key: "graphic" as const, label: "Graphic Design" },
+        { key: "motion" as const, label: "Motion & Ads" },
+        { key: "devops" as const, label: "Devops & Cloud" },
+      ];
+
+  // Map from category key to the project.category values (which are in English)
+  const categoryToProjectCategory: Record<
+    typeof activeCategory,
+    string | null
+  > = {
+    all: null,
+    web: "Web",
+    mobile: "Mobile",
+    uiux: "UI/UX Design",
+    graphic: "Graphic Design",
+    motion: "Motion & Ads",
+    devops: "Devops & Cloud",
+  };
 
   const filteredProjects =
-    activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory)
+    activeCategory === "all"
+      ? projects
+      : projects.filter(
+          (project) => project.category === categoryToProjectCategory[activeCategory]
+        )
 
   return (
     <div className="min-h-screen font-sans">
@@ -187,9 +230,9 @@ export default function PortfolioPage() {
                 >
                   <div className="flex items-center justify-center mb-2">
                     <stat.icon className="w-5 h-5 text-blue-600 mr-2" />
-                    <span className="text-2xl font-bold font-mono text-slate-900">{ t("PortfolioPage.stats." + stat.value)}</span>
+                    <span className="text-2xl font-bold font-mono text-slate-900">{stat.value}</span>
                   </div>
-                  <p className="text-sm text-slate-600">{ t("PortfolioPage.stats." + stat.label)}</p>
+                  <p className="text-sm text-slate-600">{stat.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -201,18 +244,19 @@ export default function PortfolioPage() {
       <section className="py-8 bg-white border-b border-slate-200">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 ">
           <div className="flex flex-wrap justify-center gap-4">
-            {  categories.map((category) => (
+            { categories.map((category) => (
               <motion.button
-                key={category}
-                onClick={() => setActiveCategory(category)}
+                key={category.key}
+                onClick={() => setActiveCategory(category.key)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`md:px-6 md:py-3 px-4 py-1 text-sm md:text-base rounded-full font-medium transition-all ${activeCategory === category
+                className={`md:px-6 md:py-3 px-4 py-1 text-sm md:text-base rounded-full font-medium transition-all ${
+                  activeCategory === category.key
                     ? "bg-prime text-white shadow-lg"
                     : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                  }`}
+                }`}
               >
-                {category}
+                {category.label}
               </motion.button>
             ))}
           </div>
@@ -221,10 +265,10 @@ export default function PortfolioPage() {
 
       {/* Projects Grid */}
       <section className="py-16 bg-white">
-        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12  mx-auto px-6">
+        <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 ">
           <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {filteredProjects.map((project, index) => (
+              { filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
                   layout
@@ -247,7 +291,7 @@ export default function PortfolioPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-second text-white font-mono text-xs">{project.category}</Badge>
+                        <Badge className="bg-second text-white font-mono text-xs">{ t(`PortfolioPage.projects.${project.id}.category` ) }</Badge>
                       </div>
                       <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="flex space-x-2">
@@ -267,18 +311,18 @@ export default function PortfolioPage() {
 
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm text-slate-500 font-mono">{project.year}</span>
-                        <span className="text-sm text-slate-500">{project.client}</span>
+                        <span className="text-sm text-slate-500 font-mono">{ t(`PortfolioPage.projects.${project.id}.year`)}</span>
+                        <span className="text-sm text-slate-500">{t(`PortfolioPage.projects.${project.id}.client`)}</span>
                       </div>
 
                       <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-second transition-colors">
-                        {project.title}
+                        {t(`PortfolioPage.projects.${project.id}.title`) }
                       </h3>
 
-                      <p className="text-slate-600 mb-4 line-clamp-2">{project.description}</p>
+                      <p className="text-slate-600 mb-4 line-clamp-2">{t(`PortfolioPage.projects.${project.id}.description`)}</p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {project.technologies.slice(0, 3).map((tech) => (
+                        {Array.isArray(t(`PortfolioPage.projects.${project.id}.technologies`)) ? t(`PortfolioPage.projects.${project.id}.technologies`).slice(0, 3).map((tech) => (
                           <Badge
                             key={tech}
                             variant="secondary"
@@ -286,16 +330,16 @@ export default function PortfolioPage() {
                           >
                             {tech}
                           </Badge>
-                        ))}
-                        {project.technologies.length > 3 && (
+                        )) : null}
+                        {Array.isArray(t(`PortfolioPage.projects.${project.id}.technologies`)) && t(`PortfolioPage.projects.${project.id}.technologies`).length > 3 && (
                           <Badge variant="secondary" className="bg-slate-100 text-slate-700 font-mono text-xs">
-                            +{project.technologies.length - 3}
+                            +{t(`PortfolioPage.projects.${project.id}.technologies`).length - 3}
                           </Badge>
                         )}
                       </div>
 
-                      <div className="grid grid-cols-3 gap-4 text-center">
-                        {Object.entries(project.metrics)
+                      {/* <div className="grid grid-cols-3 gap-4 text-center">
+                        {Object.entries( t(`PortfolioPage.projects.${project.id}.metrics`) )
                           .slice(0, 3)
                           .map(([key, value]) => (
                             <div key={key}>
@@ -303,7 +347,7 @@ export default function PortfolioPage() {
                               <div className="text-xs text-slate-500 capitalize">{key}</div>
                             </div>
                           ))}
-                      </div>
+                      </div> */}
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -333,7 +377,7 @@ export default function PortfolioPage() {
               <div className="relative">
                 <Image
                   src={selectedProject.image || "/placeholder.svg"}
-                  alt={selectedProject.title}
+                  alt={t(`PortfolioPage.projects.${selectedProject.id}.title`)}
                   width={800}
                   height={400}
                   className="w-full h-64 object-cover rounded-t-2xl"
@@ -349,49 +393,52 @@ export default function PortfolioPage() {
               <div className="p-8">
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h2 className="text-3xl font-bold text-slate-900 mb-2">{selectedProject.title}</h2>
+                    <h2 className="text-3xl font-bold text-slate-900 mb-2">{t(`PortfolioPage.projects.${selectedProject.id}.title`)}</h2>
                     <p className="text-slate-600">
-                      {selectedProject.client} • {selectedProject.year}
+                      {t(`PortfolioPage.projects.${selectedProject.id}.client`)} • {selectedProject.year}
                     </p>
                   </div>
-                  <Badge className="bg-blue-50 text-blue-700 font-mono">{selectedProject.category}</Badge>
+                  <Badge className="bg-blue-50 text-blue-700 font-mono">{t(`PortfolioPage.projects.${selectedProject.id}.category`)}</Badge>
                 </div>
 
-                <p className="text-lg text-slate-600 mb-8 leading-relaxed">{selectedProject.description}</p>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">{t(`PortfolioPage.projects.${selectedProject.id}.description`)}</p>
 
                 <div className="grid md:grid-cols-3 gap-8 mb-8">
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-3 flex items-center">
                       <Calendar className="w-4 h-4 mr-2" />
-                      Durée du projet
+                      {t(`PortfolioPage.projects.${selectedProject.id}.durationKey`)}
                     </h4>
-                    <p className="text-slate-600">{selectedProject.duration}</p>
+                    <p className="text-slate-600">{t(`PortfolioPage.projects.${selectedProject.id}.duration`)}</p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-3 flex items-center">
                       <Users className="w-4 h-4 mr-2" />
-                      Équipe
+                      {t(`PortfolioPage.projects.${selectedProject.id}.teamKey`)}
                     </h4>
-                    <p className="text-slate-600">{selectedProject.team}</p>
+                    <p className="text-slate-600">{t(`PortfolioPage.projects.${selectedProject.id}.team`)}</p>
                   </div>
+
+                  { t(`PortfolioPage.projects.${selectedProject.id}.metrics`).length > 0 && (
                   <div>
                     <h4 className="font-semibold text-slate-900 mb-3 flex items-center">
                       <TrendingUp className="w-4 h-4 mr-2" />
-                      Résultats
+                      {t(`PortfolioPage.projects.${selectedProject.id}.metricsKey`)}
                     </h4>
-                    <div className="space-y-1">
-                      {Object.entries(selectedProject.metrics).map(([key, value]) => (
-                        <div key={key} className="flex justify-between">
-                          <span className="text-slate-600 capitalize">{key}:</span>
-                          <span className="font-mono font-semibold">{value}</span>
+                      <div className="space-y-1">
+                        {Object.entries(selectedProject.metrics).map(([key, value]) => (
+                          <div key={key} className="flex justify-between">
+                            <span className="text-slate-600 capitalize">{t(`PortfolioPage.projects.${selectedProject.id}.metrics.${key}`)}:</span>
+                            <span className="font-mono font-semibold">{value}</span>
                         </div>
                       ))}
-                    </div>
+                      </div>
                   </div>
+              )}
                 </div>
 
                 <div className="mb-8">
-                  <h4 className="font-semibold text-slate-900 mb-4">Technologies utilisées</h4>
+                  <h4 className="font-semibold text-slate-900 mb-4">{t(`PortfolioPage.projects.${selectedProject.id}.technologiesKey`)}</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech) => (
                       <Badge key={tech} variant="secondary" className="bg-slate-100 text-slate-700 font-mono">
@@ -405,15 +452,15 @@ export default function PortfolioPage() {
                   <Button className="bg-slate-900 hover:bg-slate-800">
                     <Link href={selectedProject.links.demo} target="_blank" className="flex items-center">
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      View Project
+                      Demo
                     </Link>
 
                   </Button>
-                  <Button variant="outline">
+                  {/* <Button variant="outline">
                     <Github className="w-4 h-4 mr-2" />
-                    Source Code
-                  </Button>
-                  {/* <Button variant="outline">Étude de cas complète</Button> */}
+                    {t(`PortfolioPage.projects.${selectedProject.id}.sourceCode`)}
+                  </Button> */}
+                  {/* <Button variant="outline">{t(`PortfolioPage.projects.${selectedProject.id}.fullCaseStudy`)}</Button> */}
                 </div>
               </div>
             </motion.div>

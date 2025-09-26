@@ -183,7 +183,7 @@ const features = [
     icon: Terminal,
     title: "Expertise & Experience",
     description: "Our team comprises seasoned professionals with deep industry knowledge and hands-on experience in the latest technologies and best practices.",
-    image: "https://polymerexpert.fr/app/uploads/2023/04/Marketing-innovation.jpeg",
+    image: "/features/1.jpeg",
   },
   {
     key: "tailored",
@@ -191,55 +191,55 @@ const features = [
     title: "Tailored Solutions",
     description:
       "We don’t do one-size-fits-all. We customize IT solutions to perfectly fit your business needs, goals, and budget.",
-    image: "https://excellencetraining.co.uk/wp-content/uploads/2016/04/Keyboard-Button-Tailored-3.jpg",
+    image: "/features/2.jpg",
   },
   {
     key: "technology",
     icon: Globe,
     title: "Cutting-Edge Technology",
     description: "We leverage the latest tools, platforms, and innovations to keep your business ahead of the competition.",
-    image: "https://www.plataine.com/wp-content/uploads/2019/11/shutterstock_1282709413-1.jpg",
+    image: "/features/3.jpg",
   },
   {
     key: "support",
     icon: Layers,
     title: "Reliable Support & Maintenance",
     description: "We provide continuous monitoring, quick issue resolution, and proactive maintenance to keep your IT infrastructure running smoothly.",
-    image: "https://wsconnect.in/wp-content/uploads/2024/04/maintenance-and-it-support-Johannesburg.jpg",
+    image: "/features/4.jpg",
   },
   {
     key: "cost",
     title: "Cost Efficiency",
     description: "Through smart planning and scalable solutions, we maximize your IT investment while minimizing unnecessary expenses.",
-    image: "https://prosperity.com.au/blog_how-to-realize-huge-cost-savings-for-enterprise-telecom-840x420.jpg",
+    image: "/features/5.jpg",
     icon: Layers
   },
   {
     key: "security",
     title: "Security First",
     description: "We prioritize your data and network security with robust protocols, compliance standards, and ongoing risk management.",
-    image: 'https://connect.geant.org/wp-content/uploads/2023/10/security-culturejpg-990x596.jpg',
+    image: '/features/6.jpg',
     icon: Shield
   },
   {
     key: "communication",
     title: "Transparent Communication",
     description: "We keep you informed at every stage with clear, honest, and timely communication.",
-    image: 'https://www.theladders.com/wp-content/uploads/handshake_190617.jpg',
+    image: '/features/7.jpg',
     icon: MessageCircle
   },
   {
     key: "innovation",
     title: "Innovation Partner",
     description: "More than just a vendor, we aim to be your long-term IT partner, driving innovation and growth alongside your business.",
-    image: 'https://intuitconsultancy.com/wp-content/uploads/2023/11/Why-Is-Digital-transformation-About-People-and-Not-Just-About-Technology.png',
+    image: '/features/8.png',
     icon: Handshake
   },
   {
     key: "global",
     title: "Global Reach, Local Touch",
     description: "With access to global talent and technologies, we deliver solutions tailored to your local business environment.",
-    image: 'https://cdn.prod.website-files.com/667a8a31f844cf6675e10801/66dfebdbce4538603a39c5d8_663067c92e822412ecc8d158_localglobal.png ',
+    image: '/features/10.png ',
     icon: Target
   }
 ]
@@ -526,13 +526,13 @@ export default function ClientHomePage({ locale }: ClientHomePageProps) {
                   transition={{ duration: 0.3 }}
                 >
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                    {/* <Image
+                    <Image
                       src={feature.image || "/placeholder.svg"}
                       alt={feature.title}
                       width={600}
                       height={400}
                       className="w-full h-80 object-cover"
-                    /> */}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-second/20 to-transparent" />
                   </div>
 

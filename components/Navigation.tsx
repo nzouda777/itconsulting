@@ -23,13 +23,13 @@ export default function Navigation({ locale }: NavigationProps) {
     const pathname = usePathname();
 
     const navItems = [
-        { key: 'home', href: `/${locale}` },
-        { key: 'about', href: `/${locale}/about` },
-        { key: 'services', href: `/${locale}/services` },
-        { key: 'portfolio', href: `/${locale}/portfolio` },
+        { key: t('Navigation.home'), href: `/${locale}` },
+        { key: t('Navigation.about'), href: `/${locale}/about` },
+        { key: t('Navigation.services'), href: `/${locale}/services` },
+        { key: t('Navigation.portfolio'), href: `/${locale}/portfolio` },
         // { key: 'blog', href: `/${locale}/blog` },
         // { key: 'testimonials', href: `/${locale}/testimonials` },
-        { key: 'contact', href: `/${locale}/contact` },
+        { key: t('Navigation.contact'), href: `/${locale}/contact` },
     ];
     useEffect(() => {
         const handleScroll = () => {
@@ -83,12 +83,12 @@ export default function Navigation({ locale }: NavigationProps) {
                         <LanguageSwitcher locale={locale} />
                         <Link href="/contact#contact">
                             <Button size="sm" className="bg-gradient-to-l from-prime to-second font-bold">
-                                Start a Project
+                                {t('Navigation.cta')}
                             </Button>
                         </Link>
                     </div>
 
-                    <div className="flex items-center gap-0.5">
+                    <div className=" lg:hidden flex items-center gap-0.5">
                         <div className="lg:hidden">
                             <LanguageSwitcher locale={locale} />
                         </div>
@@ -140,7 +140,7 @@ export default function Navigation({ locale }: NavigationProps) {
                   </Link> */}
                                     <Link href="/contact#contact">
                                         <Button size="sm" className="w-full bg-gradient-to-l from-prime to-second font-bold">
-                                            Start a Project
+                                            {t('Navigation.cta')}
                                         </Button>
                                     </Link>
                                 </div>
