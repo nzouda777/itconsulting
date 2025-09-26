@@ -871,6 +871,8 @@
     "projectDescriptionPlaceholder": "Describe your project, its objectives and technical constraints...",
     "buttonLabel": "Send my request",
     "processing": "Sending in progress...",
+
+    "servicesKey": "Select a service",
     "services": [
       "Audit technical",
       "Web development",
