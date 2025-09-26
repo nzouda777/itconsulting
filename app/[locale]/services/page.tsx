@@ -12,6 +12,7 @@ import { useTranslation, type Locale } from '../../../lib/i18n';
 import LanguageSwitcher from '../../../components/LanguageSwitcher';
 import Navigation from '../../../components//Navigation';
 import { useLocale } from "../../../hooks/useLocale"
+import type { Variants } from 'framer-motion';
 
 
 
@@ -149,7 +150,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
     },
   },
 }
