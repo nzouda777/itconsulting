@@ -21,8 +21,8 @@ interface PortfolioPageProps {
 }
 
 
-  // const locale = useLocale(PortfolioPageProps.locale);
-  
+// const locale = useLocale(PortfolioPageProps.locale);
+
 const projects = [
   {
     id: 0,
@@ -144,31 +144,31 @@ export default function PortfolioPage() {
     "all" | "web" | "mobile" | "uiux" | "graphic" | "motion" | "devops"
   >("all")
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
-   const locale = useLocale()
-    const { t } = useTranslation(locale)
-    console.log(t("AboutPage.title"))
-    const isFrench = locale === 'fr';
+  const locale = useLocale()
+  const { t } = useTranslation(locale)
+  console.log(t("AboutPage.title"))
+  const isFrench = locale === 'fr';
 
   // Localized labels for display, stable keys for logic
   const categories = isFrench
     ? [
-        { key: "all" as const, label: "Tous" },
-        { key: "web" as const, label: "Web" },
-        { key: "mobile" as const, label: "Mobile" },
-        { key: "uiux" as const, label: "UI/UX Design" },
-        { key: "graphic" as const, label: "Design Graphique" },
-        { key: "motion" as const, label: "Motion & Ads" },
-        { key: "devops" as const, label: "Devops & Cloud" },
-      ]
+      { key: "all" as const, label: "Tous" },
+      { key: "web" as const, label: "Web" },
+      { key: "mobile" as const, label: "Mobile" },
+      { key: "uiux" as const, label: "UI/UX Design" },
+      { key: "graphic" as const, label: "Design Graphique" },
+      { key: "motion" as const, label: "Motion & Ads" },
+      { key: "devops" as const, label: "Devops & Cloud" },
+    ]
     : [
-        { key: "all" as const, label: "All" },
-        { key: "web" as const, label: "Web" },
-        { key: "mobile" as const, label: "Mobile" },
-        { key: "uiux" as const, label: "UI/UX Design" },
-        { key: "graphic" as const, label: "Graphic Design" },
-        { key: "motion" as const, label: "Motion & Ads" },
-        { key: "devops" as const, label: "Devops & Cloud" },
-      ];
+      { key: "all" as const, label: "All" },
+      { key: "web" as const, label: "Web" },
+      { key: "mobile" as const, label: "Mobile" },
+      { key: "uiux" as const, label: "UI/UX Design" },
+      { key: "graphic" as const, label: "Graphic Design" },
+      { key: "motion" as const, label: "Motion & Ads" },
+      { key: "devops" as const, label: "Devops & Cloud" },
+    ];
 
   // Map from category key to the project.category values (which are in English)
   const categoryToProjectCategory: Record<
@@ -188,8 +188,8 @@ export default function PortfolioPage() {
     activeCategory === "all"
       ? projects
       : projects.filter(
-          (project) => project.category === categoryToProjectCategory[activeCategory]
-        )
+        (project) => project.category === categoryToProjectCategory[activeCategory]
+      )
 
   return (
     <div className="min-h-screen font-sans">
@@ -208,10 +208,10 @@ export default function PortfolioPage() {
               Portfolio Technique
             </Badge> */}
 
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">{ t("PortfolioPage.heading") } </h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">{t("PortfolioPage.heading")} </h1>
 
             <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-              { t("PortfolioPage.description") }
+              {t("PortfolioPage.description")}
             </p>
 
             <div className="gr id grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-aut hidden">
@@ -244,17 +244,16 @@ export default function PortfolioPage() {
       <section className="py-8 bg-white border-b border-slate-200">
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 ">
           <div className="flex flex-wrap justify-center gap-4">
-            { categories.map((category) => (
+            {categories.map((category) => (
               <motion.button
                 key={category.key}
                 onClick={() => setActiveCategory(category.key)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`md:px-6 md:py-3 px-4 py-1 text-sm md:text-base rounded-full font-medium transition-all ${
-                  activeCategory === category.key
+                className={`md:px-6 md:py-3 px-4 py-1 text-sm md:text-base rounded-full font-medium transition-all ${activeCategory === category.key
                     ? "bg-prime text-white shadow-lg"
                     : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 {category.label}
               </motion.button>
@@ -268,7 +267,7 @@ export default function PortfolioPage() {
         <div className="2xl:container  max-w-[100%] mx-auto overflow-x-hidden px-6 md:px-12 ">
           <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              { filteredProjects.map((project, index) => (
+              {filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
                   layout
@@ -291,7 +290,7 @@ export default function PortfolioPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-second text-white font-mono text-xs">{ t(`PortfolioPage.projects.${project.id}.category` ) }</Badge>
+                        <Badge className="bg-second text-white font-mono text-xs">{t(`PortfolioPage.projects.${project.id}.category`)}</Badge>
                       </div>
                       <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="flex space-x-2">
@@ -311,32 +310,39 @@ export default function PortfolioPage() {
 
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm text-slate-500 font-mono">{ t(`PortfolioPage.projects.${project.id}.year`)}</span>
+                        <span className="text-sm text-slate-500 font-mono">{t(`PortfolioPage.projects.${project.id}.year`)}</span>
                         <span className="text-sm text-slate-500">{t(`PortfolioPage.projects.${project.id}.client`)}</span>
                       </div>
 
                       <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-second transition-colors">
-                        {t(`PortfolioPage.projects.${project.id}.title`) }
+                        {t(`PortfolioPage.projects.${project.id}.title`)}
                       </h3>
 
                       <p className="text-slate-600 mb-4 line-clamp-2">{t(`PortfolioPage.projects.${project.id}.description`)}</p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {Array.isArray(t(`PortfolioPage.projects.${project.id}.technologies`)) ? t(`PortfolioPage.projects.${project.id}.technologies`).slice(0, 3).map((tech) => (
-                          <Badge
-                            key={tech}
-                            variant="secondary"
-                            className="bg-slate-100 text-slate-700 font-mono text-xs"
-                          >
-                            {tech}
-                          </Badge>
-                        )) : null}
-                        {Array.isArray(t(`PortfolioPage.projects.${project.id}.technologies`)) && t(`PortfolioPage.projects.${project.id}.technologies`).length > 3 && (
-                          <Badge variant="secondary" className="bg-slate-100 text-slate-700 font-mono text-xs">
-                            +{t(`PortfolioPage.projects.${project.id}.technologies`).length - 3}
-                          </Badge>
-                        )}
-                      </div>
+  {(() => {
+    const techs = t<string[]>(`PortfolioPage.projects.${project.id}.technologies`);
+    return Array.isArray(techs) ? (
+      <>
+        {techs.slice(0, 3).map((tech) => (
+          <Badge
+            key={tech}
+            variant="secondary"
+            className="bg-slate-100 text-slate-700 font-mono text-xs"
+          >
+            {tech}
+          </Badge>
+        ))}
+        {techs.length > 3 && (
+          <Badge variant="secondary" className="bg-slate-100 text-slate-700 font-mono text-xs">
+            +{techs.length - 3}
+          </Badge>
+        )}
+      </>
+    ) : null;
+  })()}
+</div>
 
                       {/* <div className="grid grid-cols-3 gap-4 text-center">
                         {Object.entries( t(`PortfolioPage.projects.${project.id}.metrics`) )
@@ -419,22 +425,22 @@ export default function PortfolioPage() {
                     <p className="text-slate-600">{t(`PortfolioPage.projects.${selectedProject.id}.team`)}</p>
                   </div>
 
-                  { t(`PortfolioPage.projects.${selectedProject.id}.metrics`).length > 0 && (
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-3 flex items-center">
-                      <TrendingUp className="w-4 h-4 mr-2" />
-                      {t(`PortfolioPage.projects.${selectedProject.id}.metricsKey`)}
-                    </h4>
+                  {t(`PortfolioPage.projects.${selectedProject.id}.metrics`).length > 0 && (
+                    <div>
+                      <h4 className="font-semibold text-slate-900 mb-3 flex items-center">
+                        <TrendingUp className="w-4 h-4 mr-2" />
+                        {t(`PortfolioPage.projects.${selectedProject.id}.metricsKey`)}
+                      </h4>
                       <div className="space-y-1">
                         {Object.entries(selectedProject.metrics).map(([key, value]) => (
                           <div key={key} className="flex justify-between">
                             <span className="text-slate-600 capitalize">{t(`PortfolioPage.projects.${selectedProject.id}.metrics.${key}`)}:</span>
                             <span className="font-mono font-semibold">{value}</span>
-                        </div>
-                      ))}
+                          </div>
+                        ))}
                       </div>
-                  </div>
-              )}
+                    </div>
+                  )}
                 </div>
 
                 <div className="mb-8">

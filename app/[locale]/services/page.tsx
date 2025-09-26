@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { Code2, Shield, Cloud, ArrowRight, PenTool, Play, Headset, Rss} from "lucide-react"
+import { Code2, Shield, Cloud, ArrowRight, PenTool, Play, Headset, Rss } from "lucide-react"
 import { useTranslation, type Locale } from '../../../lib/i18n';
 import LanguageSwitcher from '../../../components/LanguageSwitcher';
 import Navigation from '../../../components//Navigation';
@@ -177,9 +177,17 @@ const process = [
   },
 ]
 
+// Type for service items coming from translations
+type ServiceTranslation = {
+  name: string
+  description: string
+  technologies: string[]
+  pricing: string
+}
+
 export default function ServicesPage() {
   const locale = useLocale()
-    const { t } = useTranslation(locale)
+  const { t } = useTranslation(locale)
   return (
     <div className="min-h-screen">
       <Navigation locale={locale} />
@@ -198,11 +206,11 @@ export default function ServicesPage() {
             </motion.div> */}
 
             <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-bold mb-8 gradient-text">
-            { t('ServicesPage.title') }
+              {t('ServicesPage.title')}
             </motion.h1>
 
             <motion.p variants={itemVariants} className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-            { t('ServicesPage.description') }
+              {t('ServicesPage.description')}
             </motion.p>
           </motion.div>
         </div>
@@ -220,18 +228,18 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               className="mb-24 last:mb-0"
             >
-              <div className="flex items-start gap-4 md:items-center md:justify-center md:flex-col md:text-center mb-12" id={ category.title.toLowerCase().replace(" ", "-") }>
+              <div className="flex items-start gap-4 md:items-center md:justify-center md:flex-col md:text-center mb-12" id={category.title.toLowerCase().replace(" ", "-")}>
                 <div className="w-12 h-12 md:w-16 md:h-16  bg-gradient-to-tr from-second/25 via-second/10 to-prime/25 md:rounded-2xl rounded-lg p-2 inline-flex items-center justify-center ">
                   <category.icon className="md:w-8 md:h-8 w-6 h-6 text-slate-700" />
                 </div>
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">{ t('ServicesPage.serviceCategories.' + categoryIndex + '.title') }</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">{t('ServicesPage.serviceCategories.' + categoryIndex + '.title')}</h2>
                   <p className="text-lg text-slate-600">{t('ServicesPage.serviceCategories.' + categoryIndex + '.description')}</p>
                 </div>
               </div>
 
               <div className={`grid md:grid-cols-${category.services.length === 3 ? 3 : 2} gap-8`}>
-                { t('ServicesPage.serviceCategories.' + categoryIndex + '.services').map((service, serviceIndex) => (
+                {(t<ServiceTranslation[]>('ServicesPage.serviceCategories.' + categoryIndex + '.services')).map((service, serviceIndex) => (
                   <motion.div
                     key={service.name}
                     initial={{ opacity: 0, y: 20 }}
@@ -246,7 +254,7 @@ export default function ServicesPage() {
                         <p className="text-slate-600">{service.description}</p>
                       </CardHeader>
                       <CardContent className="w-full">
-                        { service.technologies.length < 1 ? (
+                        {service.technologies.length < 1 ? (
                           <div className="mb-6">
                             {/* <h4 className="font-semibold text-slate-900 mb-3">Technologies</h4>
                             <div className="flex flex-wrap gap-2">
@@ -265,15 +273,15 @@ export default function ServicesPage() {
                             <div className="flex flex-wrap gap-2">
                               {service.technologies.map((tech) => (
                                 <Badge
-                                key={tech}
-                                variant="secondary"
-                                className="bg-slate-100 text-slate-700 font-mono text-xs"
-                              >
-                                {tech}
-                              </Badge>
-                            ))}
+                                  key={tech}
+                                  variant="secondary"
+                                  className="bg-slate-100 text-slate-700 font-mono text-xs"
+                                >
+                                  {tech}
+                                </Badge>
+                              ))}
+                            </div>
                           </div>
-                        </div>
                         )}
 
                         {/* <div className="mb-6">
@@ -283,7 +291,7 @@ export default function ServicesPage() {
 
                         <Button className="w-full bg-gradient-to-r from-prime to-second">
                           <Link href="/contact#contact">
-                            { t('ServicesPage.cta') }
+                            {t('ServicesPage.cta')}
                           </Link>
                           <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
@@ -307,9 +315,9 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             {/* <Badge className="mb-6 bg-slate-50 text-slate-700 border-slate-950 font-light md:text-sm text-xs hover:bg-slate-950 hover:text-white">Méthodologie</Badge> */}
-            <h2 className="text-4xl font-bold mb-6 gradient-text">{ t('ServicesPage.process.heading') }</h2>
+            <h2 className="text-4xl font-bold mb-6 gradient-text">{t('ServicesPage.process.heading')}</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              { t('ServicesPage.process.description') }
+              {t('ServicesPage.process.description')}
             </p>
           </motion.div>
 
@@ -326,8 +334,8 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-gradient-to-tr from-prime to-second text-white rounded-2xl flex items-center justify-center mx-auto mb-6 font-mono text-xl font-bold">
                   {phase.step}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{ t('ServicesPage.process.steps.' + index + '.title') }</h3>
-                <p className="text-slate-600">{ t('ServicesPage.process.steps.' + index + '.description') }</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{t('ServicesPage.process.steps.' + index + '.title')}</h3>
+                <p className="text-slate-600">{t('ServicesPage.process.steps.' + index + '.description')}</p>
               </motion.div>
             ))}
           </div>

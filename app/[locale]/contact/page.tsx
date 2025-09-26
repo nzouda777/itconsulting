@@ -39,8 +39,8 @@ export default function ContactPage() {
   const { t } = useTranslation(locale)
 
   // Lists from translations
-  const servicesRaw = t("ContactPage.services")
-  const serviceTypes: string[] = Array.isArray(servicesRaw) ? (servicesRaw as string[]) : []
+  const serviceTypes = t<string[]>("ContactPage.services") || []
+  const urgencyOptions = t<Record<string, string>>("ContactPage.urgencyOptions") || {}
   const contactMethods = [
     {
       icon: Mail,
@@ -202,7 +202,7 @@ export default function ContactPage() {
                             required
                           >
                             <option value="">{ t("ContactPage.servicesKey") }</option>
-                            { t("ContactPage.services").map((service) => (
+                            { serviceTypes.map((service) => (
                               <option key={service} value={service}>
                                 {service}
                               </option>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                         <div>
                           <label className="block text-sm font-medium text-slate-700 mb-2"> { t("ContactPage.urgencyKey") } </label>
                           <div className="flex space-x-4">
-                            {Object.entries(t("ContactPage.urgencyOptions")).map(([key, value]) => (
+                            {Object.entries(urgencyOptions).map(([key, value]) => (
                               <label key={key} className="flex items-center">
                                 <input
                                   type="radio"
