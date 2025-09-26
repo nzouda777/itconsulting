@@ -7,11 +7,16 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Home, Mail } from "lucide-react"
 import Link from "next/link"
+import { useLocale } from "@/hooks/useLocale"
+import { useTranslation } from "@/lib/i18n"
+import Navigation from "@/components/Navigation"
 
 export default function ContactSuccessPage() {
+  const locale = useLocale()
+  const { t } = useTranslation(locale)
   return (
     <div className="min-h-screen font-sans">
-      <Header />
+      <Navigation locale={locale} />
 
       <section className="pt-32 pb-16 min-h-screen flex items-center">
         <div className="2xl:container  max-w-[100%] mx-auto  px-6 md:px-12  ">

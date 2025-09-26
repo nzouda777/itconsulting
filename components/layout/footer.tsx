@@ -105,11 +105,11 @@ export default function Footer() {
           <div className="flex space-x-6 mt-4 md:mt-0">
             <div className="flex space-x-4">
               {[
-                { icon: Linkedin, href: "https://linkedin.com" },
-                { icon: Facebook, href: "https://facebook.com" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/108900033/admin/dashboard/" },
+                { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61580501526943&sk=about_profile_transparency&locale=fr_FR" },
                 { icon: Youtube, href: "https://youtube.com" },
-                { icon: "TikTok", href: "https://tiktok.com" },
-                { icon: Instagram, href: "https://instagram.com" },
+                { icon: "TikTok", href: "https://www.tiktok.com/@itcloudconsulting" },
+                { icon: Instagram, href: "https://www.instagram.com/itcloud_consulting/" },
 
               ].map((social, index) => (
                 <motion.a
