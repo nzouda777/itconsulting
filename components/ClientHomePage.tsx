@@ -546,7 +546,7 @@ export default function ClientHomePage({ locale }: ClientHomePageProps) {
                     transition={{
                       duration: 8,
                       repeat: Number.POSITIVE_INFINITY,
-                      ease: linear,
+                      
                     }}
                   />
                   <motion.div
@@ -558,7 +558,7 @@ export default function ClientHomePage({ locale }: ClientHomePageProps) {
                     transition={{
                       duration: 6,
                       repeat: Number.POSITIVE_INFINITY,
-                      ease: linear,
+                      
                     }}
                   />
                 </motion.div>
