@@ -291,15 +291,19 @@ export default function AboutPage() {
                     <p className="text-slate-600 text-sm mb-4 leading-relaxed">{ t(`AboutPage.team.members.${member.key}.bio`)}</p>
 
                     <div className="flex flex-wrap gap-2">
-                      { t(`AboutPage.team.members.${member.key}.skills`)?.map((skill) => (
-                        <Badge
-                          key={skill}
-                          variant="secondary"
-                          className="bg-second/5 text-second font-mono text-xs"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
+                      {(() => {
+                        const translated = t<string[]>(`AboutPage.team.members.${member.key}.skills`);
+                        const skills = Array.isArray(translated) ? translated : member.skills;
+                        return skills.map((skill) => (
+                          <Badge
+                            key={skill}
+                            variant="secondary"
+                            className="bg-second/5 text-second font-mono text-xs"
+                          >
+                            {skill}
+                          </Badge>
+                        ));
+                      })()}
                     </div>
                   </CardContent>
                 </Card>

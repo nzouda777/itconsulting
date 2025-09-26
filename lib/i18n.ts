@@ -13,19 +13,19 @@ export const messages = {
 } as const;
 
 // Fonction utilitaire pour obtenir une traduction
-export function getTranslation(locale: Locale, key: string): string {
+export function getTranslation<T = string>(locale: Locale, key: string): T {
   const keys = key.split('.');
-  let value: any = messages[locale];
+  let value: unknown = messages[locale] as unknown;
   
   for (const k of keys) {
-    value = value?.[k];
+    value = (value as any)?.[k];
   }
   
-  return value || key;
+  return (value as T) ?? ((key as unknown) as T);
 }
 
 // Hook pour les composants clients
 export function useTranslation(locale: Locale) {
-  const t = (key: string) => getTranslation(locale, key);
+  const t = <T = string>(key: string) => getTranslation<T>(locale, key);
   return { t, locale };
 }
